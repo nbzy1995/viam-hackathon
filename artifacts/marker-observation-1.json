@@ -1,0 +1,101 @@
+{
+  "captured_at": "2026-10-16T17:41:27.615Z",
+  "arm_pose": {
+    "x": 295.72407252559816,
+    "y": -591.042554457793,
+    "z": 381.15224426320646,
+    "oX": -0.02777345029907711,
+    "oY": 0.06476975229776927,
+    "oZ": -0.9975136663954886,
+    "theta": -64.8890178097986
+  },
+  "arm_joints": {
+    "values": [
+      296.54533964720315,
+      47.84488090948153,
+      -135.75854749046593,
+      0.23507051187865627,
+      91.94799977652248,
+      -241.55376543175962
+    ]
+  },
+  "arm_moving": false,
+  "camera_properties": {
+    "supportsPcd": true,
+    "intrinsicParameters": {
+      "widthPx": 1280,
+      "heightPx": 720,
+      "focalXPx": 910.4820556640625,
+      "focalYPx": 908.2489013671875,
+      "centerXPx": 641.4655151367188,
+      "centerYPx": 371.125
+    },
+    "distortionParameters": {
+      "model": "inverse_brown_conrady",
+      "parameters": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "extrinsicParameters": {
+      "translation": {},
+      "orientation": {
+        "oZ": 1.0
+      }
+    }
+  },
+  "images": [
+    {
+      "name": "color",
+      "mime_type": "image/jpeg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "depth",
+      "mime_type": "image/vnd.viam.dep",
+      "width": null,
+      "height": null
+    }
+  ],
+  "depth_nonzero_fraction": 0.8421050347222222,
+  "depth_quantiles_mm": [
+    332.0,
+    350.0,
+    372.0
+  ],
+  "blue_candidates": [
+    {
+      "pixels": 10634,
+      "pixel_center_uv": [
+        163.31643784088772,
+        309.6388000752304
+      ],
+      "bbox_uv": [
+        71,
+        252,
+        240,
+        388
+      ],
+      "valid_depth_fraction": 1.0,
+      "camera_point": {
+        "x": -190.63320795684908,
+        "y": -24.574200463214243,
+        "z": 363.0,
+        "oZ": 1.0
+      },
+      "world_point": {
+        "x": 178.807322583649,
+        "y": -793.219610452639,
+        "z": -10.669732177240437,
+        "oX": -0.027773450299078597,
+        "oY": 0.0647697522977716,
+        "oZ": -0.9975136663954888,
+        "theta": -154.88901780979833
+      }
+    }
+  ]
+}

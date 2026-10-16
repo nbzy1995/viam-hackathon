@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-16T20:25:57.111327+00:00",
+  "execution_attempted": false,
+  "success": false,
+  "transfers": [
+    {
+      "source": "A",
+      "destination": "B",
+      "cap_world_mm": [
+        490.3109766201045,
+        -486.2125204012037,
+        149.80320666790473
+      ],
+      "stages": [],
+      "previews": []
+    }
+  ],
+  "error": "GRPCError: (<Status.UNKNOWN: 2>, 'zero IK solutions produced, goal positions appears to be physically unreachable', None)"
+}

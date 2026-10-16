@@ -1,0 +1,71 @@
+{
+  "captured_at": "2026-10-16T17:44:09.366Z",
+  "arm_pose": {
+    "x": 295.7596057869587,
+    "y": -591.083082956586,
+    "z": 381.1317258518193,
+    "oX": -0.037802754889905706,
+    "oY": -0.27989515273250065,
+    "oZ": -0.959286013240881,
+    "theta": 83.89865405556694
+  },
+  "arm_joints": {
+    "values": [
+      298.20081357747415,
+      84.76479227925762,
+      -200.06796139428923,
+      -9.736083760884567,
+      101.72131062970456,
+      -243.32849446493907
+    ]
+  },
+  "arm_moving": false,
+  "camera_properties": {
+    "supportsPcd": true,
+    "intrinsicParameters": {
+      "widthPx": 1280,
+      "heightPx": 720,
+      "focalXPx": 910.4820556640625,
+      "focalYPx": 908.2489013671875,
+      "centerXPx": 641.4655151367188,
+      "centerYPx": 371.125
+    },
+    "distortionParameters": {
+      "model": "inverse_brown_conrady",
+      "parameters": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "extrinsicParameters": {
+      "translation": {},
+      "orientation": {
+        "oZ": 1.0
+      }
+    }
+  },
+  "images": [
+    {
+      "name": "color",
+      "mime_type": "image/jpeg",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "depth",
+      "mime_type": "image/vnd.viam.dep",
+      "width": null,
+      "height": null
+    }
+  ],
+  "depth_nonzero_fraction": 0.5955598958333334,
+  "depth_quantiles_mm": [
+    285.0,
+    310.0,
+    354.0
+  ],
+  "blue_candidates": []
+}

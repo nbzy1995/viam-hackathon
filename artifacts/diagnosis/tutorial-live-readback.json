@@ -1,0 +1,495 @@
+{
+  "at": "2026-10-16T19:09:56.395607+00:00",
+  "joints": [
+    320.7240453845082,
+    47.91632810329445,
+    -181.12337988212667,
+    -2.7870083181785743,
+    107.16102354886445,
+    -239.1176555208695
+  ],
+  "moving": false,
+  "error": {
+    "error info": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "frames": [
+    {
+      "referenceFrame": "table",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "z": -123.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    {
+      "referenceFrame": "wall-side",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "y": -750.0,
+          "z": 300.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    {
+      "referenceFrame": "ceiling",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "z": 1050.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    {
+      "referenceFrame": "arm",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "oZ": 1.0
+        }
+      }
+    },
+    {
+      "referenceFrame": "gripper",
+      "poseInObserverFrame": {
+        "referenceFrame": "arm",
+        "pose": {
+          "z": 150.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    {
+      "referenceFrame": "wall-front",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "x": -400.0,
+          "z": 300.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    {
+      "referenceFrame": "qa-sim-arm",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "oZ": 1.0
+        }
+      }
+    },
+    {
+      "referenceFrame": "cam",
+      "poseInObserverFrame": {
+        "referenceFrame": "arm",
+        "pose": {
+          "x": 68.70800575609482,
+          "y": -20.22730535625142,
+          "z": 29.714873870981037,
+          "oX": 0.0019235952692383805,
+          "oY": -0.013890249449288298,
+          "oZ": 0.9999016755418888,
+          "theta": 90.66247906609505
+        }
+      },
+      "physicalObject": {
+        "center": {
+          "x": 32.2,
+          "z": -8.3,
+          "oZ": 1.0
+        },
+        "box": {
+          "dimsMm": {
+            "x": 90.0,
+            "y": 25.0,
+            "z": 25.0
+          }
+        },
+        "label": "box"
+      }
+    }
+  ],
+  "resources": [
+    "cam",
+    "arm",
+    "wall-side",
+    "table",
+    "travel-pose",
+    "ceiling",
+    "home-pose",
+    "builtin",
+    "wall-front",
+    "approach-pose",
+    "qa-sim-arm",
+    "gripper",
+    "grasp-pose",
+    "place-pose"
+  ],
+  "switches": {
+    "home-pose": 0,
+    "approach-pose": 0,
+    "grasp-pose": 0,
+    "travel-pose": 0,
+    "place-pose": 0
+  },
+  "status": {
+    "resources": [
+      {
+        "name": {
+          "namespace": "rdk-internal",
+          "type": "service",
+          "subtype": "web",
+          "name": "$web"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:13.922020662Z",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk-internal",
+          "type": "service",
+          "subtype": "packagemanager",
+          "name": "deferred-manager"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:13.922033285Z",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "service",
+          "subtype": "motion",
+          "name": "builtin"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:13.923637296Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "camera",
+          "name": "cam"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:07:20.035782630Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk-internal",
+          "type": "service",
+          "subtype": "frame_system",
+          "name": "$frame_system"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:13.922028416Z",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "gripper",
+          "name": "wall-front"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T18:10:28.061172211Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "gripper",
+          "name": "wall-side"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T18:10:28.060609665Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "arm",
+          "name": "arm"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T17:36:06.637750456Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "switch",
+          "name": "approach-pose"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:07:19.939871916Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "switch",
+          "name": "travel-pose"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:07:19.939908153Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "gripper",
+          "name": "table"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:14.083967359Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "gripper",
+          "name": "ceiling"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:14.083739416Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "switch",
+          "name": "home-pose"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:07:19.939924423Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "arm",
+          "name": "qa-sim-arm"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T17:17:17.630720319Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk-internal",
+          "type": "service",
+          "subtype": "cloud_connection",
+          "name": "$cloud_connection"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:13.922038094Z",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "gripper",
+          "name": "gripper"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T17:36:06.659751486Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "switch",
+          "name": "grasp-pose"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:07:19.939805031Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      },
+      {
+        "name": {
+          "namespace": "rdk",
+          "type": "component",
+          "subtype": "switch",
+          "name": "place-pose"
+        },
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:07:19.939835308Z",
+        "revision": "1792177633222",
+        "cloudMetadata": {
+          "primaryOrgId": "6d6c7293-bc67-43e4-9c8b-31c76aac27d3",
+          "locationId": "310sld03v2",
+          "machineId": "0ff1c3e0-d169-4194-a66e-8f854630ce99",
+          "machinePartId": "f3d9c05f-c163-47c5-8291-1f58f13e46f0"
+        }
+      }
+    ],
+    "config": {
+      "revision": "1792177633222",
+      "lastUpdated": "2026-10-16T19:09:54.087612135Z"
+    },
+    "state": "STATE_RUNNING",
+    "modules": [
+      {
+        "moduleName": "viam_ufactory",
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:14.040422009Z"
+      },
+      {
+        "moduleName": "viam_realsense",
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:14.037302672Z"
+      },
+      {
+        "moduleName": "erh_vmodutils",
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-13T15:25:14.041321520Z"
+      }
+    ],
+    "packages": [
+      {
+        "name": "m_erh_vmodutils",
+        "type": "PACKAGE_TYPE_MODULE",
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:09:54.087588711Z",
+        "version": "0.4.6-linux-amd64"
+      },
+      {
+        "name": "m_viam_ufactory",
+        "type": "PACKAGE_TYPE_MODULE",
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:09:54.087599181Z",
+        "version": "1.1.36-linux-amd64"
+      },
+      {
+        "name": "m_viam_realsense",
+        "type": "PACKAGE_TYPE_MODULE",
+        "state": "STATE_READY",
+        "lastUpdated": "2026-10-16T19:09:54.087608528Z",
+        "version": "0.22.5-linux-amd64"
+      }
+    ]
+  }
+}

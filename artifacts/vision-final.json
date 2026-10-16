@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-16T20:14:01.654Z",
+  "arm_stationary_at_home": true,
+  "gripper_empty": true,
+  "gripper_position": {
+    "position": 840.0
+  },
+  "image": "artifacts/vision-final.jpg",
+  "run": "artifacts/diagnosis/vision-cycle-20261016T200629Z.json",
+  "visual_verification": "Fresh wrist image shows carton at A; native final detection confirmed upright cap near A.",
+  "vision_guided_round_trips_verified": 1,
+  "operator_intervention_during_run": false
+}
