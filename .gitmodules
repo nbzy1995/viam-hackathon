@@ -1,0 +1,3 @@
+[submodule "references/ringside"]
+	path = references/ringside
+	url = https://github.com/JoeyYu23/ringside.git
