@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-16T19:49:17.897085+00:00",
+  "execution_attempted": true,
+  "success": true,
+  "stages": [
+    "home-pose",
+    "approach-pose",
+    "grasp-pose",
+    "travel-pose",
+    "above-place-pose",
+    "place-pose",
+    "release-at-B",
+    "above-place-pose",
+    "travel-pose",
+    "grasp-pose",
+    "release-at-A",
+    "approach-pose",
+    "home-pose"
+  ],
+  "pending": null
+}

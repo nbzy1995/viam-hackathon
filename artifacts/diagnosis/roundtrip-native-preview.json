@@ -1,0 +1,5724 @@
+{
+  "preflight_passed": true,
+  "previews": [
+    {
+      "name": "home-pose",
+      "plan": [
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.597689628601074,
+            0.8362846374511719,
+            -3.1611678600311284,
+            -0.04864153638482094,
+            2.21929931640625,
+            -4.1733903884887695
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.597690582275391,
+            0.8362976908683777,
+            -3.1611993312835693,
+            -0.04864247143268585,
+            2.219315528869629,
+            -4.1733903884887695
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 2,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 292.4151725191089,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              320.72399074299483,
+              47.91558019758033,
+              -181.1215767121858,
+              -2.786954743882272,
+              127.15648430634683,
+              -239.1176555208695
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 254.4418034910543,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              320.72399074299483,
+              47.91558019758033,
+              -181.1215767121858,
+              -2.786954743882272,
+              127.15648430634683,
+              -239.1176555208695
+            ]
+          },
+          "table": {
+            "clearance_mm": 177.99989223480225,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              320.72399074299483,
+              47.91558019758033,
+              -181.1215767121858,
+              -2.786954743882272,
+              127.15648430634683,
+              -239.1176555208695
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 246.00196930823492,
+            "link": "link5",
+            "segment": 0,
+            "fraction": 1.0,
+            "joints_degrees": [
+              320.7240453845082,
+              47.91632810329445,
+              -181.12337988212667,
+              -2.7870083181785743,
+              127.15741321207395,
+              -239.1176555208695
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 0.00180316994087093
+      }
+    },
+    {
+      "name": "approach-pose",
+      "plan": [
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.597690582275391,
+            0.8362976908683777,
+            -3.1611993312835693,
+            -0.04864247143268585,
+            2.219315528869629,
+            -4.1733903884887695
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4377718429089965,
+            0.939828543620899,
+            -2.504393328340204,
+            1.1294244158503273e-05,
+            1.5645573567382811,
+            -4.283715849527848
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 77,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.94709032305167,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.9342105263157894,
+            "joints_degrees": [
+              312.16418371367877,
+              53.45795369223918,
+              -145.9669713708984,
+              -0.1827512710757202,
+              92.11061754888075,
+              -245.02297148950856
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 103.8666827333844,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.5613765537612,
+              53.8482090154043,
+              -143.4911679546147,
+              0.0006471125230724795,
+              89.64253334724744,
+              -245.4388388112437
+            ]
+          },
+          "table": {
+            "clearance_mm": 177.99989223480225,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              320.7240453845082,
+              47.91632810329445,
+              -181.12337988212667,
+              -2.7870083181785743,
+              127.15741321207395,
+              -239.1176555208695
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 246.00196930823492,
+            "link": "link5",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              320.7240453845082,
+              47.91632810329445,
+              -181.12337988212667,
+              -2.7870083181785743,
+              127.15741321207395,
+              -239.1176555208695
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 37.632211927511975
+      }
+    },
+    {
+      "name": "grasp-pose",
+      "plan": [
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4377718429089965,
+            0.939828543620899,
+            -2.504393328340204,
+            1.1294244158503273e-05,
+            1.5645573567382811,
+            -4.283715849527848
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.43777203296336,
+            0.9322390219508538,
+            -2.483763566635276,
+            1.0678345609299461e-05,
+            1.551517826770767,
+            -4.283715843557884
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437771887306806,
+            0.9256315044349627,
+            -2.464910715157798,
+            1.104882343630928e-05,
+            1.5392732949199417,
+            -4.283716283762589
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437772138374316,
+            0.9198171158022729,
+            -2.447489867258346,
+            9.632626777423452e-06,
+            1.5276664321331301,
+            -4.283715395997038
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437772237469228,
+            0.9146600250450122,
+            -2.4312533087659194,
+            9.05948514550249e-06,
+            1.516587419634841,
+            -4.283715220870166
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437772334053509,
+            0.9100605283642373,
+            -2.4160190573783202,
+            8.505029721409782e-06,
+            1.505952951885758,
+            -4.283714955599493
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437772407567221,
+            0.9059403802118519,
+            -2.401643800961884,
+            8.310311316794208e-06,
+            1.4956965017783135,
+            -4.283714070095256
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437772664222609,
+            0.9022562141206667,
+            -2.388052635380228,
+            5.9950571165206714e-06,
+            1.4857930151249354,
+            -4.283715462138787
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437772434379477,
+            0.898933787422321,
+            -2.3751009198535398,
+            7.725168346359278e-06,
+            1.4761625300758672,
+            -4.2837150350842785
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437771845226691,
+            0.8959527550829955,
+            -2.362759579736358,
+            1.0473497506047036e-05,
+            1.4667986124858758,
+            -4.2837180667094685
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437772901935069,
+            0.8932820024674337,
+            -2.350970132401096,
+            5.637717414912518e-06,
+            1.4576826943355365,
+            -4.2837120533525015
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.43777282033567,
+            0.8908902935651262,
+            -2.339674993663148,
+            5.77429396550499e-06,
+            1.4487811913754158,
+            -4.283713854010757
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "gripper": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773513913842,
+            0.8887553492578564,
+            -2.328833462947671,
+            3.0352509360118384e-06,
+            1.4400740968219305,
+            -4.283712865359044
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437772743243999,
+            0.8868611552554732,
+            -2.3184163143938767,
+            5.621050132836394e-06,
+            1.4315503852564562,
+            -4.283709976349185
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4377726744250845,
+            0.8851838159268598,
+            -2.308381977006995,
+            3.8609461882673516e-06,
+            1.4231935341814719,
+            -4.283713457438122
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773389162936,
+            0.8837206180049125,
+            -2.298721600538446,
+            2.488907617612654e-06,
+            1.4149973393782371,
+            -4.283713595701671
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773161180528,
+            0.8824469883762783,
+            -2.289394297566058,
+            4.110126643427393e-06,
+            1.4069440469821475,
+            -4.2837115630715425
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773519347769,
+            0.8813580165622396,
+            -2.280389666886048,
+            3.774216273862129e-07,
+            1.3990310597174536,
+            -4.283712728056886
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4377738703475496,
+            0.8804407754687661,
+            -2.271683898614914,
+            4.147807480824907e-07,
+            1.3912417797752823,
+            -4.283714056483722
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773497478676,
+            0.8796893787593225,
+            -2.263266684975644,
+            -1.5015236681469414e-07,
+            1.3835753378058657,
+            -4.28371229867143
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773610982953,
+            0.8790936612827996,
+            -2.2551203713334,
+            2.5743280105158192e-08,
+            1.376026660431642,
+            -4.283710330986087
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 59,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.9500525472026,
+            "link": "link1",
+            "segment": 17,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.5614927174335,
+              50.445540545585644,
+              -130.15789977845935,
+              2.3765186288405732e-05,
+              79.71228226339281,
+              -245.43873607738283
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 103.86057116919112,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.6666666666666666,
+            "joints_degrees": [
+              311.5613838133031,
+              53.558310641926525,
+              -142.70316910257938,
+              0.0006235869314207823,
+              89.14445999126549,
+              -245.43883858320788
+            ]
+          },
+          "table": {
+            "clearance_mm": 143.01157178338687,
+            "link": "gripper:claws",
+            "segment": 19,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.5614778569368,
+              50.36835658820756,
+              -129.20887957137882,
+              1.4749813008486624e-06,
+              78.84052014021437,
+              -245.4385226220917
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 486.0074956460326,
+            "link": "link3",
+            "segment": 7,
+            "fraction": 0.5,
+            "joints_degrees": [
+              311.5614170270442,
+              51.60029259478772,
+              -136.45429794381408,
+              0.0003930555064954737,
+              84.85377592268836,
+              -245.43880438127502
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 1.1819982780529585
+      }
+    },
+    {
+      "name": "travel-pose",
+      "plan": [
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773610982954,
+            0.8790936612827996,
+            -2.2551203713334,
+            2.5743280105158192e-08,
+            1.3760266604316422,
+            -4.283710330986087
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773580899662,
+            0.8796899273574097,
+            -2.2632680873925413,
+            5.1934672904107585e-08,
+            1.3835779938156294,
+            -4.283710332321791
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773573920916,
+            0.8804424468804541,
+            -2.2716871398793357,
+            -4.943011627141507e-08,
+            1.3912446414656685,
+            -4.283710274478157
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437772702730637,
+            0.881358384487243,
+            -2.2803899657303566,
+            3.762511718555627e-06,
+            1.3990298401965382,
+            -4.283710646577518
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773535671068,
+            0.8824484022420461,
+            -2.2893972011124957,
+            3.875790243306542e-07,
+            1.4069485464962674,
+            -4.28371010901649
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.43777446802425,
+            0.8837202461507737,
+            -2.298721364317112,
+            -3.4294830448515517e-06,
+            1.4149993790069701,
+            -4.283709586036719
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773424688982,
+            0.8851881078727083,
+            -2.308389307924643,
+            -3.2752950972854324e-09,
+            1.4231995957503625,
+            -4.283711673292914
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773516597654,
+            0.8868626503729286,
+            -2.3184201452683753,
+            -5.16361172982133e-07,
+            1.4315575407125112,
+            -4.283710202144345
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773629087824,
+            0.8887584016061681,
+            -2.3288390138839903,
+            -3.256938020079675e-06,
+            1.4400782336118925,
+            -4.283707048500281
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773798082868,
+            0.8908921901179662,
+            -2.3396795526459826,
+            -1.5544733267991655e-06,
+            1.4487885608427318,
+            -4.283708249414264
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773424408638,
+            0.893284844300279,
+            -2.3509760234906243,
+            1.2037946579118596e-06,
+            1.4576900126243106,
+            -4.28371171220434
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773151431287,
+            0.895959966921344,
+            -2.3627739998172634,
+            2.299447887212669e-06,
+            1.4668138625826692,
+            -4.283712427788759
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4377732920892035,
+            0.8989340173174383,
+            -2.3751025398127794,
+            1.1149804195947947e-06,
+            1.4761677570970797,
+            -4.283711763691022
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773257587582,
+            0.9022492866586342,
+            -2.3880382878539055,
+            9.96433350969206e-07,
+            1.485786919933435,
+            -4.283711096476365
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773171326649,
+            0.9059451937713204,
+            -2.4016543442137426,
+            1.2689358782587624e-06,
+            1.4957085255940832,
+            -4.283711913923507
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "cam": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773035878592,
+            0.9100664014201607,
+            -2.416031133682814,
+            1.5684373200094452e-06,
+            1.5059660001418622,
+            -4.2837123612617765
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773371425535,
+            0.9146636772263421,
+            -2.4312610449516026,
+            -1.273191987012408e-07,
+            1.5165966977644751,
+            -4.283710329345057
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4377733489989435,
+            0.9198196476082414,
+            -2.4474954950376198,
+            2.793259508511914e-07,
+            1.527674708047743,
+            -4.283710816711762
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773669404868,
+            0.9256312290356863,
+            -2.4649108977368535,
+            -1.2414827329579167e-06,
+            1.539277351705058,
+            -4.28370859616171
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773781467223,
+            0.932241974044609,
+            -2.4837702967466515,
+            -1.548104895049763e-06,
+            1.55152744604008,
+            -4.283708845836753
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773330804528,
+            0.939836307610929,
+            -2.5044088625532472,
+            1.4455697567303857e-07,
+            1.5645722383227016,
+            -4.283710756598377
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 59,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.9500521964194,
+            "link": "link1",
+            "segment": 4,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.56152696178594,
+              50.63344037470157,
+              -131.70703245192504,
+              -0.00019649490438166872,
+              81.07349243073178,
+              -245.43847993963698
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 103.8604171798202,
+            "link": "gripper:claws",
+            "segment": 19,
+            "fraction": 0.3333333333333333,
+            "joints_degrees": [
+              311.5614790179425,
+              53.558571684888754,
+              -142.70372285551284,
+              -5.637241628484965e-05,
+              89.1451116376145,
+              -245.43847402216187
+            ]
+          },
+          "table": {
+            "clearance_mm": 143.0115717833869,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              311.56147785693685,
+              50.36835658820756,
+              -129.20887957137882,
+              1.4749813008486624e-06,
+              78.84052014021438,
+              -245.4385226220917
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 486.0069037086233,
+            "link": "link3",
+            "segment": 12,
+            "fraction": 0.5,
+            "joints_degrees": [
+              311.5614585972721,
+              51.6001007236291,
+              -136.45393332587543,
+              6.048754892956038e-05,
+              84.85375105144166,
+              -245.43858559574585
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 1.182502715920947
+      }
+    },
+    {
+      "name": "above-place-pose",
+      "plan": [
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773330804528,
+            0.939836307610929,
+            -2.5044088625532472,
+            1.4455697567303857e-07,
+            1.5645722383227016,
+            -4.283710756598377
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554479598999023,
+            0.15588828921318054,
+            -1.5248268842697146,
+            -1.8326627468923107e-06,
+            1.3689373731613161,
+            -4.167002201080322
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 114,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.94708684585765,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.08849557522123894,
+            "joints_degrees": [
+              312.15321194639694,
+              49.8737058228196,
+              -138.5251630399272,
+              -1.7428356844075447e-06,
+              88.65143448600965,
+              -244.8467852676803
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 103.8666382691008,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              311.5614618038955,
+              53.8486538592652,
+              -143.49205799946014,
+              8.282504605240423e-06,
+              89.6433859992272,
+              -245.43854700787966
+            ]
+          },
+          "table": {
+            "clearance_mm": 177.99989223480225,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              311.5614618038955,
+              53.8486538592652,
+              -143.49205799946014,
+              8.282504605240423e-06,
+              89.6433859992272,
+              -245.43854700787966
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 358.43431710445617,
+            "link": "link3",
+            "segment": 0,
+            "fraction": 1.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778163,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 56.125913042722274
+      }
+    },
+    {
+      "name": "place-pose",
+      "plan": [
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554479598999023,
+            0.15588828921318054,
+            -1.5248268842697148,
+            -1.8326627468923107e-06,
+            1.3689373731613164,
+            -4.167002201080322
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.55447967925937,
+            0.1557307875217485,
+            -1.5175339815260966,
+            -1.9056112457906358e-06,
+            1.3618019699387294,
+            -4.167002183240632
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554479733182947,
+            0.15563901779186162,
+            -1.5103256603714659,
+            -1.8659080781591525e-06,
+            1.3546854347617587,
+            -4.167002189278543
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.55447978570499,
+            0.15561243815090195,
+            -1.503200856663962,
+            -1.8240123681427663e-06,
+            1.347587228510725,
+            -4.167002183100463
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554479837148398,
+            0.15565054913992854,
+            -1.496158570085245,
+            -1.7766470430203404e-06,
+            1.3405068501636153,
+            -4.167002170906671
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554479886608208,
+            0.15575287849834488,
+            -1.489197849761941,
+            -1.7180872228687383e-06,
+            1.3334438227295393,
+            -4.1670021439359255
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554479939401549,
+            0.15591894538689957,
+            -1.482317750884363,
+            -1.6769269417295895e-06,
+            1.3263976752806903,
+            -4.16700213459556
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.5544799907225,
+            0.15614833020225022,
+            -1.4755174173222019,
+            -1.626639090749896e-06,
+            1.319367977650098,
+            -4.167002113322394
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480043434795,
+            0.15644059681612013,
+            -1.4687959885610042,
+            -1.583286266137878e-06,
+            1.3123543013452335,
+            -4.167002100419273
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554480095249429,
+            0.15679535084417928,
+            -1.4621526683487127,
+            -1.5331672234993371e-06,
+            1.305356248174627,
+            -4.167002076629572
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480149188716,
+            0.1572121837145076,
+            -1.4555866581909958,
+            -1.4945736354081693e-06,
+            1.2983734228693042,
+            -4.16700207216444
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554480201899667,
+            0.15769074017735638,
+            -1.4490972363874342,
+            -1.4463203034553993e-06,
+            1.2914054651848448,
+            -4.1670020510345225
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.55448025558556,
+            0.15823064309483137,
+            -1.4426836692769198,
+            -1.4028372859709954e-06,
+            1.284452014165822,
+            -4.167002039709194
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "cam": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.55448031184202,
+            0.1588315170895844,
+            -1.4363452389302178,
+            -1.3845228968042274e-06,
+            1.2775127193134714,
+            -4.167002084891656
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480363351521,
+            0.1594931223916322,
+            -1.4300813980643945,
+            -1.3127564286722395e-06,
+            1.2705873019647236,
+            -4.167002016573331
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480418917121,
+            0.16021501524529433,
+            -1.4238913752446787,
+            -1.2829620745009799e-06,
+            1.2636753989549796,
+            -4.1670020465091655
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480472686825,
+            0.16099696580922776,
+            -1.4177746598585899,
+            -1.2297960772701422e-06,
+            1.2567767541988846,
+            -4.167002024745089
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554480527798853,
+            0.16183858148674113,
+            -1.4117305650588698,
+            -1.2199316221841379e-06,
+            1.2498910460230628,
+            -4.167002105826808
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.5544805808208295,
+            0.16273974784099257,
+            -1.4057587369688263,
+            -1.124424366345732e-06,
+            1.243018090285097,
+            -4.167001990471247
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480633735614,
+            0.16369983128984358,
+            -1.3998582352311022,
+            -1.1877570521098444e-06,
+            1.2361574672145343,
+            -4.167002243662577
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480687199342,
+            0.1647191582132561,
+            -1.3940292358167747,
+            -1.0064617158740945e-06,
+            1.2293092250690423,
+            -4.167001913690102
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554480740777074,
+            0.16579668410051546,
+            -1.3882703485302297,
+            -1.094669804226196e-06,
+            1.222472759196839,
+            -4.167002249310172
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554480796987564,
+            0.16693299089510824,
+            -1.3825820660707833,
+            -8.93630313609876e-07,
+            1.2156482613550774,
+            -4.167001902181401
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554480796020692,
+            0.16812606588502182,
+            -1.376961888961202,
+            -1.4018008443827564e-06,
+            1.2088345511012042,
+            -4.167003114124437
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481231686574,
+            0.16937992202626803,
+            -1.3714132286469112,
+            -1.179291297522416e-06,
+            1.2020353329692204,
+            -4.16700208260888
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.5544812080925805,
+            0.1706890030159114,
+            -1.3659327210271748,
+            -1.1228872859304219e-06,
+            1.1952431119417597,
+            -4.167000940942641
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554480971543113,
+            0.1720560921480869,
+            -1.360520104496766,
+            -8.093687974045966e-07,
+            1.188463883041244,
+            -4.167001833565009
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481080065634,
+            0.17347961491867422,
+            -1.3551755707632243,
+            -1.798831465881435e-06,
+            1.1816947027477547,
+            -4.167000580529781
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481397959355,
+            0.17496201231847977,
+            -1.3498987438923817,
+            -7.468096249043834e-07,
+            1.1749386718031027,
+            -4.167002087648466
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481536389981,
+            0.17650022690747827,
+            -1.3446905624701242,
+            8.171056977104201e-07,
+            1.1681901267437111,
+            -4.166999931222422
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481334302137,
+            0.17809300628957475,
+            -1.3395454304229033,
+            1.070434084956243e-06,
+            1.1614516290055372,
+            -4.167004146163855
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481846065951,
+            0.1797448769909394,
+            -1.3344706842712413,
+            -3.1988220305710733e-06,
+            1.1547221343196892,
+            -4.167001416343561
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481703484218,
+            0.18145133059884874,
+            -1.3294614270851635,
+            -4.7629913717057607e-07,
+            1.1480096873767986,
+            -4.167001307651104
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481930130112,
+            0.18321502910247514,
+            -1.3245190325961498,
+            -2.998742254643668e-06,
+            1.1413043090266597,
+            -4.167000084905852
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481517633152,
+            0.18503165955824652,
+            -1.319640572269599,
+            -8.111712847171705e-07,
+            1.1346077028666173,
+            -4.167000094178918
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.5544814980256065,
+            0.18690682806586473,
+            -1.314828279572008,
+            -1.3251263722437902e-06,
+            1.127920851571742,
+            -4.167000995657965
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481749298236,
+            0.18883657573943,
+            -1.3100806256402597,
+            1.166533468911507e-07,
+            1.1212458273427677,
+            -4.167002175362436
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481704496953,
+            0.19081958451584163,
+            -1.3053991481867635,
+            -2.4510336971536218e-06,
+            1.1145785546032274,
+            -4.1670013130517
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481770156,
+            0.19286010884668014,
+            -1.3007813124598782,
+            -6.048796986375183e-07,
+            1.1079200339269595,
+            -4.167000478536111
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481819777232,
+            0.19495466224885574,
+            -1.296228735590522,
+            -2.2631153629950698e-06,
+            1.10127436652515,
+            -4.167000735105044
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554481935790866,
+            0.19710376491082146,
+            -1.2917396968622983,
+            4.905721993132561e-07,
+            1.0946375780959854,
+            -4.167002214805453
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481719852546,
+            0.1993061762286086,
+            -1.2873158367523498,
+            -2.2412418675455055e-06,
+            1.0880086420861717,
+            -4.167000558632472
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554481861309937,
+            0.20156417284508574,
+            -1.282954764864133,
+            -9.957064693485364e-08,
+            1.081390187292023,
+            -4.167001675736388
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554482359658787,
+            0.20387582021802897,
+            -1.2786581193601496,
+            5.0404583377135865e-06,
+            1.074783417977927,
+            -4.167004355335108
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.5544819962339655,
+            0.20624137510723342,
+            -1.2744245062470307,
+            -3.7761301151798465e-08,
+            1.0681827523351903,
+            -4.167001699177886
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.5544820774512145,
+            0.20866078550427752,
+            -1.2702548614614046,
+            2.2042003500263298e-07,
+            1.0615946060800947,
+            -4.1670018185918245
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554480829505944,
+            0.21113400955561892,
+            -1.2661474895420664,
+            -8.009689925294775e-07,
+            1.055014014292341,
+            -4.16700137285803
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554482222295166,
+            0.21365956750369006,
+            -1.2621036057653159,
+            4.509934980823669e-08,
+            1.048442974164156,
+            -4.167001639114348
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554482984506879,
+            0.21623939000292186,
+            -1.2581230552935054,
+            8.302501626950403e-07,
+            1.0418838555151537,
+            -4.167002342861614
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554483247169157,
+            0.2188719499237263,
+            -1.2542059655104079,
+            -5.741555147984787e-06,
+            1.035335965996626,
+            -4.166995550447846
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554482494251564,
+            0.22155747942211385,
+            -1.2503506273552525,
+            9.307662839604179e-07,
+            1.0287933643518612,
+            -4.167002364573169
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554482085430299,
+            0.22429454685308234,
+            -1.2465570929020193,
+            6.084445623496713e-07,
+            1.0222611187190307,
+            -4.167001581993862
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 102,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 292.27658823974616,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778163,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 263.8620458128085,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778163,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          },
+          "table": {
+            "clearance_mm": 146.01214981815937,
+            "link": "gripper:claws",
+            "segment": 50,
+            "fraction": 1.0,
+            "joints_degrees": [
+              318.24838087618014,
+              12.851130902480918,
+              -71.42246034538297,
+              3.486130549032064e-05,
+              58.57124766292245,
+              -238.75160387258555
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 358.43431710445617,
+            "link": "link3",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778163,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 0.41785254760868895
+      }
+    },
+    {
+      "name": "above-place-pose",
+      "plan": [
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554482085430299,
+            0.22429454685308234,
+            -1.2465570929020193,
+            6.084445623496713e-07,
+            1.0222611187190307,
+            -4.167001581993862
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.554479598999023,
+            0.15588828921318054,
+            -1.5248268842697146,
+            -1.8326627468923107e-06,
+            1.3689373731613161,
+            -4.167002201080322
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 41,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 292.27658823974616,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 1.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778161,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 260.35935294002996,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.5,
+            "joints_degrees": [
+              318.24830964517105,
+              10.89143597495546,
+              -79.39430265106043,
+              -3.507126758873049e-05,
+              68.50279078139566,
+              -238.7516216081062
+            ]
+          },
+          "table": {
+            "clearance_mm": 146.01214981815937,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              318.24838087618014,
+              12.851130902480918,
+              -71.42246034538297,
+              3.486130549032064e-05,
+              58.57124766292245,
+              -238.75160387258555
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 358.43431710445617,
+            "link": "link3",
+            "segment": 0,
+            "fraction": 1.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778161,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 19.863086236946423
+      }
+    },
+    {
+      "name": "travel-pose",
+      "plan": [
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.554479598999023,
+            0.15588828921318054,
+            -1.5248268842697148,
+            -1.8326627468923107e-06,
+            1.3689373731613164,
+            -4.167002201080322
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.552498134140919,
+            0.16318649076163452,
+            -1.531164556211777,
+            -3.238933002301118e-06,
+            1.3679773301236793,
+            -4.16898442997755
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.550531604683645,
+            0.1705147420972412,
+            -1.5375806251493924,
+            -2.855973250826148e-06,
+            1.3670651565854934,
+            -4.170949655273208
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.548581755051334,
+            0.17787188815006238,
+            -1.544079288974683,
+            -1.8065319750130257e-06,
+            1.3662063966247542,
+            -4.172899623712959
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.546644845678824,
+            0.18525960359124388,
+            -1.5506571502116837,
+            1.0951495044926182e-07,
+            1.3653957663583307,
+            -4.17483944828962
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.544722560620822,
+            0.19267864156770015,
+            -1.5573160577671912,
+            1.177603205354436e-06,
+            1.3646357501396884,
+            -4.176761698964674
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.542814584529627,
+            0.2001276736149216,
+            -1.5640582871496418,
+            -1.7201933174029e-07,
+            1.3639290564081823,
+            -4.178667975484512
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.540921137810121,
+            0.20760859910541976,
+            -1.5708846234531657,
+            -3.9357261182978883e-07,
+            1.3632745361032357,
+            -4.180561303555447
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.5390416387575145,
+            0.21512160496670615,
+            -1.5777961833361596,
+            4.1199742835591903e-07,
+            1.3626731655782913,
+            -4.182441661303312
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.537176183445411,
+            0.22266722815884388,
+            -1.5847935464779674,
+            -5.825699232926727e-07,
+            1.362125011389952,
+            -4.184306209313984
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.535324505219769,
+            0.2302459749847799,
+            -1.591878312288395,
+            -8.023097915302667e-07,
+            1.36163109593615,
+            -4.186157807913611
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.533486692118849,
+            0.23785776204414744,
+            -1.5990485537929573,
+            -3.312567085328494e-06,
+            1.3611891118589619,
+            -4.187993003192949
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.531662001013821,
+            0.245504719394103,
+            -1.6063121870506256,
+            -2.678665716516696e-06,
+            1.3608060043865746,
+            -4.189818047471359
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.529850966907362,
+            0.25318661551851784,
+            -1.6136667062778283,
+            -2.37606595335585e-06,
+            1.3604783153385038,
+            -4.1916297352964484
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.52805254086725,
+            0.26090532016678153,
+            -1.621114585835042,
+            1.9264053380412136e-06,
+            1.3602061996967134,
+            -4.193431527560756
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.526268377068559,
+            0.2686596955325174,
+            -1.6286574860806429,
+            -1.995989766417489e-06,
+            1.359998615511043,
+            -4.195212925000637
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.524494738563111,
+            0.2764511576318984,
+            -1.6362916164781791,
+            7.111195019753125e-07,
+            1.3598375011970003,
+            -4.196989476292357
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.522736731130772,
+            0.2842801206291129,
+            -1.644025345979484,
+            -2.2295900755647705e-06,
+            1.359743646679134,
+            -4.1987448340408795
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.520990034629559,
+            0.292148766583797,
+            -1.6518570678126223,
+            -1.1014900594261181e-06,
+            1.3597057227951796,
+            -4.200491923825079
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "gripper": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.51925639945848,
+            0.30005699045677997,
+            -1.659789338775145,
+            -1.5576423741969317e-06,
+            1.3597298463374148,
+            -4.202225194807397
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.517535207860758,
+            0.3080059203701136,
+            -1.667823813449488,
+            -1.942466256312911e-06,
+            1.3598156169111058,
+            -4.203946094461992
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.515826244756687,
+            0.31599593149374655,
+            -1.675962425588863,
+            -2.8732529351515394e-07,
+            1.3599642737910989,
+            -4.205656429419438
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.514129622181748,
+            0.3240292417124897,
+            -1.6842072100280685,
+            -3.0981343388058806e-07,
+            1.360175776699976,
+            -4.207353043443625
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.512445097672513,
+            0.3321064190983818,
+            -1.692560205969696,
+            -3.2472366933860675e-07,
+            1.36045161725828,
+            -4.20903756495126
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "gripper": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.510772644294863,
+            0.340229148057823,
+            -1.7010236684750704,
+            -1.9807835677679183e-06,
+            1.3607923426319808,
+            -4.210708616795535
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.509111807855565,
+            0.348397109983196,
+            -1.7095997844915616,
+            -2.316699701414968e-07,
+            1.361200499011917,
+            -4.212370845930055
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.507462977103753,
+            0.35661309153536347,
+            -1.7182911157352805,
+            -5.7456801943313e-07,
+            1.3616760889335342,
+            -4.214019696057686
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.505825753504713,
+            0.36487795065201856,
+            -1.7271000324790504,
+            -8.174740405345643e-07,
+            1.3622203130610087,
+            -4.215656914267856
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.504199980988834,
+            0.3731931457271797,
+            -1.7360292353145594,
+            -9.078547642349102e-07,
+            1.3628343845167372,
+            -4.217282682464502
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.502585615305384,
+            0.3815601718763055,
+            -1.745081571495005,
+            -1.0129493611162806e-06,
+            1.3635197605763283,
+            -4.218897041658202
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.500982545097741,
+            0.3899806251277899,
+            -1.7542600057031055,
+            -1.132911150453967e-06,
+            1.364277808983294,
+            -4.220500102966425
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.499390660230165,
+            0.39845619296097384,
+            -1.7635676653861705,
+            -1.2654136030773943e-06,
+            1.3651099683499068,
+            -4.222091977452161
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4978098514617635,
+            0.40698866040546744,
+            -1.773007852842659,
+            -1.4079667315478664e-06,
+            1.366017754482987,
+            -4.223672774484994
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.496240010727434,
+            0.41557991778030584,
+            -1.7825840582096153,
+            -1.5561923998912765e-06,
+            1.3670027658994979,
+            -4.225242602620653
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.494681030117399,
+            0.42423196865564766,
+            -1.7922999743465127,
+            -1.7029283837819245e-06,
+            1.3680666892780966,
+            -4.226801571067957
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.493132804507483,
+            0.43294693765773495,
+            -1.8021595127164542,
+            -1.8419095510666197e-06,
+            1.3692113110327477,
+            -4.228349785552374
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.49159522746127,
+            0.441727081480997,
+            -1.8121668204738681,
+            -1.9648017374379576e-06,
+            1.3704385192072666,
+            -4.2298873531325825
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.490068195657784,
+            0.4505747977939822,
+            -1.8223263006862254,
+            -2.0656812981968997e-06,
+            1.3717503188206908,
+            -4.231414377657463
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.488551606230077,
+            0.4594926380981118,
+            -1.8326426334562906,
+            -2.1378963949749e-06,
+            1.3731488378704575,
+            -4.232930962315125
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.487045358072569,
+            0.4684833197552892,
+            -1.8431207998523544,
+            -2.178907384767433e-06,
+            1.3746363404923632,
+            -4.234437207890777
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.485549357691814,
+            0.4775497466372705,
+            -1.8537661141014283,
+            -2.21550385085657e-06,
+            1.376215223906591,
+            -4.235933184191193
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.484063521813651,
+            0.48669502768211304,
+            -1.8645842484851263,
+            -2.3693237386150347e-06,
+            1.3778880056715042,
+            -4.237418891871123
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.482587749451504,
+            0.49592245183433487,
+            -1.8755812305823734,
+            -2.7016225067328883e-06,
+            1.3796574528319596,
+            -4.238894439461386
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4811219496752965,
+            0.5052355397071386,
+            -1.886763550896361,
+            -3.0725744417901225e-06,
+            1.3815266269183237,
+            -4.240360043278918
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.479666039921162,
+            0.5146381260202266,
+            -1.8981381278688951,
+            -3.914249338245604e-06,
+            1.3834985382487217,
+            -4.2418154948472155
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.478219914619111,
+            0.5241342738126444,
+            -1.9097124550731133,
+            -4.900032034222311e-06,
+            1.3855767701429909,
+            -4.24326112640345
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.476783097735525,
+            0.5337283583924909,
+            -1.9214949898353957,
+            -2.1451525231922816e-06,
+            1.3877655241108957,
+            -4.2446997227963505
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4753559076564535,
+            0.5434254659681615,
+            -1.9334938981832217,
+            -1.7307327984283445e-06,
+            1.3900671451764839,
+            -4.246127105151417
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.473939408313801,
+            0.553230134641453,
+            -1.945718794028761,
+            -1.5077930755810347e-06,
+            1.3924881672690759,
+            -4.2475435744168815
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.472531688912511,
+            0.5631481588862969,
+            -1.9581795248838758,
+            -2.113489518203186e-06,
+            1.395031955810756,
+            -4.248951660078411
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.471132635779117,
+            0.5731859744613704,
+            -1.970887371785135,
+            -8.33099844701328e-07,
+            1.3977011099292673,
+            -4.250350455516811
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4697432724592066,
+            0.5833496827611148,
+            -1.9838544277243206,
+            -1.1634917322644401e-06,
+            1.400504784996139,
+            -4.251740057983764
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.468362967057024,
+            0.5936467794212436,
+            -1.9970939938533463,
+            -1.1803214900643313e-06,
+            1.403447233755018,
+            -4.253120357828103
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.466990127947383,
+            0.6040856614286357,
+            -2.010620375557355,
+            -7.931372787759838e-07,
+            1.4065334769028115,
+            -4.2544916932882915
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.465629353882742,
+            0.6146733918810461,
+            -2.024449414923062,
+            -7.918610518232663e-07,
+            1.4097758206635431,
+            -4.2558540111772505
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.464275014883402,
+            0.6254214527977537,
+            -2.0385982322814167,
+            -3.193919268010754e-06,
+            1.4131772429909828,
+            -4.2572076422250715
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.462930583169069,
+            0.6363393790802178,
+            -2.053087222886345,
+            -2.636947209734967e-06,
+            1.416748157899094,
+            -4.258552212410592
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.461594883536078,
+            0.6474392996800485,
+            -2.0679374530105816,
+            -2.118807073291823e-06,
+            1.4204983180976358,
+            -4.259888027833545
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.460267836793802,
+            0.6587344055863631,
+            -2.0831729956498135,
+            -1.6927189134241935e-06,
+            1.4244385344057309,
+            -4.261215187362046
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.45894957105954,
+            0.6702398780605683,
+            -2.098821305923951,
+            -3.0466974754511004e-06,
+            1.428580841137639,
+            -4.2625330480413295
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.457639513333835,
+            0.6819717267185629,
+            -2.1149121563126134,
+            -2.5008098636987943e-06,
+            1.432939225850639,
+            -4.26384351292171
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4563379093695845,
+            0.6939493664624221,
+            -2.131480627429205,
+            -2.434529646037739e-06,
+            1.4375287735145141,
+            -4.265145847049395
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.455044628337552,
+            0.7061948201363162,
+            -2.148566927872705,
+            -2.9428086075485644e-06,
+            1.4423677932196186,
+            -4.266440767052477
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.453759505426524,
+            0.7187346373889757,
+            -2.16621961046167,
+            -3.902741292482175e-06,
+            1.447479571648793,
+            -4.267728151089134
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.452482314986739,
+            0.731598858364053,
+            -2.1844938783824666,
+            -3.426410896908882e-06,
+            1.4528914731184523,
+            -4.2690047098925055
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.451213422995575,
+            0.7448194088436388,
+            -2.203447937790293,
+            -2.123791170782107e-06,
+            1.4586261569493697,
+            -4.270271543791912
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.449952715299282,
+            0.7584382037853906,
+            -2.223158071064959,
+            -1.463726674871619e-06,
+            1.464717626906694,
+            -4.271531216965044
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.44870060353234,
+            0.7725065239861647,
+            -2.2437188108776067,
+            -1.662998119059778e-07,
+            1.4712122607344034,
+            -4.272782878683568
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.447455654827621,
+            0.7870867081262395,
+            -2.2652424832356037,
+            1.2822959244631979e-06,
+            1.4781575867428223,
+            -4.274026072001642
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.446218785237576,
+            0.8022450996030341,
+            -2.287850764733521,
+            -1.3432117076608567e-07,
+            1.485605608558685,
+            -4.27526483687603
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.444989585991286,
+            0.818088040608407,
+            -2.311738420267713,
+            -7.930585380942301e-07,
+            1.4936504307068073,
+            -4.276493917102981
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4437681104277,
+            0.834737763167987,
+            -2.3371281614096944,
+            -1.2539435446745715e-06,
+            1.5023907192464743,
+            -4.27771590810209
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.442553860175698,
+            0.8523628486966469,
+            -2.364328682930103,
+            1.5935424265172515e-06,
+            1.5119623271988634,
+            -4.278923174782528
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.441347883961493,
+            0.8712031031660112,
+            -2.393775560608499,
+            -3.8237818397795585e-07,
+            1.5225726543234113,
+            -4.280135961424531
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.440149169308258,
+            0.8916093942655196,
+            -2.42611193646713,
+            -6.223522435772627e-07,
+            1.534503105344693,
+            -4.2813344121458625
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.438957484019645,
+            0.914147593855995,
+            -2.4623699030220205,
+            3.5377930003882056e-08,
+            1.5482218752968533,
+            -4.282526515376572
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437774148240496,
+            0.9398377773930926,
+            -2.5044122599371215,
+            1.4023987851581593e-07,
+            1.5645760172422873,
+            -4.283710120038658
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 223,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.94708548390304,
+            "link": "link1",
+            "segment": 67,
+            "fraction": 0.6666666666666666,
+            "joints_degrees": [
+              312.13999487512706,
+              44.81828548122884,
+              -129.37776200122238,
+              4.580400392036764e-05,
+              84.55954521973166,
+              -244.85991221115657
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 103.86726007492675,
+            "link": "gripper:claws",
+            "segment": 75,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.5615086395265,
+              53.84873807157998,
+              -143.49225265521753,
+              8.03515315838364e-06,
+              89.64360251537059,
+              -245.43851053569438
+            ]
+          },
+          "table": {
+            "clearance_mm": 177.99989223480225,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778163,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 358.43431710445617,
+            "link": "link3",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              318.24823841416196,
+              8.931741047430002,
+              -87.36614495673787,
+              -0.00010500384066778163,
+              78.43433389986888,
+              -238.75163934362686
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 2.4088496120179457
+      }
+    },
+    {
+      "name": "grasp-pose",
+      "plan": [
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437774148240496,
+            0.9398377773930926,
+            -2.5044122599371215,
+            1.4023987851581593e-07,
+            1.5645760172422876,
+            -4.283710120038658
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4377732341442195,
+            0.9322374588455248,
+            -2.4837625495978477,
+            5.291589762278412e-06,
+            1.551527539571255,
+            -4.283714701390166
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4377741614259465,
+            0.9256380700064627,
+            -2.464924714621809,
+            -2.1556865378439253e-07,
+            1.5392883195133948,
+            -4.283709875719394
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773401693903,
+            0.9198269707253629,
+            -2.4475103198182153,
+            3.1488762601943427e-06,
+            1.527687988766563,
+            -4.28371323578189
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4377740802186905,
+            0.9146653157170302,
+            -2.431264670931985,
+            -3.014784047204028e-08,
+            1.5166007821452911,
+            -4.283709978438849
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437774521896309,
+            0.9100612737112267,
+            -2.4160216477200773,
+            -2.5209344132281975e-06,
+            1.5059579252325386,
+            -4.283707780524539
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773883397075,
+            0.9059479445016164,
+            -2.401659721895145,
+            4.795748607630343e-07,
+            1.4957133383946073,
+            -4.283710589031228
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773452056855,
+            0.9022611851086415,
+            -2.3880606313522414,
+            2.5653282357768765e-06,
+            1.4858031034230643,
+            -4.283711911754283
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.4377744165000665,
+            0.8989438604481432,
+            -2.3751216798192303,
+            -2.571482752204266e-06,
+            1.4761835684778333,
+            -4.283707836205582
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "ceiling": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "wall-side_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773929843599,
+            0.8959576130708655,
+            -2.362770361240012,
+            1.0303479194392526e-07,
+            1.4668134930368668,
+            -4.283710316331974
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "wall-side": [],
+          "ceiling": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773731218683,
+            0.8932832842686536,
+            -2.350974040572363,
+            2.5607191066771956e-06,
+            1.4576911896747815,
+            -4.283712432732823
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773747889945,
+            0.8909048138446882,
+            -2.3397030652413804,
+            3.5083414892438726e-07,
+            1.4488040400406987,
+            -4.283711078172562
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "table_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773730327345,
+            0.888758073592988,
+            -2.3288393414521797,
+            -1.320313731458802e-08,
+            1.4400812409522263,
+            -4.283710276197016
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "table_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773876532924,
+            0.8868611227155379,
+            -2.318417599567307,
+            -1.932828771859928e-06,
+            1.4315565172225297,
+            -4.283708403412087
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "gripper": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "cam": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773627459919,
+            0.8851874612349734,
+            -2.308388402914177,
+            6.090419674813467e-07,
+            1.4231997857888987,
+            -4.283708390757014
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773659653729,
+            0.883720305555754,
+            -2.29872194874264,
+            -2.088368982216713e-08,
+            1.415001561566763,
+            -4.283710380123882
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773803218453,
+            0.8824465985328964,
+            -2.2893942802233154,
+            -3.0723767157278943e-06,
+            1.4069470897992482,
+            -4.283707286763701
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "table_origin": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.43777438104421,
+            0.8813560141977413,
+            -2.280384548601376,
+            -1.2524297408350796e-06,
+            1.3990238573848182,
+            -4.2837098174011645
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "cam": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773446709207,
+            0.880436289413446,
+            -2.2716759679158542,
+            3.6517142329984173e-07,
+            1.3912388390317114,
+            -4.283710167559089
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "ceiling": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4377740066282545,
+            0.8796904460241664,
+            -2.263268407380891,
+            -1.4647492844943659e-06,
+            1.383578727950927,
+            -4.283709577570313
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "ceiling": [],
+          "wall-front": [],
+          "cam_origin": [],
+          "wall-front_origin": [],
+          "gripper": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.437773835114434,
+            0.8790916529572149,
+            -2.255116389474911,
+            -1.6846726019198178e-06,
+            1.3760243956818554,
+            -4.28370957538599
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "gripper": [],
+          "arm_origin": [],
+          "wall-side_origin": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 59,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.9500521648023,
+            "link": "link1",
+            "segment": 4,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.5615300484276,
+              52.142670081953305,
+              -138.4278436266034,
+              -0.00014443890230726438,
+              86.28503324010245,
+              -245.43837649140923
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 103.86140289958811,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.3333333333333333,
+            "joints_degrees": [
+              311.5614911815736,
+              53.703582679669765,
+              -143.09787223834817,
+              0.00010641868886998495,
+              89.39439494883031,
+              -245.438598033063
+            ]
+          },
+          "table": {
+            "clearance_mm": 143.01130157683988,
+            "link": "gripper:claws",
+            "segment": 19,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.56149069872464,
+              50.36824151962767,
+              -129.20865142769279,
+              -9.65246299513286e-05,
+              78.84039037960993,
+              -245.4384793293952
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 486.0088178757147,
+            "link": "link3",
+            "segment": 7,
+            "fraction": 0.5,
+            "joints_degrees": [
+              311.56149638040495,
+              51.600723574036465,
+              -136.45512174074724,
+              -1.763139081166834e-07,
+              84.85466763696117,
+              -245.4384964375679
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 1.1831412506080596
+      }
+    },
+    {
+      "name": "approach-pose",
+      "plan": [
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.437773835114434,
+            0.8790916529572149,
+            -2.255116389474911,
+            -1.684672601919818e-06,
+            1.3760243956818554,
+            -4.28370957538599
+          ],
+          "cam_origin": [],
+          "ceiling_origin": [],
+          "wall-side_origin": [],
+          "wall-side": [],
+          "arm_origin": [],
+          "cam": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4377718429089965,
+            0.939828543620899,
+            -2.504393328340204,
+            1.1294244158503273e-05,
+            1.5645573567382811,
+            -4.283715849527848
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "wall-side": [],
+          "wall-front": [],
+          "gripper": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 30,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.9500525678819,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              311.56149069872464,
+              50.36824151962767,
+              -129.20865142769279,
+              -9.65246299513286e-05,
+              78.84039037960993,
+              -245.4384793293952
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 102.62123124279144,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.48275862068965514,
+            "joints_degrees": [
+              311.56143559425954,
+              52.04822582793363,
+              -136.10365940620682,
+              0.00026247261633604733,
+              84.05521801915907,
+              -245.43865287235653
+            ]
+          },
+          "table": {
+            "clearance_mm": 143.01130157683988,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              311.56149069872464,
+              50.36824151962767,
+              -129.20865142769279,
+              -9.65246299513286e-05,
+              78.84039037960993,
+              -245.4384793293952
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 488.94039852030824,
+            "link": "link3",
+            "segment": 0,
+            "fraction": 1.0,
+            "joints_degrees": [
+              311.5613765537612,
+              53.8482090154043,
+              -143.4911679546147,
+              0.0006471125230725215,
+              89.64253334724744,
+              -245.4388388112437
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 14.28251652692191
+      }
+    },
+    {
+      "name": "home-pose",
+      "plan": [
+        {
+          "table": [],
+          "table_origin": [],
+          "arm": [
+            5.4377718429089965,
+            0.939828543620899,
+            -2.504393328340204,
+            1.1294244158503273e-05,
+            1.5645573567382811,
+            -4.283715849527848
+          ],
+          "wall-side_origin": [],
+          "ceiling_origin": [],
+          "cam": [],
+          "cam_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "wall-side": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        },
+        {
+          "table": [],
+          "wall-side": [],
+          "arm": [
+            5.597690582275391,
+            0.8362976908683777,
+            -3.1611993312835693,
+            -0.04864247143268585,
+            2.219315528869629,
+            -4.1733903884887695
+          ],
+          "cam": [],
+          "ceiling_origin": [],
+          "cam_origin": [],
+          "wall-side_origin": [],
+          "arm_origin": [],
+          "gripper": [],
+          "wall-front": [],
+          "table_origin": [],
+          "wall-front_origin": [],
+          "ceiling": [],
+          "gripper_origin": []
+        }
+      ],
+      "sweep": {
+        "samples": 77,
+        "sample_step_degrees": 0.5,
+        "boundaries": {
+          "wall-front": {
+            "clearance_mm": 291.94709032305167,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.06578947368421052,
+            "joints_degrees": [
+              312.16418371367877,
+              53.45795369223918,
+              -145.9669713708984,
+              -0.18275127107572,
+              92.11061754888075,
+              -245.02297148950856
+            ]
+          },
+          "wall-side": {
+            "clearance_mm": 103.8666827333844,
+            "link": "gripper:claws",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              311.5613765537612,
+              53.8482090154043,
+              -143.4911679546147,
+              0.0006471125230725215,
+              89.64253334724744,
+              -245.4388388112437
+            ]
+          },
+          "table": {
+            "clearance_mm": 177.99989223480225,
+            "link": "link1",
+            "segment": 0,
+            "fraction": 0.0,
+            "joints_degrees": [
+              311.5613765537612,
+              53.8482090154043,
+              -143.4911679546147,
+              0.0006471125230725215,
+              89.64253334724744,
+              -245.4388388112437
+            ]
+          },
+          "ceiling": {
+            "clearance_mm": 246.00196930823492,
+            "link": "link5",
+            "segment": 0,
+            "fraction": 1.0,
+            "joints_degrees": [
+              320.7240453845082,
+              47.91632810329445,
+              -181.12337988212667,
+              -2.7870083181785743,
+              127.15741321207395,
+              -239.1176555208695
+            ]
+          }
+        },
+        "model_intersection": false,
+        "max_joint_change_degrees": 37.632211927511975
+      }
+    }
+  ],
+  "poses": {
+    "home-pose": {
+      "arm": "arm",
+      "joints": [
+        5.597690582275391,
+        0.8362976908683777,
+        -3.1611993312835693,
+        -0.04864247143268585,
+        2.219315528869629,
+        -4.1733903884887695
+      ],
+      "motion": "builtin",
+      "point": {
+        "X": 405.93190883239447,
+        "Y": -339.70453625329037,
+        "Z": 620.6030010584445
+      },
+      "orientation": {
+        "th": 102.38061505832859,
+        "x": 0.05655139488079647,
+        "y": -0.09630713728630041,
+        "z": -0.9937438679281269
+      },
+      "constraints": {
+        "linear_constraints": [],
+        "pseudolinear_constraints": [],
+        "orientation_constraints": [],
+        "collision_specifications": []
+      }
+    },
+    "approach-pose": {
+      "arm": "arm",
+      "joints": [
+        5.4377718429089965,
+        0.939828543620899,
+        -2.504393328340204,
+        1.1294244158503273e-05,
+        1.5645573567382811,
+        -4.283715849527848
+      ],
+      "motion": "builtin",
+      "point": {
+        "X": 451.3,
+        "Y": -509,
+        "Z": 370
+      },
+      "orientation": {
+        "th": 163,
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "constraints": {
+        "linear_constraints": null,
+        "pseudolinear_constraints": null,
+        "orientation_constraints": null,
+        "collision_specifications": null
+      }
+    },
+    "grasp-pose": {
+      "arm": "arm",
+      "motion": "builtin",
+      "point": {
+        "X": 451.3,
+        "Y": -509,
+        "Z": 320.011567
+      },
+      "orientation": {
+        "th": 163,
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "constraints": {
+        "linear_constraints": [
+          {
+            "LineToleranceMm": 2,
+            "OrientationToleranceDegs": 2
+          }
+        ],
+        "pseudolinear_constraints": null,
+        "orientation_constraints": null,
+        "collision_specifications": null
+      }
+    },
+    "travel-pose": {
+      "arm": "arm",
+      "motion": "builtin",
+      "point": {
+        "X": 451.3,
+        "Y": -509,
+        "Z": 370
+      },
+      "orientation": {
+        "th": 163,
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "constraints": {
+        "linear_constraints": [
+          {
+            "LineToleranceMm": 2,
+            "OrientationToleranceDegs": 2
+          }
+        ],
+        "pseudolinear_constraints": null,
+        "orientation_constraints": null,
+        "collision_specifications": null
+      }
+    },
+    "above-place-pose": {
+      "arm": "arm",
+      "joints": [
+        5.554479598999023,
+        0.15588828921318054,
+        -1.5248268842697146,
+        -1.8326627468923107e-06,
+        1.3689373731613161,
+        -4.167002201080322
+      ],
+      "motion": "builtin",
+      "point": {
+        "X": 391.00273237680574,
+        "Y": -349.0041750977227,
+        "Z": 450.0026694457182
+      },
+      "orientation": {
+        "th": 163.00010118967802,
+        "x": 2.1717899293491532e-06,
+        "y": 0,
+        "z": -0.9999999999976417
+      },
+      "constraints": {
+        "linear_constraints": null,
+        "pseudolinear_constraints": null,
+        "orientation_constraints": null,
+        "collision_specifications": null
+      }
+    },
+    "place-pose": {
+      "arm": "arm",
+      "motion": "builtin",
+      "point": {
+        "X": 390.99993159369916,
+        "Y": -349.0001181847391,
+        "Z": 323.0120004067579
+      },
+      "orientation": {
+        "th": 163.00000071214328,
+        "x": 3.548229009612265e-07,
+        "y": -6.617444900424222e-24,
+        "z": -0.9999999999999373
+      },
+      "constraints": {
+        "linear_constraints": [
+          {
+            "LineToleranceMm": 2,
+            "OrientationToleranceDegs": 2
+          }
+        ],
+        "pseudolinear_constraints": null,
+        "orientation_constraints": null,
+        "collision_specifications": null
+      }
+    }
+  },
+  "frames": {
+    "table": {
+      "referenceFrame": "table",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "z": -123.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    "wall-side": {
+      "referenceFrame": "wall-side",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "y": -750.0,
+          "z": 300.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    "ceiling": {
+      "referenceFrame": "ceiling",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "z": 1050.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    "arm": {
+      "referenceFrame": "arm",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "oZ": 1.0
+        }
+      }
+    },
+    "gripper": {
+      "referenceFrame": "gripper",
+      "poseInObserverFrame": {
+        "referenceFrame": "arm",
+        "pose": {
+          "z": 150.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    "wall-front": {
+      "referenceFrame": "wall-front",
+      "poseInObserverFrame": {
+        "referenceFrame": "world",
+        "pose": {
+          "x": -400.0,
+          "z": 300.0,
+          "oZ": 1.0
+        }
+      }
+    },
+    "cam": {
+      "referenceFrame": "cam",
+      "poseInObserverFrame": {
+        "referenceFrame": "arm",
+        "pose": {
+          "x": 68.70800575609482,
+          "y": -20.22730535625142,
+          "z": 29.714873870981037,
+          "oX": 0.0019235952692383805,
+          "oY": -0.013890249449288298,
+          "oZ": 0.9999016755418888,
+          "theta": 90.66247906609505
+        }
+      },
+      "physicalObject": {
+        "center": {
+          "x": 32.2,
+          "z": -8.3,
+          "oZ": 1.0
+        },
+        "box": {
+          "dimsMm": {
+            "x": 90.0,
+            "y": 25.0,
+            "z": 25.0
+          }
+        },
+        "label": "box"
+      }
+    }
+  },
+  "home_joints": [
+    320.72399074299483,
+    47.91558019758033,
+    -181.1215767121858,
+    -2.786954743882272,
+    127.15648430634683,
+    -239.1176555208695
+  ]
+}

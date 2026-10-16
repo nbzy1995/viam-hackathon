@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-16T19:58:03.204888+00:00",
+  "execution_attempted": true,
+  "success": false,
+  "stages": [
+    "home-pose",
+    "approach-pose",
+    "grasp-pose",
+    "travel-pose",
+    "above-place-pose",
+    "place-pose",
+    "release-at-B"
+  ],
+  "pending": null,
+  "error": "RuntimeError: Grab failed; no carrying move attempted",
+  "stop_requested": true
+}

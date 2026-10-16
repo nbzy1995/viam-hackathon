@@ -1,0 +1,23 @@
+{
+  "physical_round_trips_verified": 1,
+  "operator_intervention_during_cycle": false,
+  "release_at_B": true,
+  "regrasp_at_B": true,
+  "release_at_A": true,
+  "returned_home": true,
+  "arm_stationary": true,
+  "duration_seconds_approx": 119,
+  "report": "artifacts/diagnosis/roundtrip-20261016T194917Z.json",
+  "final_image": "artifacts/roundtrip-final-color.png",
+  "verification": "Fresh wrist image shows upright carton back at A; telemetry confirms stationary home. Carton orientation changed slightly on release.",
+  "limitations": [
+    "Fixed-pose re-grasp at B failed on the third recorded run; unattended repeatability is not established",
+    "Perception pipeline now returns carton and marker, but perception-guided physical pick is not yet verified"
+  ],
+  "additional_run_reports": [
+    "artifacts/diagnosis/roundtrip-20261016T195414Z.json",
+    "artifacts/diagnosis/roundtrip-20261016T195803Z.json"
+  ],
+  "successful_script_reports": 2,
+  "latest_attempt": "Third run stopped after release at B because Grab returned false; no return carry attempted"
+}
