@@ -1,0 +1,734 @@
+{
+  "scope": {
+    "description": "Frozen final 12-case generalization holdout, authored independently without inspecting production instructions, implementation, or current evaluation results. Text-only scenes test the language layer, with physical feasibility reserved for the executor.",
+    "version": 2,
+    "oracle_tolerance_mm": 0.2,
+    "frozen_before_model_runs": true,
+    "case_count": 12,
+    "output_schema_reference": "config/text-task.schema.json",
+    "scoring": "Assess structured decisions and ordered commands numerically; assess optional prose rubrics by meaning rather than exact wording."
+  },
+  "cases": [
+    {
+      "id": "G2-01",
+      "family": "camera_frame",
+      "provenance": "independent synthetic",
+      "request": "In the calibrated wrist-camera view, shift the maroon trapezoid 1.6 cm toward the right edge.",
+      "scene": {
+        "objects": [
+          {
+            "id": "part-j7T",
+            "label": "maroon trapezoid",
+            "world_mm": [
+              315,
+              -170,
+              23
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.8,
+                -0.6
+              ],
+              "image_down_world_xy_unit": [
+                0.6,
+                0.8
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "part-j7T",
+            "dx_mm": 12.8,
+            "dy_mm": -9.6,
+            "target_id": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2-02",
+      "family": "camera_frame",
+      "provenance": "independent synthetic",
+      "request": "In the calibrated wrist-camera view, shift the maroon trapezoid 1.6 cm toward the right edge.",
+      "scene": {
+        "objects": [
+          {
+            "id": "part-j7T",
+            "label": "maroon trapezoid",
+            "world_mm": [
+              315,
+              -170,
+              23
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -0.8,
+                0.6
+              ],
+              "image_down_world_xy_unit": [
+                -0.6,
+                -0.8
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "part-j7T",
+            "dx_mm": -12.8,
+            "dy_mm": 9.6,
+            "target_id": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2-03",
+      "family": "measured_geometry",
+      "provenance": "independent synthetic",
+      "request": "Bring the olive puck nearer the salmon prism.",
+      "scene": {
+        "objects": [
+          {
+            "id": "sample-h8N",
+            "label": "olive puck",
+            "world_mm": [
+              320,
+              -260,
+              22
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                -1
+              ],
+              "image_down_world_xy_unit": [
+                1,
+                0
+              ]
+            }
+          },
+          {
+            "id": "sample-4Vc",
+            "label": "salmon prism",
+            "world_mm": [
+              260,
+              -180,
+              22
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -0.8,
+                0.6
+              ],
+              "image_down_world_xy_unit": [
+                -0.6,
+                -0.8
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "sample-h8N",
+            "dx_mm": -12,
+            "dy_mm": 16,
+            "target_id": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2-04",
+      "family": "measured_geometry",
+      "provenance": "independent synthetic",
+      "request": "Bring the salmon prism nearer the olive puck.",
+      "scene": {
+        "objects": [
+          {
+            "id": "sample-h8N",
+            "label": "olive puck",
+            "world_mm": [
+              320,
+              -260,
+              22
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                -1
+              ],
+              "image_down_world_xy_unit": [
+                1,
+                0
+              ]
+            }
+          },
+          {
+            "id": "sample-4Vc",
+            "label": "salmon prism",
+            "world_mm": [
+              260,
+              -180,
+              22
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -0.8,
+                0.6
+              ],
+              "image_down_world_xy_unit": [
+                -0.6,
+                -0.8
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "sample-4Vc",
+            "dx_mm": 12,
+            "dy_mm": -16,
+            "target_id": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2-05",
+      "family": "stacking_roles",
+      "provenance": "independent synthetic",
+      "request": "Set the lime cuboid on top of the indigo cylinder.",
+      "scene": {
+        "objects": [
+          {
+            "id": "shape-v5R",
+            "label": "lime cuboid",
+            "world_mm": [
+              280,
+              -230,
+              18
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                1
+              ],
+              "image_down_world_xy_unit": [
+                -1,
+                0
+              ]
+            }
+          },
+          {
+            "id": "shape-M0b",
+            "label": "indigo cylinder",
+            "world_mm": [
+              320,
+              -220,
+              35
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                1
+              ],
+              "image_down_world_xy_unit": [
+                -1,
+                0
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "shape-v5R",
+            "dx_mm": 0,
+            "dy_mm": 0,
+            "target_id": "shape-M0b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2-06",
+      "family": "stacking_roles",
+      "provenance": "independent synthetic",
+      "request": "Set the indigo cylinder on top of the lime cuboid.",
+      "scene": {
+        "objects": [
+          {
+            "id": "shape-v5R",
+            "label": "lime cuboid",
+            "world_mm": [
+              280,
+              -230,
+              18
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                1
+              ],
+              "image_down_world_xy_unit": [
+                -1,
+                0
+              ]
+            }
+          },
+          {
+            "id": "shape-M0b",
+            "label": "indigo cylinder",
+            "world_mm": [
+              320,
+              -220,
+              35
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                1
+              ],
+              "image_down_world_xy_unit": [
+                -1,
+                0
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "shape-M0b",
+            "dx_mm": 0,
+            "dy_mm": 0,
+            "target_id": "shape-v5R"
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2-07",
+      "family": "sequential_correction_restore",
+      "provenance": "independent synthetic",
+      "request": "Slide the tan wedge 1.2 cm right—correction, 1.2 cm left. Next, slide the cyan puck 0.07 m right. Finally, return the wedge to where it was before this sequence.",
+      "scene": {
+        "objects": [
+          {
+            "id": "item-Q0e",
+            "label": "tan wedge",
+            "world_mm": [
+              260,
+              -270,
+              24
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                1
+              ],
+              "image_down_world_xy_unit": [
+                -1,
+                0
+              ]
+            }
+          },
+          {
+            "id": "item-p3Z",
+            "label": "cyan puck",
+            "world_mm": [
+              330,
+              -190,
+              19
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                -1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "item-Q0e",
+            "dx_mm": 0,
+            "dy_mm": -12,
+            "target_id": null
+          },
+          {
+            "action": "translate",
+            "object_id": "item-p3Z",
+            "dx_mm": -70,
+            "dy_mm": 0,
+            "target_id": null
+          },
+          {
+            "action": "restore",
+            "object_id": "item-Q0e",
+            "dx_mm": 0,
+            "dy_mm": 0,
+            "target_id": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G2-08",
+      "family": "missing_evidence",
+      "provenance": "independent synthetic",
+      "request": "Put the rust cone on top of the ivory tile.",
+      "scene": {
+        "objects": [
+          {
+            "id": "thing-f4L",
+            "label": "rust cone",
+            "world_mm": [
+              240,
+              -230,
+              25
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "thing-9Ka",
+            "label": "ivory tile",
+            "world_mm": null,
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "observe",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Request an observation to obtain the missing measured support position; do not invent coordinates or emit a placement command."
+      ]
+    },
+    {
+      "id": "G2-09",
+      "family": "missing_evidence",
+      "provenance": "independent synthetic",
+      "request": "Shift the chartreuse cylinder a little left.",
+      "scene": {
+        "objects": [
+          {
+            "id": "unit-u8W",
+            "label": "magenta wedge",
+            "world_mm": [
+              290,
+              -240,
+              27
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": true,
+        "camera_available": false,
+        "default_view": "wrist camera",
+        "observations": {
+          "last_overview_capture_succeeded": false
+        }
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Explain that the requested target is not grounded in the supplied evidence after the observation attempt.",
+        "Do not claim that the target is physically absent merely because the overview capture failed.",
+        "Do not request a second observation or infer robot disconnection from unavailable camera access."
+      ]
+    },
+    {
+      "id": "G2-10",
+      "family": "ambiguity",
+      "provenance": "independent synthetic",
+      "request": "Shift the small gray cube 9 mm right.",
+      "scene": {
+        "objects": [
+          {
+            "id": "body-B7n",
+            "label": "gray cube",
+            "world_mm": [
+              240,
+              -260,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "body-r2C",
+            "label": "gray cube",
+            "world_mm": [
+              290,
+              -220,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": true,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "The scene contains two gray cubes and supplies no size evidence identifying the small one. Do not select an ID from position, list order, or an invented size."
+      ]
+    },
+    {
+      "id": "G2-11",
+      "family": "status_evidence",
+      "provenance": "independent synthetic",
+      "request": "What can you confirm about motion, whether the closed gripper contains an object, and readiness to start?",
+      "scene": {
+        "objects": [],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera",
+        "observations": {
+          "current_robot_moving": false,
+          "current_gripper_state": "closed",
+          "current_workspace_clearance": "clear"
+        }
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Report that the robot is currently not moving and the gripper is closed.",
+        "A closed gripper does not establish whether it contains an object; holding status is unknown.",
+        "Readiness is not established by the available motion, gripper, workspace-clearance, and camera facts. Do not claim that the robot is ready or safe to start.",
+        "A blanket unknown response fails because explicit current facts are supplied."
+      ]
+    },
+    {
+      "id": "G2-12",
+      "family": "unsupported_operation",
+      "provenance": "independent synthetic",
+      "request": "Sweep the loose beads into a row using the side of the end effector.",
+      "scene": {
+        "objects": [
+          {
+            "id": "bead-Y6m",
+            "label": "red bead",
+            "world_mm": [
+              250,
+              -250,
+              8
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "bead-c0P",
+            "label": "white bead",
+            "world_mm": [
+              265,
+              -235,
+              8
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "bead-3Ds",
+            "label": "blue bead",
+            "world_mm": [
+              280,
+              -260,
+              8
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Recognize side-contact sweeping as an unsupported pushing operation. Do not silently substitute separate pick-and-place translations."
+      ]
+    }
+  ]
+}

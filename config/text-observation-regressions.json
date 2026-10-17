@@ -1,0 +1,1083 @@
+{
+  "scope": "Known failure regressions and adjacent observation states. Recorded geometry only; no images, robot calls, or held-out score.",
+  "cases": [
+    {
+      "id": "explicit-higher-look",
+      "family": "observation-lifecycle",
+      "request": "move higher, and see again",
+      "scene": {
+        "at": "2026-10-16T22:41:28.082103+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              433.0585239195393,
+              -481.8881894746977,
+              147.31434252588159
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.2806595105662158,
+                -0.9598073968920703
+              ],
+              "image_down_world_xy_unit": [
+                -0.9568044755583927,
+                -0.2907321715108754
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                433.0585239195393,
+                -481.8881894746977,
+                147.31434252588159
+              ],
+              "top_z_mm": 147.31434252588159,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 167.31434252588159
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              546.8227830029173,
+              -365.55402562717035,
+              21.888820106393837
+            ],
+            "observed_bounds_world_mm": [
+              [
+                507.95332911926573,
+                -401.2455634989833,
+                12.944561150531172
+              ],
+              [
+                591.8400204007063,
+                -332.22166633554394,
+                31.21751228635594
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.30679273945563823,
+                -0.9517763471621391
+              ],
+              "image_down_world_xy_unit": [
+                -0.9550808817518386,
+                -0.2963452535677437
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                546.8227830029173,
+                -365.55402562717035,
+                21.888820106393837
+              ],
+              "top_z_mm": 21.888820106393837,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 82.16484053864394,
+              "width_mm": 28.64233984282992,
+              "theta_degrees": 212.14300922342338,
+              "surface_residual_mm": 3.614702367888844,
+              "surface_points": 4019
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              542.8037278138881,
+              -290.19045054526055,
+              66.29327132147847
+            ],
+            "observed_bounds_world_mm": [
+              [
+                528.0013535839612,
+                -307.17940079046286,
+                12.943806389367182
+              ],
+              [
+                570.3912280007356,
+                -265.8184116362478,
+                69.05994046879698
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3108914016312626,
+                -0.9504454410389631
+              ],
+              "image_down_world_xy_unit": [
+                -0.954064347945092,
+                -0.2996017689869445
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                542.8037278138881,
+                -290.19045054526055,
+                66.29327132147847
+              ],
+              "top_z_mm": 66.29327132147847,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 28.125222941070206,
+              "width_mm": 23.067136235639225,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 2.714183681669209,
+              "surface_points": 1570
+            }
+          }
+        ],
+        "images": [],
+        "errors": {
+          "brio": "FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'"
+        },
+        "native_counts": {
+          "native_segments": 2,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 466.6869451821356,
+          "y": -302.07516937960435,
+          "z": 590.5198723816399,
+          "oX": 0.05411323178584093,
+          "oY": -0.08256753289472935,
+          "oZ": -0.995115249937097,
+          "theta": -164.15384366996636
+        },
+        "joints_degrees": [
+          320.72420930904826,
+          47.916078801389745,
+          -181.12493716525742,
+          -2.787277470320555,
+          127.15921638201483,
+          -239.1177921246529
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": false,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084,
+        "replay_note": "Recorded native measurements; historical camera images were overwritten and are not replayed."
+      },
+      "history": [],
+      "expected": {
+        "decision": "observe",
+        "commands": []
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "higher-look-completed",
+      "family": "observation-lifecycle",
+      "request": "move higher, and see again",
+      "scene": {
+        "at": "2026-10-16T22:40:17.511122+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              434.74359536341467,
+              -477.97156453526327,
+              142.46775825034354
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3016726234375317,
+                -0.9534115733870222
+              ],
+              "image_down_world_xy_unit": [
+                -0.958923622373612,
+                -0.28366439052843845
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                434.74359536341467,
+                -477.97156453526327,
+                142.46775825034354
+              ],
+              "top_z_mm": 142.46775825034354,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 162.46775825034354
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              550.4988673191962,
+              -351.84915819905575,
+              16.87031650484539
+            ],
+            "observed_bounds_world_mm": [
+              [
+                502.46068600769036,
+                -393.3797700541527,
+                12.944973210312014
+              ],
+              [
+                589.2827925958607,
+                -293.98200442634914,
+                59.52538915506102
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3207907896238515,
+                -0.9471500774916853
+              ],
+              "image_down_world_xy_unit": [
+                -0.9569433780090536,
+                -0.2902746480225612
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                550.4988673191962,
+                -351.84915819905575,
+                16.87031650484539
+              ],
+              "top_z_mm": 16.87031650484539,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 87.80791088066155,
+              "width_mm": 52.398923143214674,
+              "theta_degrees": 205.70269158865483,
+              "surface_residual_mm": 3.509976751453359,
+              "surface_points": 3909
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              547.9844218615893,
+              -285.7215949034826,
+              59.29997576441656
+            ],
+            "observed_bounds_world_mm": [
+              [
+                531.5247831746669,
+                -313.1701743073859,
+                12.954988478242285
+              ],
+              [
+                581.9101266883733,
+                -264.8284395918895,
+                61.144388368401906
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3250404816618264,
+                -0.945700103246821
+              ],
+              "image_down_world_xy_unit": [
+                -0.9563351675183667,
+                -0.29227221449809015
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                547.9844218615893,
+                -285.7215949034826,
+                59.29997576441656
+              ],
+              "top_z_mm": 59.29997576441656,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 25.3591767645583,
+              "width_mm": 20.290715608110474,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 3.7104837740766463,
+              "surface_points": 943
+            }
+          }
+        ],
+        "images": [],
+        "errors": {
+          "brio": "FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'"
+        },
+        "native_counts": {
+          "native_segments": 3,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 310.77119390735254,
+          "y": -162.38508310833762,
+          "z": 670.5085938548732,
+          "oX": 0.05411517490986928,
+          "oY": -0.08257002312597927,
+          "oZ": -0.9951149376456225,
+          "theta": -164.15368816701405
+        },
+        "joints_degrees": [
+          323.8682000255185,
+          43.22374567178015,
+          -210.2823726942599,
+          -7.848236549765968,
+          161.00636907817474,
+          -241.72943789721236
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": true,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084,
+        "replay_note": "Recorded native measurements; historical camera images were overwritten and are not replayed.",
+        "completed_actions": [
+          {
+            "action": "observe",
+            "view": "higher",
+            "camera_available": true,
+            "returned_home": true
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Acknowledge completed higher observation and summarize measured objects; no claim of missing wrist-camera evidence."
+      ]
+    },
+    {
+      "id": "higher-look-paraphrase",
+      "family": "observation-lifecycle",
+      "request": "Take another look at the table from above and tell me what is there.",
+      "scene": {
+        "at": "2026-10-16T22:40:17.511122+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              434.74359536341467,
+              -477.97156453526327,
+              142.46775825034354
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3016726234375317,
+                -0.9534115733870222
+              ],
+              "image_down_world_xy_unit": [
+                -0.958923622373612,
+                -0.28366439052843845
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                434.74359536341467,
+                -477.97156453526327,
+                142.46775825034354
+              ],
+              "top_z_mm": 142.46775825034354,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 162.46775825034354
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              550.4988673191962,
+              -351.84915819905575,
+              16.87031650484539
+            ],
+            "observed_bounds_world_mm": [
+              [
+                502.46068600769036,
+                -393.3797700541527,
+                12.944973210312014
+              ],
+              [
+                589.2827925958607,
+                -293.98200442634914,
+                59.52538915506102
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3207907896238515,
+                -0.9471500774916853
+              ],
+              "image_down_world_xy_unit": [
+                -0.9569433780090536,
+                -0.2902746480225612
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                550.4988673191962,
+                -351.84915819905575,
+                16.87031650484539
+              ],
+              "top_z_mm": 16.87031650484539,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 87.80791088066155,
+              "width_mm": 52.398923143214674,
+              "theta_degrees": 205.70269158865483,
+              "surface_residual_mm": 3.509976751453359,
+              "surface_points": 3909
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              547.9844218615893,
+              -285.7215949034826,
+              59.29997576441656
+            ],
+            "observed_bounds_world_mm": [
+              [
+                531.5247831746669,
+                -313.1701743073859,
+                12.954988478242285
+              ],
+              [
+                581.9101266883733,
+                -264.8284395918895,
+                61.144388368401906
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3250404816618264,
+                -0.945700103246821
+              ],
+              "image_down_world_xy_unit": [
+                -0.9563351675183667,
+                -0.29227221449809015
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                547.9844218615893,
+                -285.7215949034826,
+                59.29997576441656
+              ],
+              "top_z_mm": 59.29997576441656,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 25.3591767645583,
+              "width_mm": 20.290715608110474,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 3.7104837740766463,
+              "surface_points": 943
+            }
+          }
+        ],
+        "images": [],
+        "errors": {
+          "brio": "FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'"
+        },
+        "native_counts": {
+          "native_segments": 3,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 310.77119390735254,
+          "y": -162.38508310833762,
+          "z": 670.5085938548732,
+          "oX": 0.05411517490986928,
+          "oY": -0.08257002312597927,
+          "oZ": -0.9951149376456225,
+          "theta": -164.15368816701405
+        },
+        "joints_degrees": [
+          323.8682000255185,
+          43.22374567178015,
+          -210.2823726942599,
+          -7.848236549765968,
+          161.00636907817474,
+          -241.72943789721236
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": true,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084,
+        "replay_note": "Recorded native measurements; historical camera images were overwritten and are not replayed.",
+        "completed_actions": [
+          {
+            "action": "observe",
+            "view": "higher",
+            "camera_available": true,
+            "returned_home": true
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Report current measured objects; do not propose another inspection."
+      ]
+    },
+    {
+      "id": "observe-then-move",
+      "family": "observation-lifecycle",
+      "request": "Look from higher up, then move the red bin right 5 cm.",
+      "scene": {
+        "at": "2026-10-16T22:40:17.511122+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              434.74359536341467,
+              -477.97156453526327,
+              142.46775825034354
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3016726234375317,
+                -0.9534115733870222
+              ],
+              "image_down_world_xy_unit": [
+                -0.958923622373612,
+                -0.28366439052843845
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                434.74359536341467,
+                -477.97156453526327,
+                142.46775825034354
+              ],
+              "top_z_mm": 142.46775825034354,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 162.46775825034354
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              550.4988673191962,
+              -351.84915819905575,
+              16.87031650484539
+            ],
+            "observed_bounds_world_mm": [
+              [
+                502.46068600769036,
+                -393.3797700541527,
+                12.944973210312014
+              ],
+              [
+                589.2827925958607,
+                -293.98200442634914,
+                59.52538915506102
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3207907896238515,
+                -0.9471500774916853
+              ],
+              "image_down_world_xy_unit": [
+                -0.9569433780090536,
+                -0.2902746480225612
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                550.4988673191962,
+                -351.84915819905575,
+                16.87031650484539
+              ],
+              "top_z_mm": 16.87031650484539,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 87.80791088066155,
+              "width_mm": 52.398923143214674,
+              "theta_degrees": 205.70269158865483,
+              "surface_residual_mm": 3.509976751453359,
+              "surface_points": 3909
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              547.9844218615893,
+              -285.7215949034826,
+              59.29997576441656
+            ],
+            "observed_bounds_world_mm": [
+              [
+                531.5247831746669,
+                -313.1701743073859,
+                12.954988478242285
+              ],
+              [
+                581.9101266883733,
+                -264.8284395918895,
+                61.144388368401906
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3250404816618264,
+                -0.945700103246821
+              ],
+              "image_down_world_xy_unit": [
+                -0.9563351675183667,
+                -0.29227221449809015
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                547.9844218615893,
+                -285.7215949034826,
+                59.29997576441656
+              ],
+              "top_z_mm": 59.29997576441656,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 25.3591767645583,
+              "width_mm": 20.290715608110474,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 3.7104837740766463,
+              "surface_points": 943
+            }
+          }
+        ],
+        "images": [],
+        "errors": {
+          "brio": "FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'"
+        },
+        "native_counts": {
+          "native_segments": 3,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 310.77119390735254,
+          "y": -162.38508310833762,
+          "z": 670.5085938548732,
+          "oX": 0.05411517490986928,
+          "oY": -0.08257002312597927,
+          "oZ": -0.9951149376456225,
+          "theta": -164.15368816701405
+        },
+        "joints_degrees": [
+          323.8682000255185,
+          43.22374567178015,
+          -210.2823726942599,
+          -7.848236549765968,
+          161.00636907817474,
+          -241.72943789721236
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": true,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084,
+        "replay_note": "Recorded native measurements; historical camera images were overwritten and are not replayed.",
+        "completed_actions": [
+          {
+            "action": "observe",
+            "view": "higher",
+            "camera_available": true,
+            "returned_home": true
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "red-1",
+            "target_id": null,
+            "dx_mm": 16.039539481192573,
+            "dy_mm": -47.35750387458427
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "missing-after-look",
+      "family": "observation-lifecycle",
+      "request": "Look from above and move the green cube right slightly.",
+      "scene": {
+        "at": "2026-10-16T22:40:17.511122+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              434.74359536341467,
+              -477.97156453526327,
+              142.46775825034354
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3016726234375317,
+                -0.9534115733870222
+              ],
+              "image_down_world_xy_unit": [
+                -0.958923622373612,
+                -0.28366439052843845
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                434.74359536341467,
+                -477.97156453526327,
+                142.46775825034354
+              ],
+              "top_z_mm": 142.46775825034354,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 162.46775825034354
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              550.4988673191962,
+              -351.84915819905575,
+              16.87031650484539
+            ],
+            "observed_bounds_world_mm": [
+              [
+                502.46068600769036,
+                -393.3797700541527,
+                12.944973210312014
+              ],
+              [
+                589.2827925958607,
+                -293.98200442634914,
+                59.52538915506102
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3207907896238515,
+                -0.9471500774916853
+              ],
+              "image_down_world_xy_unit": [
+                -0.9569433780090536,
+                -0.2902746480225612
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                550.4988673191962,
+                -351.84915819905575,
+                16.87031650484539
+              ],
+              "top_z_mm": 16.87031650484539,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 87.80791088066155,
+              "width_mm": 52.398923143214674,
+              "theta_degrees": 205.70269158865483,
+              "surface_residual_mm": 3.509976751453359,
+              "surface_points": 3909
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              547.9844218615893,
+              -285.7215949034826,
+              59.29997576441656
+            ],
+            "observed_bounds_world_mm": [
+              [
+                531.5247831746669,
+                -313.1701743073859,
+                12.954988478242285
+              ],
+              [
+                581.9101266883733,
+                -264.8284395918895,
+                61.144388368401906
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.3250404816618264,
+                -0.945700103246821
+              ],
+              "image_down_world_xy_unit": [
+                -0.9563351675183667,
+                -0.29227221449809015
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                547.9844218615893,
+                -285.7215949034826,
+                59.29997576441656
+              ],
+              "top_z_mm": 59.29997576441656,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 25.3591767645583,
+              "width_mm": 20.290715608110474,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 3.7104837740766463,
+              "surface_points": 943
+            }
+          }
+        ],
+        "images": [],
+        "errors": {
+          "brio": "FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'"
+        },
+        "native_counts": {
+          "native_segments": 3,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 310.77119390735254,
+          "y": -162.38508310833762,
+          "z": 670.5085938548732,
+          "oX": 0.05411517490986928,
+          "oY": -0.08257002312597927,
+          "oZ": -0.9951149376456225,
+          "theta": -164.15368816701405
+        },
+        "joints_degrees": [
+          323.8682000255185,
+          43.22374567178015,
+          -210.2823726942599,
+          -7.848236549765968,
+          161.00636907817474,
+          -241.72943789721236
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": true,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084,
+        "replay_note": "Recorded native measurements; historical camera images were overwritten and are not replayed.",
+        "completed_actions": [
+          {
+            "action": "observe",
+            "view": "higher",
+            "camera_available": true,
+            "returned_home": true
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Identify the missing green cube; do not claim camera failure or move another object."
+      ]
+    },
+    {
+      "id": "failed-look",
+      "family": "observation-lifecycle",
+      "request": "move higher, and see again",
+      "scene": {
+        "at": "2026-10-16T22:40:17.511122+00:00",
+        "objects": [],
+        "images": [],
+        "errors": {
+          "brio": "FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'",
+          "wrist": "RPC unavailable"
+        },
+        "native_counts": {
+          "native_segments": 3,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 310.77119390735254,
+          "y": -162.38508310833762,
+          "z": 670.5085938548732,
+          "oX": 0.05411517490986928,
+          "oY": -0.08257002312597927,
+          "oZ": -0.9951149376456225,
+          "theta": -164.15368816701405
+        },
+        "joints_degrees": [
+          323.8682000255185,
+          43.22374567178015,
+          -210.2823726942599,
+          -7.848236549765968,
+          161.00636907817474,
+          -241.72943789721236
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": true,
+        "camera_available": false,
+        "table_surface_z_mm": 7.940526661468084,
+        "replay_note": "Recorded native measurements; historical camera images were overwritten and are not replayed.",
+        "completed_actions": [
+          {
+            "action": "observe",
+            "view": "higher",
+            "camera_available": false,
+            "returned_home": true
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Explain missing camera evidence rather than claiming the table is empty or inspection succeeded."
+      ]
+    }
+  ]
+}

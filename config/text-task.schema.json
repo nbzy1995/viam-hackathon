@@ -1,0 +1,18 @@
+{
+  "type": "object", "additionalProperties": false,
+  "required": ["decision", "message", "grounding", "commands"],
+  "properties": {
+    "decision": {"type": "string", "enum": ["execute", "observe", "status", "reject"]},
+    "message": {"type": "string"}, "grounding": {"type": "string"},
+    "commands": {"type": "array", "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["action", "object_id", "dx_mm", "dy_mm", "target_id"],
+      "properties": {
+        "action": {"type": "string", "enum": ["translate", "restore", "place_on"]},
+        "object_id": {"type": "string"},
+        "target_id": {"type": ["string", "null"]},
+        "dx_mm": {"type": "number"}, "dy_mm": {"type": "number"}
+      }
+    }}
+  }
+}

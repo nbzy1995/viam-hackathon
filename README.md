@@ -1,5 +1,43 @@
 # Viam carton round trip
 
+[Voice demo](voice-ui/README.md): realtime ElevenLabs speech around the local
+robot harness, with saved readiness and five-degree motion checks.
+
+[Milestone 2: scene-aware text control](docs/milestone-2-text-control.md).
+`uv run python workshop_text.py` opens the persistent preview console;
+`--execute` enables physical execution. Edit
+[`robot_workspace/INSTRUCTIONS.md`](robot_workspace/INSTRUCTIONS.md) to iterate
+behavior without restarting. The program supplies live images, native 3D object
+positions, and persisted verified move history to Codex. Left/right defaults to
+the calibrated wrist view; “slightly” means 20 mm. It can request one checked
+higher observation, translate objects, restore their previous positions, or
+place one observed object on another. There is no 5 cm move cap or carton-only
+allowlist. Native depth supplies grasp/support geometry; Viam previews the path
+and tries alternative grasp angles when needed. This general adapter has preview
+verification; physical results below belong to the earlier carton adapter.
+Restart the console after Python/schema updates; instruction-only edits reload
+on the next request.
+
+[Tabletop end-to-end evaluation and latency results](docs/tabletop-evaluation-results.md)
+cover the production controller with real model calls and native Viam planning,
+plus stateful simulated arm/gripper execution. Camera and contact are synthetic;
+this is software integration evidence, separate from physical transfer results.
+
+The original failed “cartoon 3 cm to the left” request now passes interpretation
+and all native motion previews in 10.36 seconds. Eight known development regressions passed;
+run `uv run python evaluate_text.py`. These do not establish generalization or
+physical transfer reliability. The separate frozen set runs with
+`uv run python evaluate_text.py --heldout`.
+[Generalization audit](docs/text-generalization-check.md): 16/16 first-pass
+held-out command cases; one unsupported status claim found by manual review,
+then corrected and checked with four fresh factual-status cases. Future reruns
+of these now-known cases are regressions.
+A two-command “3 cm right, then put it back” request passed on hardware without
+intervention: 3.34 mm outward error, 2.26 mm return error, 138.97 seconds total.
+The higher-view observation and return also passed on hardware. [MCP comparison](docs/mcp-comparison.md)
+now confirms OAuth and machine discovery. Live MCP reads are blocked by the
+child CLI's approval gate, so no transport-speed comparison is available yet.
+
 One trigger uses native Viam vision and motion to move the carton A → B → A,
 then return home. It re-observes after placement to accommodate a shifted carton.
 If the carton starts at B, it first returns it to A.
@@ -41,7 +79,7 @@ Credentials are loaded from ignored `.env.viam.json`. Reports are saved under
 `artifacts/diagnosis/`. See [checkpoint evidence](docs/checkpoints/phase-5-vision-roundtrip.md).
 
 ```sh
-uv run pytest -q  # ten focused offline tests; never moves hardware
+uv run pytest -q  # focused offline tests; never moves hardware
 ```
 
 The 20 cm expansion has not been verified by physical pickups throughout that

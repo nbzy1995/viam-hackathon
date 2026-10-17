@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "split": "holdout",
+  "execution_model": "stateful_kinematic_sdk_integration",
+  "coordinate_units": "mm",
+  "freeze_protocol": "Do not inspect cases until code, production instructions, evaluator and development results are frozen by SHA256. Report first pass before fixes. Re-runs become regression evidence.",
+  "defaults": {
+    "non_target_tolerance_mm": 2.0,
+    "max_overviews_per_request": 1,
+    "slightly_mm": 20.0,
+    "all_actions_preflight_before_first_transfer": true
+  },
+  "fixtures": {
+    "base": {
+      "table_z_mm": 7.94052666147,
+      "objects": [
+        {
+          "id": "red-1",
+          "label": "red block",
+          "center_xy_mm": [
+            445.0,
+            -345.0
+          ],
+          "bottom_z_mm": 7.94052666147,
+          "size_xyz_mm": [
+            46.0,
+            22.0,
+            18.0
+          ],
+          "yaw_deg": 25.0
+        },
+        {
+          "id": "yellow-1",
+          "label": "yellow cylinder",
+          "center_xy_mm": [
+            505.0,
+            -265.0
+          ],
+          "bottom_z_mm": 7.94052666147,
+          "size_xyz_mm": [
+            62.0,
+            62.0,
+            34.0
+          ],
+          "yaw_deg": 0.0
+        },
+        {
+          "id": "carton-1",
+          "label": "carton",
+          "center_xy_mm": [
+            370.0,
+            -455.0
+          ],
+          "bottom_z_mm": 7.94052666147,
+          "size_xyz_mm": [
+            38.0,
+            38.0,
+            88.0
+          ],
+          "yaw_deg": 15.0
+        }
+      ],
+      "image_right_xy": [
+        0.0,
+        -1.0
+      ],
+      "image_up_xy": [
+        1.0,
+        0.0
+      ],
+      "obstacles": "checked_setup",
+      "verified_history": []
+    },
+    "rotated": {
+      "table_z_mm": 7.94052666147,
+      "objects": [
+        {
+          "id": "red-1",
+          "label": "red block",
+          "center_xy_mm": [
+            445.0,
+            -345.0
+          ],
+          "bottom_z_mm": 7.94052666147,
+          "size_xyz_mm": [
+            46.0,
+            22.0,
+            18.0
+          ],
+          "yaw_deg": 25.0
+        },
+        {
+          "id": "yellow-1",
+          "label": "yellow cylinder",
+          "center_xy_mm": [
+            505.0,
+            -265.0
+          ],
+          "bottom_z_mm": 7.94052666147,
+          "size_xyz_mm": [
+            62.0,
+            62.0,
+            34.0
+          ],
+          "yaw_deg": 0.0
+        },
+        {
+          "id": "carton-1",
+          "label": "carton",
+          "center_xy_mm": [
+            370.0,
+            -455.0
+          ],
+          "bottom_z_mm": 7.94052666147,
+          "size_xyz_mm": [
+            38.0,
+            38.0,
+            88.0
+          ],
+          "yaw_deg": 15.0
+        }
+      ],
+      "image_right_xy": [
+        0.8191520442889918,
+        0.573576436351046
+      ],
+      "image_up_xy": [
+        -0.573576436351046,
+        0.8191520442889918
+      ],
+      "obstacles": "checked_setup",
+      "verified_history": []
+    }
+  },
+  "cases": [
+    {
+      "id": "H01_rotated_shift_restore",
+      "fixture": "rotated",
+      "turns": [
+        {
+          "request": "Nudge the carton 35 mm toward the right of this camera view.",
+          "expect": {
+            "outcome": "completed",
+            "final_positions": [
+              {
+                "object_id": "carton-1",
+                "xy_mm": [
+                  398.6703215501147,
+                  -434.92482472771337
+                ],
+                "tolerance_mm": 5.0,
+                "bottom_z_mm": 7.94052666147,
+                "z_tolerance_mm": 3.0
+              }
+            ],
+            "relations": [],
+            "preserved_ids": [
+              "red-1",
+              "yellow-1"
+            ],
+            "actuator_policy": "run",
+            "history_policy": "verified_success_only",
+            "arm_home": true,
+            "gripper_empty": true
+          }
+        },
+        {
+          "request": "Undo that carton move.",
+          "expect": {
+            "outcome": "completed",
+            "final_positions": [
+              {
+                "object_id": "carton-1",
+                "xy_mm": [
+                  370,
+                  -455
+                ],
+                "tolerance_mm": 5.0,
+                "bottom_z_mm": 7.94052666147,
+                "z_tolerance_mm": 3.0
+              }
+            ],
+            "relations": [],
+            "preserved_ids": [
+              "red-1",
+              "yellow-1"
+            ],
+            "actuator_policy": "run",
+            "history_policy": "verified_success_only",
+            "arm_home": true,
+            "gripper_empty": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "H02_farther_relative",
+      "fixture": "base",
+      "turns": [
+        {
+          "request": "Slide the red block a little farther away from the yellow cylinder.",
+          "expect": {
+            "outcome": "completed",
+            "final_positions": [
+              {
+                "object_id": "red-1",
+                "xy_mm": [
+                  433,
+                  -361
+                ],
+                "tolerance_mm": 5.0,
+                "bottom_z_mm": 7.94052666147,
+                "z_tolerance_mm": 3.0
+              }
+            ],
+            "relations": [
+              {
+                "predicate": "distance_delta",
+                "object_id": "red-1",
+                "reference_id": "yellow-1",
+                "delta_mm": 20,
+                "tolerance_mm": 5
+              }
+            ],
+            "preserved_ids": [
+              "yellow-1",
+              "carton-1"
+            ],
+            "actuator_policy": "run",
+            "history_policy": "verified_success_only",
+            "arm_home": true,
+            "gripper_empty": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "H03_stack_then_restore",
+      "fixture": "base",
+      "turns": [
+        {
+          "request": "Set the red block on the yellow cylinder, then return the red block to its earlier spot on the table.",
+          "expect": {
+            "outcome": "completed",
+            "final_positions": [
+              {
+                "object_id": "red-1",
+                "xy_mm": [
+                  445,
+                  -345
+                ],
+                "tolerance_mm": 5.0,
+                "bottom_z_mm": 7.94052666147,
+                "z_tolerance_mm": 3.0
+              }
+            ],
+            "relations": [
+              {
+                "predicate": "supported_by",
+                "object_id": "red-1",
+                "support_id": "table",
+                "max_contact_gap_mm": 3
+              }
+            ],
+            "preserved_ids": [
+              "yellow-1",
+              "carton-1"
+            ],
+            "actuator_policy": "run",
+            "history_policy": "verified_success_only",
+            "arm_home": true,
+            "gripper_empty": true,
+            "verified_move_count": 2,
+            "milestones": [
+              {
+                "after_object_release": 1,
+                "positions": [
+                  {
+                    "object_id": "red-1",
+                    "xy_mm": [
+                      505.0,
+                      -265.0
+                    ],
+                    "bottom_z_mm": 41.94052666147,
+                    "tolerance_mm": 5.0,
+                    "z_tolerance_mm": 3.0
+                  }
+                ],
+                "relations": [
+                  {
+                    "predicate": "supported_by",
+                    "object_id": "red-1",
+                    "support_id": "yellow-1",
+                    "max_contact_gap_mm": 3
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "H04_other_source_reference",
+      "fixture": "base",
+      "turns": [
+        {
+          "request": "Bring the yellow cylinder 2 centimeters toward the carton.",
+          "expect": {
+            "outcome": "completed",
+            "final_positions": [
+              {
+                "object_id": "yellow-1",
+                "xy_mm": [
+                  493.4158573562161,
+                  -281.3036081653255
+                ],
+                "tolerance_mm": 5.0,
+                "bottom_z_mm": 7.94052666147,
+                "z_tolerance_mm": 3.0
+              }
+            ],
+            "relations": [
+              {
+                "predicate": "distance_delta",
+                "object_id": "yellow-1",
+                "reference_id": "carton-1",
+                "delta_mm": -20,
+                "tolerance_mm": 5
+              }
+            ],
+            "preserved_ids": [
+              "red-1",
+              "carton-1"
+            ],
+            "actuator_policy": "run",
+            "history_policy": "verified_success_only",
+            "arm_home": true,
+            "gripper_empty": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "H05_completed_overview",
+      "fixture": "base",
+      "turns": [
+        {
+          "request": "Get a higher view and tell me which objects are there.",
+          "expect": {
+            "outcome": "status",
+            "final_positions": [],
+            "relations": [],
+            "preserved_ids": [
+              "red-1",
+              "yellow-1",
+              "carton-1"
+            ],
+            "actuator_policy": "overview_only",
+            "history_policy": "unchanged",
+            "arm_home": true,
+            "gripper_empty": true,
+            "observation_count": 1,
+            "visible_claim_ids": [
+              "red-1",
+              "yellow-1",
+              "carton-1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "H06_find_then_act",
+      "fixture": "base",
+      "turns": [
+        {
+          "request": "Shift the yellow cylinder left by 12 millimeters.",
+          "expect": {
+            "outcome": "completed",
+            "final_positions": [
+              {
+                "object_id": "yellow-1",
+                "xy_mm": [
+                  505,
+                  -253
+                ],
+                "tolerance_mm": 5.0,
+                "bottom_z_mm": 7.94052666147,
+                "z_tolerance_mm": 3.0
+              }
+            ],
+            "relations": [],
+            "preserved_ids": [
+              "red-1",
+              "carton-1"
+            ],
+            "actuator_policy": "run",
+            "history_policy": "verified_success_only",
+            "arm_home": true,
+            "gripper_empty": true,
+            "observation_count": 1
+          },
+          "visible_ids_before": [
+            "red-1",
+            "carton-1"
+          ],
+          "visible_ids_after_overview": [
+            "red-1",
+            "yellow-1",
+            "carton-1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "H07_sequence_atomic_preflight",
+      "fixture": "base",
+      "turns": [
+        {
+          "request": "Move the red block right 2 cm, then move the carton right 4 meters.",
+          "expect": {
+            "outcome": "error",
+            "final_positions": [],
+            "relations": [],
+            "preserved_ids": [
+              "red-1",
+              "yellow-1",
+              "carton-1"
+            ],
+            "actuator_policy": "none",
+            "history_policy": "unchanged",
+            "arm_home": true,
+            "gripper_empty": true,
+            "no_success_claim": true,
+            "native_planning_required": true,
+            "failure_category": "unreachable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "H08_scene_changed_before_execution",
+      "fixture": "base",
+      "turns": [
+        {
+          "request": "Move the red block 3 centimeters to the left.",
+          "expect": {
+            "outcome": "error",
+            "final_positions": [],
+            "relations": [],
+            "preserved_ids": [
+              "yellow-1",
+              "carton-1"
+            ],
+            "actuator_policy": "none",
+            "history_policy": "unchanged",
+            "arm_home": true,
+            "gripper_empty": true,
+            "no_success_claim": true
+          },
+          "fault": {
+            "stage": "before_execution_observation",
+            "kind": "offset_source_object",
+            "offset_xy_mm": [
+              25.0,
+              0.0
+            ],
+            "occurrence": 1
+          }
+        }
+      ]
+    }
+  ]
+}

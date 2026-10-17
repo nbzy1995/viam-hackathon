@@ -1,0 +1,14 @@
+{
+  "height_world_mm": 7.940526661468084,
+  "frames_sha256": "25c35bf718093f7661c6b8c3a1971abadd3a76c15e86b6e60cf02d36023f372c",
+  "source": "Two native camera point clouds in the checked home pose; dominant horizontal tabletop depth plane. Static station geometry, not an object target.",
+  "measurement_world_mm": [
+    7.986232233652686,
+    7.894821089283482
+  ],
+  "measurement_spread_mm": 0.09141114436920361,
+  "reports": [
+    "text-task-20261016T220404400927Z.json",
+    "text-task-20261016T220600825704Z.json"
+  ]
+}

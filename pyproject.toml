@@ -8,6 +8,13 @@ dependencies = [
  "viam-sdk==0.84.0",
 ]
 
+[project.optional-dependencies]
+voice-ui = [
+ "fastapi>=0.115,<1",
+ "httpx>=0.27,<1",
+ "uvicorn>=0.30,<1",
+]
+
 [dependency-groups]
 dev = ["pytest>=8,<10"]
 

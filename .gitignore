@@ -7,3 +7,6 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 .arm-control.lock
+robot_workspace/*.json
+robot_workspace/*.jpg
+robot_workspace/*.png

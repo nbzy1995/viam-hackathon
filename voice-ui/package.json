@@ -1,0 +1,13 @@
+{
+  "name": "ringside-chat-client",
+  "private": true,
+  "scripts": {
+    "build:chat": "esbuild app/static/chat.js --bundle --minify --format=esm --outfile=app/static/chat.bundle.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  },
+  "dependencies": {
+    "@elevenlabs/client": "1.28.0"
+  }
+}

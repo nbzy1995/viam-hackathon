@@ -1,0 +1,5 @@
+[
+  {"name":"Check robot","command":"Check robot","description":"Read connection, arm, gripper, and setup status. No motion."},
+  {"name":"Prepare robot","command":"Prepare robot","description":"Return an empty arm to the checked observation pose."},
+  {"name":"Run motion check","command":"Run motion check","description":"Turn the empty arm 5° and return; verify both endpoints."}
+]

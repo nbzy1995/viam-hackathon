@@ -1,0 +1,821 @@
+{
+  "scope": "Fixed recorded-scene inference replay; images kept identical across pairs. Not current workspace state or a generalization score.",
+  "source": "artifacts/diagnosis/general-pick-place-preview/input.json",
+  "source_sha256": "b51c4b6c946669086f562a44db336ac7825d1f9c419d970aaa58ce06ed33cd60",
+  "image_sha256": {
+    "/Users/Yang/Documents/ChatGPT/viam-hackathon/artifacts/diagnosis/general-pick-place-preview/wrist.jpg": "dcd61706dc90840098ac35e93099175efeb5fde3af918a0e54da28198b277449"
+  },
+  "cases": [
+    {
+      "id": "L01",
+      "request": "Move the red object 30 mm to the right.",
+      "scene": {
+        "at": "2026-10-16T22:12:42.304057+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              431.8277874566737,
+              -482.06204915632884,
+              146.67718081990853
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.28043616647026337,
+                -0.9598726772522815
+              ],
+              "image_down_world_xy_unit": [
+                -0.9567970543356538,
+                -0.29075659375948104
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                431.8277874566737,
+                -482.06204915632884,
+                146.67718081990853
+              ],
+              "top_z_mm": 146.67718081990853,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 166.67718081990853
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              544.7252847080416,
+              -364.92305997307324,
+              22.19118629523416
+            ],
+            "observed_bounds_world_mm": [
+              [
+                506.32992902152324,
+                -402.69114408607294,
+                12.944779049930162
+              ],
+              [
+                593.7369850961945,
+                -328.6226479671127,
+                29.33504845293578
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.30651113288141824,
+                -0.95186707339825
+              ],
+              "image_down_world_xy_unit": [
+                -0.9550644697821747,
+                -0.29639814196396996
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                544.7252847080416,
+                -364.92305997307324,
+                22.19118629523416
+              ],
+              "top_z_mm": 22.19118629523416,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 82.24924226282337,
+              "width_mm": 28.894472876745542,
+              "theta_degrees": 213.30704241939813,
+              "surface_residual_mm": 4.653807936622377,
+              "surface_points": 4079
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              543.3773355976036,
+              -290.7578695543939,
+              66.57408263685966
+            ],
+            "observed_bounds_world_mm": [
+              [
+                529.1539240217287,
+                -308.3320170330598,
+                12.940695737338615
+              ],
+              [
+                573.3861108237916,
+                -265.64332728886166,
+                69.70026171728682
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.31095956435743055,
+                -0.9504231422554046
+              ],
+              "image_down_world_xy_unit": [
+                -0.9540754803046663,
+                -0.2995663163331623
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                543.3773355976036,
+                -290.7578695543939,
+                66.57408263685966
+              ],
+              "top_z_mm": 66.57408263685966,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.02668507331782,
+              "width_mm": 21.197776265217144,
+              "theta_degrees": 215.24686008314114,
+              "surface_residual_mm": 3.4498949168605573,
+              "surface_points": 1623
+            }
+          }
+        ],
+        "images": [
+          {
+            "view": "calibrated wrist camera; default left/right view",
+            "path": "/Users/Yang/Documents/ChatGPT/viam-hackathon/artifacts/diagnosis/general-pick-place-preview/wrist.jpg",
+            "captured_at": "2026-10-16T22:12:41.324Z"
+          }
+        ],
+        "errors": {
+          "brio": "RuntimeError: [AVFoundation indev @ 0x7faaa6b08dc0] Video device not found\n[in#0 @ 0x7faaa5f07340] Error opening input: Input/output error\nError opening input file Brio 101:none.\nError opening input files: Input/output error\n"
+        },
+        "native_counts": {
+          "native_segments": 2,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 466.6988564590563,
+          "y": -302.09113008633767,
+          "z": 590.5007796738802,
+          "oX": 0.05411082023148352,
+          "oY": -0.08256115223431225,
+          "oZ": -0.9951159104725534,
+          "theta": -164.1529196879745
+        },
+        "joints_degrees": [
+          320.7235809316446,
+          47.91812785814075,
+          -181.12411754255703,
+          -2.786856559912953,
+          127.15667555164359,
+          -239.11798336994968
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": false,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "red-1",
+            "target_id": null,
+            "dx_mm": 9.195333986442547,
+            "dy_mm": -28.556012201947503
+          }
+        ]
+      }
+    },
+    {
+      "id": "L02",
+      "request": "Place the red object on the yellow object.",
+      "scene": {
+        "at": "2026-10-16T22:12:42.304057+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              431.8277874566737,
+              -482.06204915632884,
+              146.67718081990853
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.28043616647026337,
+                -0.9598726772522815
+              ],
+              "image_down_world_xy_unit": [
+                -0.9567970543356538,
+                -0.29075659375948104
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                431.8277874566737,
+                -482.06204915632884,
+                146.67718081990853
+              ],
+              "top_z_mm": 146.67718081990853,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 166.67718081990853
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              544.7252847080416,
+              -364.92305997307324,
+              22.19118629523416
+            ],
+            "observed_bounds_world_mm": [
+              [
+                506.32992902152324,
+                -402.69114408607294,
+                12.944779049930162
+              ],
+              [
+                593.7369850961945,
+                -328.6226479671127,
+                29.33504845293578
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.30651113288141824,
+                -0.95186707339825
+              ],
+              "image_down_world_xy_unit": [
+                -0.9550644697821747,
+                -0.29639814196396996
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                544.7252847080416,
+                -364.92305997307324,
+                22.19118629523416
+              ],
+              "top_z_mm": 22.19118629523416,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 82.24924226282337,
+              "width_mm": 28.894472876745542,
+              "theta_degrees": 213.30704241939813,
+              "surface_residual_mm": 4.653807936622377,
+              "surface_points": 4079
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              543.3773355976036,
+              -290.7578695543939,
+              66.57408263685966
+            ],
+            "observed_bounds_world_mm": [
+              [
+                529.1539240217287,
+                -308.3320170330598,
+                12.940695737338615
+              ],
+              [
+                573.3861108237916,
+                -265.64332728886166,
+                69.70026171728682
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.31095956435743055,
+                -0.9504231422554046
+              ],
+              "image_down_world_xy_unit": [
+                -0.9540754803046663,
+                -0.2995663163331623
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                543.3773355976036,
+                -290.7578695543939,
+                66.57408263685966
+              ],
+              "top_z_mm": 66.57408263685966,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.02668507331782,
+              "width_mm": 21.197776265217144,
+              "theta_degrees": 215.24686008314114,
+              "surface_residual_mm": 3.4498949168605573,
+              "surface_points": 1623
+            }
+          }
+        ],
+        "images": [
+          {
+            "view": "calibrated wrist camera; default left/right view",
+            "path": "/Users/Yang/Documents/ChatGPT/viam-hackathon/artifacts/diagnosis/general-pick-place-preview/wrist.jpg",
+            "captured_at": "2026-10-16T22:12:41.324Z"
+          }
+        ],
+        "errors": {
+          "brio": "RuntimeError: [AVFoundation indev @ 0x7faaa6b08dc0] Video device not found\n[in#0 @ 0x7faaa5f07340] Error opening input: Input/output error\nError opening input file Brio 101:none.\nError opening input files: Input/output error\n"
+        },
+        "native_counts": {
+          "native_segments": 2,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 466.6988564590563,
+          "y": -302.09113008633767,
+          "z": 590.5007796738802,
+          "oX": 0.05411082023148352,
+          "oY": -0.08256115223431225,
+          "oZ": -0.9951159104725534,
+          "theta": -164.1529196879745
+        },
+        "joints_degrees": [
+          320.7235809316446,
+          47.91812785814075,
+          -181.12411754255703,
+          -2.786856559912953,
+          127.15667555164359,
+          -239.11798336994968
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": false,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "red-1",
+            "target_id": "yellow-1",
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "L03",
+      "request": "Place the red object on the yellow object, then return the red object to its starting position.",
+      "scene": {
+        "at": "2026-10-16T22:12:42.304057+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              431.8277874566737,
+              -482.06204915632884,
+              146.67718081990853
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.28043616647026337,
+                -0.9598726772522815
+              ],
+              "image_down_world_xy_unit": [
+                -0.9567970543356538,
+                -0.29075659375948104
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                431.8277874566737,
+                -482.06204915632884,
+                146.67718081990853
+              ],
+              "top_z_mm": 146.67718081990853,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 166.67718081990853
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              544.7252847080416,
+              -364.92305997307324,
+              22.19118629523416
+            ],
+            "observed_bounds_world_mm": [
+              [
+                506.32992902152324,
+                -402.69114408607294,
+                12.944779049930162
+              ],
+              [
+                593.7369850961945,
+                -328.6226479671127,
+                29.33504845293578
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.30651113288141824,
+                -0.95186707339825
+              ],
+              "image_down_world_xy_unit": [
+                -0.9550644697821747,
+                -0.29639814196396996
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                544.7252847080416,
+                -364.92305997307324,
+                22.19118629523416
+              ],
+              "top_z_mm": 22.19118629523416,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 82.24924226282337,
+              "width_mm": 28.894472876745542,
+              "theta_degrees": 213.30704241939813,
+              "surface_residual_mm": 4.653807936622377,
+              "surface_points": 4079
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              543.3773355976036,
+              -290.7578695543939,
+              66.57408263685966
+            ],
+            "observed_bounds_world_mm": [
+              [
+                529.1539240217287,
+                -308.3320170330598,
+                12.940695737338615
+              ],
+              [
+                573.3861108237916,
+                -265.64332728886166,
+                69.70026171728682
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.31095956435743055,
+                -0.9504231422554046
+              ],
+              "image_down_world_xy_unit": [
+                -0.9540754803046663,
+                -0.2995663163331623
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                543.3773355976036,
+                -290.7578695543939,
+                66.57408263685966
+              ],
+              "top_z_mm": 66.57408263685966,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.02668507331782,
+              "width_mm": 21.197776265217144,
+              "theta_degrees": 215.24686008314114,
+              "surface_residual_mm": 3.4498949168605573,
+              "surface_points": 1623
+            }
+          }
+        ],
+        "images": [
+          {
+            "view": "calibrated wrist camera; default left/right view",
+            "path": "/Users/Yang/Documents/ChatGPT/viam-hackathon/artifacts/diagnosis/general-pick-place-preview/wrist.jpg",
+            "captured_at": "2026-10-16T22:12:41.324Z"
+          }
+        ],
+        "errors": {
+          "brio": "RuntimeError: [AVFoundation indev @ 0x7faaa6b08dc0] Video device not found\n[in#0 @ 0x7faaa5f07340] Error opening input: Input/output error\nError opening input file Brio 101:none.\nError opening input files: Input/output error\n"
+        },
+        "native_counts": {
+          "native_segments": 2,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 466.6988564590563,
+          "y": -302.09113008633767,
+          "z": 590.5007796738802,
+          "oX": 0.05411082023148352,
+          "oY": -0.08256115223431225,
+          "oZ": -0.9951159104725534,
+          "theta": -164.1529196879745
+        },
+        "joints_degrees": [
+          320.7235809316446,
+          47.91812785814075,
+          -181.12411754255703,
+          -2.786856559912953,
+          127.15667555164359,
+          -239.11798336994968
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": false,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "red-1",
+            "target_id": "yellow-1",
+            "dx_mm": 0,
+            "dy_mm": 0
+          },
+          {
+            "action": "restore",
+            "object_id": "red-1",
+            "target_id": null,
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "L04",
+      "request": "Describe the visible objects without moving anything.",
+      "scene": {
+        "at": "2026-10-16T22:12:42.304057+00:00",
+        "objects": [
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              431.8277874566737,
+              -482.06204915632884,
+              146.67718081990853
+            ],
+            "station": "A",
+            "movable": true,
+            "source": "native carton-detector and vision-segment",
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.28043616647026337,
+                -0.9598726772522815
+              ],
+              "image_down_world_xy_unit": [
+                -0.9567970543356538,
+                -0.29075659375948104
+              ]
+            },
+            "geometry": {
+              "center_top_world_mm": [
+                431.8277874566737,
+                -482.06204915632884,
+                146.67718081990853
+              ],
+              "top_z_mm": 146.67718081990853,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.0,
+              "width_mm": 30.0,
+              "body_length_mm": 100.0,
+              "body_width_mm": 100.0,
+              "theta_degrees": 163.0,
+              "surface_residual_mm": 0.0,
+              "grasp_tcp_z_mm": 166.67718081990853
+            }
+          },
+          {
+            "id": "red-1",
+            "label": "red",
+            "world_mm": [
+              544.7252847080416,
+              -364.92305997307324,
+              22.19118629523416
+            ],
+            "observed_bounds_world_mm": [
+              [
+                506.32992902152324,
+                -402.69114408607294,
+                12.944779049930162
+              ],
+              [
+                593.7369850961945,
+                -328.6226479671127,
+                29.33504845293578
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.30651113288141824,
+                -0.95186707339825
+              ],
+              "image_down_world_xy_unit": [
+                -0.9550644697821747,
+                -0.29639814196396996
+              ]
+            },
+            "source": "native_red: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                544.7252847080416,
+                -364.92305997307324,
+                22.19118629523416
+              ],
+              "top_z_mm": 22.19118629523416,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 82.24924226282337,
+              "width_mm": 28.894472876745542,
+              "theta_degrees": 213.30704241939813,
+              "surface_residual_mm": 4.653807936622377,
+              "surface_points": 4079
+            }
+          },
+          {
+            "id": "yellow-1",
+            "label": "yellow",
+            "world_mm": [
+              543.3773355976036,
+              -290.7578695543939,
+              66.57408263685966
+            ],
+            "observed_bounds_world_mm": [
+              [
+                529.1539240217287,
+                -308.3320170330598,
+                12.940695737338615
+              ],
+              [
+                573.3861108237916,
+                -265.64332728886166,
+                69.70026171728682
+              ]
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.31095956435743055,
+                -0.9504231422554046
+              ],
+              "image_down_world_xy_unit": [
+                -0.9540754803046663,
+                -0.2995663163331623
+              ]
+            },
+            "source": "native_yellow: native detection and depth segment",
+            "geometry": {
+              "center_top_world_mm": [
+                543.3773355976036,
+                -290.7578695543939,
+                66.57408263685966
+              ],
+              "top_z_mm": 66.57408263685966,
+              "bottom_z_mm": 7.940526661468084,
+              "length_mm": 30.02668507331782,
+              "width_mm": 21.197776265217144,
+              "theta_degrees": 215.24686008314114,
+              "surface_residual_mm": 3.4498949168605573,
+              "surface_points": 1623
+            }
+          }
+        ],
+        "images": [
+          {
+            "view": "calibrated wrist camera; default left/right view",
+            "path": "/Users/Yang/Documents/ChatGPT/viam-hackathon/artifacts/diagnosis/general-pick-place-preview/wrist.jpg",
+            "captured_at": "2026-10-16T22:12:41.324Z"
+          }
+        ],
+        "errors": {
+          "brio": "RuntimeError: [AVFoundation indev @ 0x7faaa6b08dc0] Video device not found\n[in#0 @ 0x7faaa5f07340] Error opening input: Input/output error\nError opening input file Brio 101:none.\nError opening input files: Input/output error\n"
+        },
+        "native_counts": {
+          "native_segments": 2,
+          "native_red": 1,
+          "native_yellow": 1
+        },
+        "camera_world": {
+          "x": 466.6988564590563,
+          "y": -302.09113008633767,
+          "z": 590.5007796738802,
+          "oX": 0.05411082023148352,
+          "oY": -0.08256115223431225,
+          "oZ": -0.9951159104725534,
+          "theta": -164.1529196879745
+        },
+        "joints_degrees": [
+          320.7235809316446,
+          47.91812785814075,
+          -181.12411754255703,
+          -2.786856559912953,
+          127.15667555164359,
+          -239.11798336994968
+        ],
+        "landmarks_world_xy_mm": {
+          "A": [
+            451.3,
+            -509.0
+          ],
+          "B": [
+            391.0,
+            -349.0
+          ]
+        },
+        "robot_base_world_mm": [
+          0,
+          0,
+          0
+        ],
+        "default_view": "wrist camera",
+        "overview_attempted": false,
+        "camera_available": true,
+        "table_surface_z_mm": 7.940526661468084
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      }
+    }
+  ]
+}

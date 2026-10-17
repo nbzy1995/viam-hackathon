@@ -1,0 +1,843 @@
+{
+  "scope": {
+    "description": "Independent frozen held-out language-interpreter evaluation. Minimal text-only measured scenes; camera-relative and geometric translations, composition, ambiguity, evidence availability, and verified restoration. Interpretation and execution grasp validation are separate.",
+    "oracle_tolerance_mm": 0.2,
+    "frozen_before_model_runs": true,
+    "case_count": 16
+  },
+  "cases": [
+    {
+      "id": "H01",
+      "request": "Move the violet cylinder 10 mm to the right in the wrist-camera view.",
+      "scene": {
+        "objects": [
+          {
+            "id": "item-f7Q",
+            "label": "violet cylinder",
+            "world_mm": [
+              250,
+              -250,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                1
+              ],
+              "image_down_world_xy_unit": [
+                -1,
+                0
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "item-f7Q",
+            "dx_mm": 0,
+            "dy_mm": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "H02",
+      "request": "Move the violet cylinder 10 mm to the right in the wrist-camera view.",
+      "scene": {
+        "objects": [
+          {
+            "id": "item-f7Q",
+            "label": "violet cylinder",
+            "world_mm": [
+              250,
+              -250,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                -1
+              ],
+              "image_down_world_xy_unit": [
+                1,
+                0
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "item-f7Q",
+            "dx_mm": 0,
+            "dy_mm": -10
+          }
+        ]
+      }
+    },
+    {
+      "id": "H03",
+      "request": "Bring the teal cube slightly closer to the amber cylinder.",
+      "scene": {
+        "objects": [
+          {
+            "id": "part-R8m",
+            "label": "teal cube",
+            "world_mm": [
+              250,
+              -250,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                0.8
+              ],
+              "image_down_world_xy_unit": [
+                -0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "part-v2K",
+            "label": "amber cylinder",
+            "world_mm": [
+              310,
+              -250,
+              30
+            ],
+            "movable": false,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                0.8
+              ],
+              "image_down_world_xy_unit": [
+                -0.8,
+                0.6
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "part-R8m",
+            "dx_mm": 20,
+            "dy_mm": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "H04",
+      "request": "Bring the teal cube slightly closer to the amber cylinder.",
+      "scene": {
+        "objects": [
+          {
+            "id": "part-R8m",
+            "label": "teal cube",
+            "world_mm": [
+              250,
+              -250,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                0.8
+              ],
+              "image_down_world_xy_unit": [
+                -0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "part-v2K",
+            "label": "amber cylinder",
+            "world_mm": [
+              190,
+              -250,
+              30
+            ],
+            "movable": false,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                0.8
+              ],
+              "image_down_world_xy_unit": [
+                -0.8,
+                0.6
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "part-R8m",
+            "dx_mm": -20,
+            "dy_mm": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "H05",
+      "request": "Shift the navy hexagon 2.5 centimetres left.",
+      "scene": {
+        "objects": [
+          {
+            "id": "shape-9sA",
+            "label": "navy hexagon",
+            "world_mm": [
+              260,
+              -270,
+              25
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                0.8
+              ],
+              "image_down_world_xy_unit": [
+                -0.8,
+                0.6
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "shape-9sA",
+            "dx_mm": -15,
+            "dy_mm": -20
+          }
+        ]
+      }
+    },
+    {
+      "id": "H06",
+      "request": "Don't rotate the coral triangle; just move it 10 mm to the right.",
+      "scene": {
+        "objects": [
+          {
+            "id": "piece-L4t",
+            "label": "coral triangle",
+            "world_mm": [
+              245,
+              -255,
+              20
+            ],
+            "movable": false,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                -1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "piece-L4t",
+            "dx_mm": -10,
+            "dy_mm": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "H07",
+      "request": "First move the blue cube 5 mm right, then the gold cylinder 1 cm left, and finally the pink prism slightly right.",
+      "scene": {
+        "objects": [
+          {
+            "id": "o-z8P",
+            "label": "blue cube",
+            "world_mm": [
+              230,
+              -260,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "o-C3w",
+            "label": "gold cylinder",
+            "world_mm": [
+              280,
+              -270,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0,
+                -1
+              ],
+              "image_down_world_xy_unit": [
+                1,
+                0
+              ]
+            }
+          },
+          {
+            "id": "o-6nF",
+            "label": "pink prism",
+            "world_mm": [
+              250,
+              -220,
+              25
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                0.8
+              ],
+              "image_down_world_xy_unit": [
+                -0.8,
+                0.6
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "o-z8P",
+            "dx_mm": 5,
+            "dy_mm": 0
+          },
+          {
+            "action": "translate",
+            "object_id": "o-C3w",
+            "dx_mm": 0,
+            "dy_mm": 10
+          },
+          {
+            "action": "translate",
+            "object_id": "o-6nF",
+            "dx_mm": 12,
+            "dy_mm": 16
+          }
+        ]
+      }
+    },
+    {
+      "id": "H08",
+      "request": "Move the orange cube 15 mm left.",
+      "scene": {
+        "objects": [
+          {
+            "id": "target-a9V",
+            "label": "orange cube",
+            "world_mm": [
+              230,
+              -260,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "target-M2x",
+            "label": "orange cube",
+            "world_mm": [
+              280,
+              -240,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": true,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    },
+    {
+      "id": "H09",
+      "request": "Move the yellow pyramid 20 mm right.",
+      "scene": {
+        "objects": [
+          {
+            "id": "thing-U5b",
+            "label": "blue sphere",
+            "world_mm": [
+              250,
+              -250,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "observe",
+        "commands": []
+      }
+    },
+    {
+      "id": "H10",
+      "request": "Move the yellow pyramid 20 mm right.",
+      "scene": {
+        "objects": [
+          {
+            "id": "thing-U5b",
+            "label": "blue sphere",
+            "world_mm": [
+              250,
+              -250,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": true,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    },
+    {
+      "id": "H11",
+      "request": "Move the mint cube 15 mm closer to the black cylinder.",
+      "scene": {
+        "objects": [
+          {
+            "id": "node-7rD",
+            "label": "mint cube",
+            "world_mm": null,
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "node-B6k",
+            "label": "black cylinder",
+            "world_mm": [
+              300,
+              -250,
+              35
+            ],
+            "movable": false,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "observe",
+        "commands": []
+      }
+    },
+    {
+      "id": "H12",
+      "request": "Undo the last successful move of the white prism.",
+      "scene": {
+        "objects": [
+          {
+            "id": "p-W3u",
+            "label": "white prism",
+            "world_mm": [
+              265,
+              -240,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "p-k8J",
+            "label": "green sphere",
+            "world_mm": [
+              290,
+              -280,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [
+        {
+          "object_id": "p-W3u",
+          "before_world_mm": [
+            250,
+            -250,
+            30
+          ],
+          "after_world_mm": [
+            265,
+            -240,
+            30
+          ],
+          "verified": true
+        },
+        {
+          "object_id": "p-W3u",
+          "before_world_mm": [
+            265,
+            -240,
+            30
+          ],
+          "after_world_mm": [
+            280,
+            -240,
+            30
+          ],
+          "verified": false
+        },
+        {
+          "object_id": "p-k8J",
+          "before_world_mm": [
+            280,
+            -280,
+            30
+          ],
+          "after_world_mm": [
+            290,
+            -280,
+            30
+          ],
+          "verified": true
+        }
+      ],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "restore",
+            "object_id": "p-W3u",
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "H13",
+      "request": "Undo the last successful move of the white prism.",
+      "scene": {
+        "objects": [
+          {
+            "id": "p-W3u",
+            "label": "white prism",
+            "world_mm": [
+              265,
+              -240,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [
+        {
+          "object_id": "p-W3u",
+          "before_world_mm": [
+            250,
+            -250,
+            30
+          ],
+          "after_world_mm": [
+            265,
+            -240,
+            30
+          ],
+          "verified": false
+        }
+      ],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    },
+    {
+      "id": "H14",
+      "request": "Put the silver cylinder back where it was before its last move.",
+      "scene": {
+        "objects": [
+          {
+            "id": "unit-X6e",
+            "label": "silver cylinder",
+            "world_mm": [
+              250,
+              -250,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    },
+    {
+      "id": "H15",
+      "request": "What is the robot's current status?",
+      "scene": {
+        "objects": [],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      }
+    },
+    {
+      "id": "H16",
+      "request": "Rotate the red triangle clockwise by 30 degrees.",
+      "scene": {
+        "objects": [
+          {
+            "id": "token-2Hq",
+            "label": "red triangle",
+            "world_mm": [
+              260,
+              -250,
+              25
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "images": [],
+        "overview_attempted": false,
+        "camera_available": true,
+        "default_view": "wrist camera"
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    }
+  ]
+}

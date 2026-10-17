@@ -1,0 +1,12 @@
+{
+  "source": "ringside-app-2026-10-16.zip",
+  "sha256": "2a67fd6851dc039b11f423be8c74c0d77623410b33e0739cb651f35fe7742dd0",
+  "archive_commit": "9ef597684fb2585f72a0aaf434ceacd26cb9b90e",
+  "upstream": "https://github.com/JoeyYu23/ringside",
+  "imported_files": [
+    "app/static/chat.html",
+    "app/static/chat.js",
+    "package.json",
+    "package-lock.json"
+  ]
+}

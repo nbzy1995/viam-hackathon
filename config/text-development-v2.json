@@ -1,0 +1,1867 @@
+{
+  "scope": "Frozen development set: known user regression plus synthetic capability dimensions. For tuning, not a holdout score.",
+  "cases": [
+    {
+      "id": "D01",
+      "family": "view-transform",
+      "provenance": "synthetic development case",
+      "request": "Move the red block right by three centimeters.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "q7",
+            "target_id": null,
+            "dx_mm": 18,
+            "dy_mm": -24
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D02",
+      "family": "view-transform",
+      "provenance": "synthetic development case",
+      "request": "Move the red block right by three centimeters.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -0.8,
+                -0.6
+              ],
+              "image_down_world_xy_unit": [
+                0.6,
+                -0.8
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -0.8,
+                -0.6
+              ],
+              "image_down_world_xy_unit": [
+                0.6,
+                -0.8
+              ]
+            }
+          },
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                -0.8,
+                -0.6
+              ],
+              "image_down_world_xy_unit": [
+                0.6,
+                -0.8
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "q7",
+            "target_id": null,
+            "dx_mm": -24,
+            "dy_mm": -18
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D03",
+      "family": "distance-units",
+      "provenance": "synthetic development case",
+      "request": "Shift the carton right by 0.24 meters.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "u9",
+            "target_id": null,
+            "dx_mm": 144,
+            "dy_mm": -192
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D04",
+      "family": "sequence-units",
+      "provenance": "synthetic development case",
+      "request": "Move the yellow cylinder one inch left, then 12 millimeters right.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "p2",
+            "target_id": null,
+            "dx_mm": -15.24,
+            "dy_mm": 20.32
+          },
+          {
+            "action": "translate",
+            "object_id": "p2",
+            "target_id": null,
+            "dx_mm": 7.2,
+            "dy_mm": -9.6
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D05",
+      "family": "relative-geometry",
+      "provenance": "synthetic development case",
+      "request": "Bring the red block a little closer to the yellow cylinder.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "q7",
+            "target_id": null,
+            "dx_mm": 12,
+            "dy_mm": 16
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D06",
+      "family": "relative-geometry",
+      "provenance": "synthetic development case",
+      "request": "Increase the gap by moving the red block three centimeters directly away from the yellow cylinder.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "q7",
+            "target_id": null,
+            "dx_mm": -18,
+            "dy_mm": -24
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D07",
+      "family": "stacking",
+      "provenance": "user-reported failure; known regression, not held out",
+      "request": "move the red bin on top of yellow bar",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "q7",
+            "target_id": "p2",
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D08",
+      "family": "stacking",
+      "provenance": "synthetic development case",
+      "request": "Put the yellow cylinder on the red block.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "p2",
+            "target_id": "q7",
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D09",
+      "family": "sequence-restore",
+      "provenance": "synthetic development case",
+      "request": "Place the red block onto the yellow cylinder, then put the red block back where it started.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "q7",
+            "target_id": "p2",
+            "dx_mm": 0,
+            "dy_mm": 0
+          },
+          {
+            "action": "restore",
+            "object_id": "q7",
+            "target_id": null,
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D10",
+      "family": "sequence-reference",
+      "provenance": "synthetic development case",
+      "request": "First move the yellow cylinder 4 cm right, then put the red block on it.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "p2",
+            "target_id": null,
+            "dx_mm": 24,
+            "dy_mm": -32
+          },
+          {
+            "action": "place_on",
+            "object_id": "q7",
+            "target_id": "p2",
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D11",
+      "family": "verified-history",
+      "provenance": "synthetic development case",
+      "request": "Undo the last completed move of the red object.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [
+        {
+          "object_id": "q7",
+          "before_world_mm": [
+            280,
+            -420,
+            30
+          ],
+          "after_world_mm": [
+            300,
+            -400,
+            30
+          ],
+          "verified": true
+        },
+        {
+          "object_id": "q7",
+          "before_world_mm": [
+            300,
+            -400,
+            30
+          ],
+          "after_world_mm": [
+            999,
+            999,
+            30
+          ],
+          "verified": false
+        }
+      ],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "restore",
+            "object_id": "q7",
+            "target_id": null,
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D12",
+      "family": "unverified-history",
+      "provenance": "synthetic development case",
+      "request": "Return the red block to its last physical position.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [
+        {
+          "object_id": "q7",
+          "before_world_mm": [
+            300,
+            -400,
+            30
+          ],
+          "after_world_mm": [
+            999,
+            999,
+            30
+          ],
+          "verified": false
+        }
+      ],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Explain that no verified previous position is available; do not use the failed proposal."
+      ]
+    },
+    {
+      "id": "D13",
+      "family": "status",
+      "provenance": "synthetic development case",
+      "request": "Is the arm stationary, and is its gripper empty?",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Both current arm motion and gripper contents are unknown; do not equate a working camera with readiness."
+      ]
+    },
+    {
+      "id": "D14",
+      "family": "missing-evidence",
+      "provenance": "synthetic development case",
+      "request": "Move the green object a little left.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "observe",
+        "commands": []
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D15",
+      "family": "missing-evidence",
+      "provenance": "synthetic development case",
+      "request": "Move the green object a little left.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": true,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Explain that the green target remains unobserved after the overview."
+      ]
+    },
+    {
+      "id": "D16",
+      "family": "missing-depth",
+      "provenance": "synthetic development case",
+      "request": "Put the red object on the yellow one.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": null,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "observe",
+        "commands": []
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D17",
+      "family": "ambiguous-reference",
+      "provenance": "synthetic development case",
+      "request": "Move the red block 2 cm to the right.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "n4",
+            "label": "red rectangular block",
+            "world_mm": [
+              220,
+              -330,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": [
+          "reject",
+          "observe"
+        ],
+        "commands": []
+      },
+      "manual_rubric": [
+        "Name the ambiguity or request clarification; neither red object is uniquely identified."
+      ]
+    },
+    {
+      "id": "D18",
+      "family": "unsupported-composition",
+      "provenance": "synthetic development case",
+      "request": "Move the carton 2 cm right and rotate it a quarter turn.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Explain unsupported rotation; do not silently execute only the translation."
+      ]
+    },
+    {
+      "id": "D19",
+      "family": "correction-negation",
+      "provenance": "synthetic development case",
+      "request": "Do not move the carton. Shift the yellow cylinder left 2 cm instead.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "translate",
+            "object_id": "p2",
+            "target_id": null,
+            "dx_mm": -12,
+            "dy_mm": 16
+          }
+        ]
+      },
+      "manual_rubric": []
+    },
+    {
+      "id": "D20",
+      "family": "negation",
+      "provenance": "synthetic development case",
+      "request": "Leave everything where it is. List the visible objects.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "q7",
+            "label": "red rectangular block",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "p2",
+            "label": "yellow cylinder",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "u9",
+            "label": "blue and white carton",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Identify red block, yellow cylinder, and carton; no claim of movement."
+      ]
+    },
+    {
+      "id": "D21",
+      "family": "sensor-failure",
+      "provenance": "synthetic development case",
+      "request": "Move the red block slightly right.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": true,
+        "default_view": "wrist camera",
+        "camera_available": false,
+        "objects": [],
+        "errors": [
+          "camera RPC timed out"
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      },
+      "manual_rubric": [
+        "Say observation failed or unavailable; do not conclude the object is absent."
+      ]
+    },
+    {
+      "id": "D22",
+      "family": "new-object-labels",
+      "provenance": "synthetic development case",
+      "request": "Set the purple puck on the orange pedestal.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "v6",
+            "label": "purple hexagonal puck",
+            "world_mm": [
+              300,
+              -400,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "t8",
+            "label": "orange pedestal",
+            "world_mm": [
+              360,
+              -320,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          },
+          {
+            "id": "r3",
+            "label": "silver package",
+            "world_mm": [
+              460,
+              -450,
+              30
+            ],
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                0.6,
+                -0.8
+              ],
+              "image_down_world_xy_unit": [
+                0.8,
+                0.6
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "execute",
+        "commands": [
+          {
+            "action": "place_on",
+            "object_id": "v6",
+            "target_id": "t8",
+            "dx_mm": 0,
+            "dy_mm": 0
+          }
+        ]
+      },
+      "manual_rubric": []
+    }
+  ]
+}
