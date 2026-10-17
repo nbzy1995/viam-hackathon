@@ -21,8 +21,9 @@ from scene_sweep import Scene
 from task_interpreter import WORKSPACE, interpret, validate_task, resolve_commands, read_history, write_json
 from robot_scene import camera_directions, capture_scene, capture_overview
 from workshop_static import check_arm, control_lock
-from workshop_vision import ROOT, validate_setup
+from workshop_vision import ROOT, validate_setup, run_cycle
 from tabletop_transfer import prepare_transfer, transfer_object
+from table_demo import ACTIONS as DEMO_ACTIONS, DemoUnavailable, context as demo_context, scan_table, move_bottle
 
 
 def emit(event, **data):
@@ -85,6 +86,7 @@ class TextController:
             await validate_setup(self.robot, self.checked)
             history = read_history(self.workspace)
             scene = await self.observe()
+            scene['table_demo'] = demo_context(self.workspace, self.checked)
             self.notify('observed', objects=[o['label'] for o in scene['objects']],
                         images=scene.get('images', []), errors=scene.get('errors', {}))
             report['timing_seconds']['observed'] = elapsed()
@@ -113,6 +115,29 @@ class TextController:
                 # Make that completed operation explicit when interpreting the same request.
                 scene['completed_actions'] = [dict(action='observe', view='higher',
                     camera_available=scene.get('camera_available', False), returned_home=True)]
+            if task['decision'] in DEMO_ACTIONS:
+                if task['decision'] == 'scan_table':
+                    if not self.execute:
+                        report['outcome'] = 'observation_required'
+                        return report
+                    scene = await scan_table(self.robot, self.scene, self.checked, self.workspace,
+                                             scene, report, save, progress)
+                    report['scene'] = scene
+                    description = validate_task(await interpret(request, scene, history, self.workspace))
+                    report.setdefault('interpretations', []).append(description)
+                    if description['decision'] != 'status':
+                        raise RuntimeError('Table scan description must be observation only')
+                    report.update(task=description, success=True, outcome='table_scanned')
+                else:
+                    await move_bottle(task['decision'], self.robot, self.scene, self.checked,
+                                      self.workspace, self.execute, report, save, progress)
+                return report
+            if task['decision'] == 'roundtrip':
+                self.notify('progress', message=task['message'])
+                result = await run_cycle(self.robot, self.scene, self.checked,
+                                         self.execute, notify=self.notify)
+                report.update({k:v for k,v in result.items() if k != 'at'})
+                return report
             if task['decision'] != 'execute':
                 report['outcome'] = task['decision']
                 report['success'] = task['decision'] == 'status'
@@ -121,6 +146,12 @@ class TextController:
             commands = resolve_commands(task, scene, history)
             report['commands'] = commands
             await self.run_tabletop(commands, scene, history, report, save, progress, elapsed, output)
+            return report
+        except DemoUnavailable as exc:
+            report['outcome'] = 'reject'
+            report['task'] = {'decision': 'reject', 'message': str(exc),
+                              'grounding': 'Saved demo state and current observation.', 'commands': []}
+            self.notify('rejected', reason=str(exc))
             return report
         except BaseException as exc:
             report['error'] = f'{type(exc).__name__}: {exc}'

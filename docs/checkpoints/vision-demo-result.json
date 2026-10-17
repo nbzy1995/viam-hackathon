@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-17",
+  "source_report": "artifacts/diagnosis/vision-cycle-20261017T152954715695Z.json",
+  "entrypoint": "Web UI Vision round trip button on port 8089",
+  "success": true,
+  "outcome": "roundtrip_completed",
+  "execution_attempted": true,
+  "verifications": [
+    {
+      "destination": "B",
+      "error_mm": 10.714134536855044,
+      "tolerance_mm": 45.0,
+      "cap_world_mm": [
+        385.05434432467274,
+        -340.0869838177933,
+        144.97282298244758
+      ]
+    },
+    {
+      "destination": "A",
+      "error_mm": 2.844151152084653,
+      "tolerance_mm": 45.0,
+      "cap_world_mm": [
+        453.52999897895086,
+        -507.2346954002828,
+        148.3439618203182
+      ]
+    }
+  ],
+  "transfers": [
+    {
+      "source": "A",
+      "destination": "B",
+      "success": true,
+      "stages": [
+        "approach",
+        "grasp",
+        "lift",
+        "B-transit",
+        "destination-approach",
+        "place",
+        "withdraw",
+        "home"
+      ],
+      "initial_cap_world_mm": [
+        506.33665895206553,
+        -398.2189502049297,
+        151.41944278966042
+      ],
+      "native_preview_count": 8
+    },
+    {
+      "source": "B",
+      "destination": "A",
+      "success": true,
+      "stages": [
+        "approach",
+        "grasp",
+        "lift",
+        "B-transit",
+        "destination-approach",
+        "place",
+        "withdraw",
+        "home"
+      ],
+      "initial_cap_world_mm": [
+        385.05434432467274,
+        -340.0869838177933,
+        144.97282298244758
+      ],
+      "native_preview_count": 8
+    }
+  ],
+  "speech": "Successful response observed in browser Speaking state using Read reply",
+  "isolation": "QA port 8088 untouched; initial attempt refused while shared lock held; retry after release",
+  "limits": [
+    "One live run from A; B-start recovery covered by automated tests and historical CLI evidence.",
+    "Microphone-triggered round trip not exercised in this run."
+  ],
+  "speed_8_run": {
+    "source_report": "artifacts/diagnosis/vision-cycle-20261017T153532649815Z.json",
+    "speed_degrees_per_second": 8,
+    "acceleration_degrees_per_second_squared": 6,
+    "approximate_cycle_seconds": 112.8,
+    "success": true,
+    "verifications": [
+      {
+        "destination": "B",
+        "error_mm": 15.530314252253588,
+        "tolerance_mm": 45.0,
+        "cap_world_mm": [
+          388.42214050573375,
+          -333.68512810365127,
+          146.8788640448541
+        ]
+      },
+      {
+        "destination": "A",
+        "error_mm": 4.613528700584359,
+        "tolerance_mm": 45.0,
+        "cap_world_mm": [
+          446.68774590435464,
+          -509.1084399756461,
+          148.57746293957746
+        ]
+      }
+    ],
+    "completed_motion_stages": 16
+  }
+}

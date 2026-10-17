@@ -1,5 +1,42 @@
 [
-  {"name":"Check robot","command":"Check robot","description":"Read connection, arm, gripper, and setup status. No motion."},
-  {"name":"Prepare robot","command":"Prepare robot","description":"Return an empty arm to the checked observation pose."},
-  {"name":"Run motion check","command":"Run motion check","description":"Turn the empty arm 5° and return; verify both endpoints."}
+  {
+    "name": "Look around",
+    "command": "What do you see on my table?",
+    "description": "Raise the camera, capture three views, describe the table, and return home."
+  },
+  {
+    "name": "Bring water",
+    "command": "Bring this water bottle to me.",
+    "description": "Deliver the blue-and-white water carton to the predefined blue tape marker."
+  },
+  {
+    "name": "Return water",
+    "command": "Take the water bottle back.",
+    "description": "Return the carton to its saved pickup position and go home."
+  },
+  {
+    "name": "Check robot",
+    "suggested": false,
+    "command": "Check robot",
+    "description": "Read connection, arm, gripper, and setup status. No motion."
+  },
+  {
+    "name": "Prepare robot",
+    "suggested": false,
+    "command": "Prepare robot",
+    "description": "Return an empty arm to the checked observation pose."
+  },
+  {
+    "name": "Run motion check",
+    "suggested": false,
+    "command": "Run motion check",
+    "description": "Turn the empty arm 5\u00b0 and return; verify both endpoints."
+  },
+  {
+    "name": "Vision round trip",
+    "suggested": false,
+    "command": "Run vision round trip",
+    "description": "Run the established vision-guided carton A \u2192 B \u2192 A demo; verify each placement and return home.",
+    "suggestion": "Move the carton to point B and then back to A."
+  }
 ]

@@ -2,7 +2,7 @@
   "type": "object", "additionalProperties": false,
   "required": ["decision", "message", "grounding", "commands"],
   "properties": {
-    "decision": {"type": "string", "enum": ["execute", "observe", "status", "reject"]},
+    "decision": {"type": "string", "enum": ["execute", "observe", "status", "reject", "roundtrip", "scan_table", "deliver_bottle", "return_bottle"]},
     "message": {"type": "string"}, "grounding": {"type": "string"},
     "commands": {"type": "array", "items": {
       "type": "object", "additionalProperties": false,

@@ -51,8 +51,8 @@ def verify_placement(cap, destination):
     if np.linalg.norm(cap[:2]-STATIONS[destination]) > PLACEMENT_TOLERANCE_MM:
         raise RuntimeError(f'Vision did not confirm placement at {destination}')
 
-async def overview(robot, scene, checked, execute, report, save, scan):
-    """Preview both empty-gripper legs, look from above once, then return home."""
+async def overview(robot, scene, checked, execute, report, save, scan, *, angles=(0.,), speed=3., xyz=OVERVIEW_XYZ):
+    """Preview a high camera sweep and return; capture at each stationary angle."""
     arm=Arm.from_robot(robot,'arm'); grip=Gripper.from_robot(robot,'gripper')
     motion=MotionClient.from_robot(robot,'builtin')
     await check_arm(arm)
@@ -62,9 +62,9 @@ async def overview(robot, scene, checked, execute, report, save, scan):
     if max(abs(q-np.array(checked['home_joints'])))>.1:
         raise RuntimeError('Overview must start from home')
     v=checked['poses']['home-pose']['orientation']
-    p=PoseInFrame(reference_frame='world',pose=Pose(x=OVERVIEW_XYZ[0],y=OVERVIEW_XYZ[1],z=OVERVIEW_XYZ[2],o_x=v['x'],o_y=v['y'],o_z=v['z'],theta=v['th']))
+    poses=[PoseInFrame(reference_frame='world',pose=Pose(x=xyz[0],y=xyz[1],z=xyz[2],o_x=v['x'],o_y=v['y'],o_z=v['z'],theta=v['th']+angle)) for angle in angles]
     start=q.copy(); previews=[]
-    for destination in (p,None):
+    for destination in [*poses,None]:
         req={'name':'builtin','componentName':'arm','extra':{'timeout':5,'start_state':{'configuration':{'arm':np.radians(start).tolist()}}}}
         if destination is not None:req['destination']=MessageToDict(destination)
         else:req['extra']['goal_state']={'configuration':{'arm':np.radians(q).tolist()}}
@@ -81,26 +81,28 @@ async def overview(robot, scene, checked, execute, report, save, scan):
     if max(abs(np.array((await arm.get_joint_positions(timeout=5)).values)-q))>.05:
         raise RuntimeError('Arm moved during overview preview')
     report['execution_attempted']=True;save()
-    await arm.do_command({'set_speed':3.,'set_acceleration':6.},timeout=5)
-    if not await motion.move(component_name='arm',destination=p,timeout=120):raise RuntimeError('Overview move failed')
-    await check_arm(arm)
-    if max(abs(np.array((await arm.get_joint_positions(timeout=5)).values)-previews[0]['end_joints']))>.2:
-        raise RuntimeError('Overview endpoint differs from preview')
-    record['executed']=True;save()
-    try:
+    await arm.do_command({'set_speed':speed,'set_acceleration':6.},timeout=5)
+    results=[]
+    for index,p in enumerate(poses):
+        if not await motion.move(component_name='arm',destination=p,timeout=120):raise RuntimeError('Overview move failed')
+        await check_arm(arm)
+        if max(abs(np.array((await arm.get_joint_positions(timeout=5)).values)-previews[index]['end_joints']))>.2:
+            raise RuntimeError('Overview endpoint differs from preview')
+        record['executed']=True;save()
         result=await scan()
+        results.append(result)
         if isinstance(result, tuple): record['cap_world_mm']=result[0].tolist()
         else: record['scene_captured']=True
+        record['views_captured']=len(results)
         save()
-    finally:
-        # Return only after a successfully completed overview move, never after a motion fault.
-        await check_arm(arm)
-        await Switch.from_robot(robot,'home-pose').set_position(2,timeout=120)
-        await check_arm(arm)
-        if max(abs(np.array((await arm.get_joint_positions(timeout=5)).values)-q))>.1:
-            raise RuntimeError('Overview did not return home')
-        record['returned_home']=True;save()
-    return result
+    # A cancellation/fault must reach the caller's stop handler, never start a new move.
+    await check_arm(arm)
+    await Switch.from_robot(robot,'home-pose').set_position(2,timeout=120)
+    await check_arm(arm)
+    if max(abs(np.array((await arm.get_joint_positions(timeout=5)).values)-q))>.1:
+        raise RuntimeError('Overview did not return home')
+    record['returned_home']=True;save()
+    return results[0] if len(results)==1 else results
 
 def point_cloud_world(pcd, camera_world):
     header, data = pcd.split(b'DATA binary\n', 1)
@@ -142,7 +144,7 @@ async def observe_carton(robot, scene, checked, execute, report, save):
         cap,station=await overview(robot,scene,checked,execute,report,save,scan)
     return cap,station,q
 
-async def transfer_carton(robot, scene, checked, execute, report, save, cap, source, q, dest, *, destination_xy=None, progress=None, before_execute=None):
+async def transfer_carton(robot, scene, checked, execute, report, save, cap, source, q, dest, *, destination_xy=None, via_b=False, progress=None, before_execute=None, _approach_joints=None):
     arm=Arm.from_robot(robot,'arm'); grip=Gripper.from_robot(robot,'gripper')
     motion=MotionClient.from_robot(robot,'builtin')
     progress = progress or (lambda message: print(message, flush=True))
@@ -160,19 +162,30 @@ async def transfer_carton(robot, scene, checked, execute, report, save, cap, sou
     # Use the established B-side high transit, then the lower reachable A approach.
     steps=[('approach',approach,False,False),('grasp',grasp,True,False),
            ('lift',approach,True,True)]
-    if destination_xy is None:
+    if destination_xy is None or via_b:
         steps.append(('B-transit',target(*STATIONS['B'],300),False,True))
-    steps += [('destination-approach',target(dx,dy,220),dest=='B' or destination_xy is not None,True),
+    steps += [('destination-approach',target(dx,dy,220),dest=='B' or (destination_xy is not None and not (via_b and dest=='A')),True),
               ('place',place,True,True),('withdraw',target(dx,dy,220),True,False),
               ('home',None,False,False)]
     start=q.copy()
     for name,p,linear,holding in steps:
         req={'name':'builtin','componentName':'gripper','extra':{'timeout':5,'start_state':{'configuration':{'arm':np.radians(start).tolist()}}}}
-        if p is None:
-            req['componentName']='arm';req['extra']['goal_state']={'configuration':{'arm':np.radians(checked['home_joints']).tolist()}}
+        goal_joints = checked['home_joints'] if p is None else _approach_joints if name=='approach' else None
+        if goal_joints is not None:
+            req['componentName']='arm';req['extra']['goal_state']={'configuration':{'arm':np.radians(goal_joints).tolist()}}
         else: req['destination']=MessageToDict(p)
         if linear: req['constraints']=MessageToDict(LINEAR)
-        plan=await motion.do_command({'plan':json.dumps(req)},timeout=15)
+        try:
+            plan=await motion.do_command({'plan':json.dumps(req)},timeout=15)
+        except Exception as exc:
+            if name=='grasp' and _approach_joints is None and 'no direct solutions' in str(exc).lower():
+                from tabletop_transfer import approach_from_grasp
+                approach_joints=await approach_from_grasp(motion,req,approach,q)
+                record['approach_branch_retry']=True;save()
+                return await transfer_carton(robot,scene,checked,execute,report,save,cap,source,q,dest,
+                    destination_xy=destination_xy,via_b=via_b,progress=progress,
+                    before_execute=before_execute,_approach_joints=approach_joints)
+            raise
         if any(w[k]!=plan['plan'][0][k] for w in plan['plan'] for k in w if k!='arm'):
             raise RuntimeError('Preview moves another resource')
         path=np.degrees([w['arm'] for w in plan['plan']])
@@ -195,13 +208,17 @@ async def transfer_carton(robot, scene, checked, execute, report, save, cap, sou
     if max(abs(np.array((await arm.get_joint_positions(timeout=5)).values)-q))>.05: raise RuntimeError('Arm moved during preview')
     if (await grip.is_holding_something(timeout=5)).is_holding_something: raise RuntimeError('Expected empty gripper')
     report['execution_attempted']=True;save()
-    await arm.do_command({'set_speed':3.,'set_acceleration':6.},timeout=5)
+    await arm.do_command({'set_speed':8.,'set_acceleration':6.},timeout=5)
     await grip.open(timeout=15)
     # Resolve approach in camera frame before leaving home, as in the tutorial.
     approach_cam=await robot.transform_pose(approach,'cam')
     for i,(name,p,linear,holding) in enumerate(steps):
         await check_arm(arm);record['pending']=name;save()
         if name=='home': await Switch.from_robot(robot,'home-pose').set_position(2,timeout=120)
+        elif name=='approach' and _approach_joints is not None:
+            if not await motion.move(component_name='arm',destination=None,timeout=120,
+                    extra={'goal_state':{'configuration':{'arm':np.radians(_approach_joints).tolist()}}}):
+                raise RuntimeError('Approach joint-goal move failed')
         else:
             destination=approach_cam if name=='approach' else p
             if name=='grasp':destination=PoseInFrame(reference_frame='gripper',pose=Pose(z=220-grasp_z,o_z=1))
@@ -232,44 +249,80 @@ async def validate_setup(robot, checked):
     # requesting point clouds/poses is not another arm controller. Unknown
     # operations and every actuator operation remain blocking.
     scene_reads = {'/viam.service.vision.v1.VisionService/GetObjectPointClouds',
-                   '/viam.robot.v1.RobotService/GetPose'}
+                   '/viam.robot.v1.RobotService/GetPose',
+                   '/viam.component.camera.v1.CameraService/GetImages',
+                   '/viam.service.vision.v1.VisionService/GetDetections',
+                   '/viam.component.arm.v1.ArmService/IsMoving',
+                   '/viam.component.arm.v1.ArmService/GetJointPositions',
+                   '/viam.component.gripper.v1.GripperService/IsHoldingSomething'}
     active = [op.method for op in await robot.get_operations() if op.method not in scene_reads]
     if active:
         raise RuntimeError('Another robot operation is active: ' + ', '.join(active))
+
+async def run_cycle(robot, scene, checked, execute, *, notify=None):
+    """Run the established vision cycle on a caller-owned connection and lock."""
+    notify = notify or (lambda event, **data: None)
+    report = {'at':datetime.now(timezone.utc).isoformat(), 'kind':'vision_round_trip',
+              'execution_attempted':False, 'success':False, 'transfers':[], 'verifications':[]}
+    output = ROOT/'artifacts/diagnosis'/f'vision-cycle-{datetime.now(timezone.utc):%Y%m%dT%H%M%S%fZ}.json'
+    def save():
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps(report, indent=2)+'\n')
+    def progress(message):
+        notify('progress', message=message)
+    arm = Arm.from_robot(robot, 'arm')
+    observe = partial(observe_carton, robot, scene, checked, execute, report, save)
+    transfer = partial(transfer_carton, robot, scene, checked, execute, report, save,
+                       progress=progress)
+    try:
+        await validate_setup(robot, checked)
+        progress('Looking for the carton from the checked home pose.')
+        cap, station, q = await observe()
+        destinations = (['A'] if station == 'B' else []) + ['B', 'A']
+        for dest in destinations:
+            progress(f'Planning carton transfer {station} to {dest}.')
+            await transfer(cap, station, q, dest)
+            if not execute:
+                report['outcome'] = 'preview_passed'
+                return report
+            progress(f'Checking the carton at {dest} with a fresh camera observation.')
+            cap, station, q = await observe()
+            verify_placement(cap, dest)
+            report['verifications'].append({'destination':dest,
+                'error_mm':float(np.linalg.norm(cap[:2]-STATIONS[dest])),
+                'tolerance_mm':PLACEMENT_TOLERANCE_MM, 'cap_world_mm':cap.tolist()})
+            save()
+        report.update(success=True, outcome='roundtrip_completed')
+        progress('Vision round trip completed; carton verified at A and arm home.')
+        return report
+    except BaseException as exc:
+        report['error'] = f'{type(exc).__name__}: {exc}'
+        if report['execution_attempted']:
+            try:
+                await arm.stop(timeout=5)
+                report['stop_requested'] = True
+            except Exception as stop:
+                report['stop_error'] = str(stop)
+        if not isinstance(exc, Exception):
+            raise
+        notify('failed', message='Vision round trip did not complete. See the saved report.')
+        return report
+    finally:
+        save()
+        notify('report', path=str(output))
+
 
 async def main(execute):
     c=json.loads((ROOT/'.env.viam.json').read_text())
     opts=RobotClient.Options.with_api_key(api_key=c['api_key'],api_key_id=c['api_key_id'])
     opts.dial_options.force_relay=True; opts.dial_options.initial_connection_attempts=1
     robot=await asyncio.wait_for(RobotClient.at_address(c['address'],opts),25)
-    report={'at':datetime.now(timezone.utc).isoformat(),'execution_attempted':False,'success':False,'transfers':[]}
-    output=ROOT/'artifacts/diagnosis'/f'vision-cycle-{datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}.json'
-    def save(): output.write_text(json.dumps(report,indent=2))
-    arm=Arm.from_robot(robot,'arm'); grip=Gripper.from_robot(robot,'gripper')
-    motion=MotionClient.from_robot(robot,'builtin'); vision=VisionClient.from_robot(robot,'vision-segment')
-    checked=json.loads((ROOT/'artifacts/roundtrip-checked-setup.json').read_text()); scene=Scene()
-    observe=partial(observe_carton,robot,scene,checked,execute,report,save)
-    transfer=partial(transfer_carton,robot,scene,checked,execute,report,save)
     try:
-        await validate_setup(robot,checked)
-        cap,station,q=await observe()
-        if station=='B':
-            await transfer(cap,station,q,'A')
-            if not execute:return
-            cap,station,q=await observe()
-            verify_placement(cap,'A')
-        for dest in ['B','A']:
-            await transfer(cap,station,q,dest)
-            if not execute:return
-            cap,station,q=await observe()
-            verify_placement(cap,dest)
-        report['success']=True;save();print('Vision-guided A -> B -> A completed; carton at A, arm home.',flush=True)
-    except BaseException as exc:
-        report['error']=f'{type(exc).__name__}: {exc}'
-        if report['execution_attempted']:
-            try:await arm.stop(timeout=5);report['stop_requested']=True
-            except Exception as stop:report['stop_error']=str(stop)
-        save();raise
+        checked=json.loads((ROOT/'artifacts/roundtrip-checked-setup.json').read_text())
+        def notify(event, **data):
+            if 'message' in data: print(data['message'], flush=True)
+        result = await run_cycle(robot, Scene(), checked, execute, notify=notify)
+        if result.get('error'): raise RuntimeError(result['error'])
     finally:await asyncio.wait_for(robot.close(),5)
 
 if __name__=='__main__':

@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-10-17T16:14:12.763Z",
+  "source_ui_worktree": "f0d0",
+  "demo_worktree": "d3a9",
+  "url": "http://127.0.0.1:8089/",
+  "samples": [
+    {
+      "frame": "frame-199.jpg",
+      "updated_at": "2026-10-17T16:14:07.727Z",
+      "fresh": true,
+      "status_fresh": true,
+      "state": "Home",
+      "holding": false,
+      "vision_available": true
+    },
+    {
+      "frame": "frame-201.jpg",
+      "updated_at": "2026-10-17T16:14:08.695Z",
+      "fresh": true,
+      "status_fresh": true,
+      "state": "Home",
+      "holding": false,
+      "vision_available": true
+    },
+    {
+      "frame": "frame-203.jpg",
+      "updated_at": "2026-10-17T16:14:09.497Z",
+      "fresh": true,
+      "status_fresh": true,
+      "state": "Home",
+      "holding": false,
+      "vision_available": true
+    },
+    {
+      "frame": "frame-205.jpg",
+      "updated_at": "2026-10-17T16:14:10.528Z",
+      "fresh": true,
+      "status_fresh": true,
+      "state": "Home",
+      "holding": false,
+      "vision_available": true
+    },
+    {
+      "frame": "frame-208.jpg",
+      "updated_at": "2026-10-17T16:14:11.695Z",
+      "fresh": true,
+      "status_fresh": true,
+      "state": "Home",
+      "holding": false,
+      "vision_available": true
+    },
+    {
+      "frame": "frame-211.jpg",
+      "updated_at": "2026-10-17T16:14:12.763Z",
+      "fresh": true,
+      "status_fresh": true,
+      "state": "Home",
+      "holding": false,
+      "vision_available": true
+    }
+  ],
+  "frames_per_second": 2.4,
+  "ui_check_robot": "Passed while camera and telemetry remained live; arm stationary, setup matches calibration, gripper empty.",
+  "recognition": "Native blue/red/yellow color detectors on the exact displayed image; not semantic object identity.",
+  "hardware_motion_for_this_verification": false
+}

@@ -32,7 +32,8 @@ def read_history(workspace=WORKSPACE):
 def validate_task(task):
     if not isinstance(task, dict) or set(task) != {'decision', 'message', 'grounding', 'commands'}:
         raise ValueError('Interpreter returned an invalid task schema')
-    if task['decision'] not in {'execute', 'observe', 'status', 'reject'}:
+    if task['decision'] not in {'execute', 'observe', 'status', 'reject', 'roundtrip',
+                                'scan_table', 'deliver_bottle', 'return_bottle'}:
         raise ValueError('Unsupported decision')
     if not all(isinstance(task[k], str) and task[k].strip() for k in ('message', 'grounding')):
         raise ValueError('Task needs an explanation and grounded reference')

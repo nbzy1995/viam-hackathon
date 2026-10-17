@@ -1,0 +1,430 @@
+{
+  "scope": "Known demo voice intents; synthetic scene; no robot calls.",
+  "cases": [
+    {
+      "id": "scan",
+      "request": "What do you see on my table?",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "table_demo": {
+          "object_id": "carton",
+          "spoken_name": "blue water bottle",
+          "delivery_location": "predefined marker",
+          "phase": "not_delivered",
+          "has_verified_return_position": false
+        }
+      },
+      "history": [],
+      "expected": {
+        "decision": "scan_table",
+        "commands": []
+      }
+    },
+    {
+      "id": "deliver",
+      "request": "Bring this water bottle to me.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "table_demo": {
+          "object_id": "carton",
+          "spoken_name": "blue water bottle",
+          "delivery_location": "predefined marker",
+          "phase": "not_delivered",
+          "has_verified_return_position": false
+        }
+      },
+      "history": [],
+      "expected": {
+        "decision": "deliver_bottle",
+        "commands": []
+      }
+    },
+    {
+      "id": "return",
+      "request": "Take the water bottle back.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "table_demo": {
+          "object_id": "carton",
+          "spoken_name": "blue water bottle",
+          "delivery_location": "predefined marker",
+          "phase": "not_delivered",
+          "has_verified_return_position": false
+        }
+      },
+      "history": [],
+      "expected": {
+        "decision": "return_bottle",
+        "commands": []
+      }
+    },
+    {
+      "id": "negation",
+      "request": "Don't move anything. What do you see on my table?",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "table_demo": {
+          "object_id": "carton",
+          "spoken_name": "blue water bottle",
+          "delivery_location": "predefined marker",
+          "phase": "not_delivered",
+          "has_verified_return_position": false
+        }
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      }
+    },
+    {
+      "id": "explain",
+      "request": "How would you bring the water bottle to me?",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ],
+        "table_demo": {
+          "object_id": "carton",
+          "spoken_name": "blue water bottle",
+          "delivery_location": "predefined marker",
+          "phase": "not_delivered",
+          "has_verified_return_position": false
+        }
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      }
+    }
+  ]
+}

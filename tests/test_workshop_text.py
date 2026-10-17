@@ -39,7 +39,7 @@ def test_physical_controller_can_request_overview_but_preview_cannot(monkeypatch
     controller.execute, controller.busy, controller.scene = True, False, None
     controller.workspace = tmp_path / 'workspace'
     controller.notify = lambda *a, **k: None
-    controller.checked = {}
+    controller.checked = {'frames': {}}
     monkeypatch.setattr(console, 'ROOT', tmp_path)
     monkeypatch.setattr(console, 'validate_setup', AsyncMock())
     observation = AsyncMock(return_value={'objects': [], 'images': [], 'overview_attempted': False})
@@ -65,7 +65,7 @@ def test_completed_overview_is_passed_back_as_a_completed_action(monkeypatch, tm
     controller.robot = None
     controller.arm = SimpleNamespace(stop=AsyncMock())
     controller.execute, controller.busy, controller.scene = True, False, None
-    controller.workspace, controller.checked = tmp_path / 'workspace', {}
+    controller.workspace, controller.checked = tmp_path / 'workspace', {'frames': {}}
     controller.notify = lambda *a, **k: None
     monkeypatch.setattr(console, 'ROOT', tmp_path)
     monkeypatch.setattr(console, 'validate_setup', AsyncMock())
@@ -151,7 +151,7 @@ def test_rejected_request_never_calls_transfer(monkeypatch, tmp_path):
     controller.execute, controller.busy, controller.scene = True, False, None
     controller.workspace = tmp_path / 'workspace'
     controller.notify = lambda *a, **k: None
-    controller.checked = {}
+    controller.checked = {'frames': {}}
     monkeypatch.setattr(console, 'ROOT', tmp_path)
     monkeypatch.setattr(console, 'validate_setup', AsyncMock())
     monkeypatch.setattr(console, 'capture_scene', AsyncMock(return_value={'objects': [], 'images': []}))
@@ -166,3 +166,60 @@ def test_rejected_request_never_calls_transfer(monkeypatch, tmp_path):
     result = asyncio.run(controller.run('Another request'))
     assert result['error'] == 'busy'
     transfer.assert_not_called()
+
+
+@pytest.mark.parametrize('execute', [True, False])
+def test_round_trip_intent_calls_existing_routine(monkeypatch,tmp_path,execute):
+    controller=object.__new__(console.TextController)
+    controller.robot=object();controller.arm=SimpleNamespace(stop=AsyncMock())
+    controller.execute,controller.busy,controller.scene=execute,False,object()
+    controller.workspace,controller.checked=tmp_path/'workspace',{'frames': {}}
+    controller.notify=lambda *a,**k:None
+    monkeypatch.setattr(console,'ROOT',tmp_path)
+    monkeypatch.setattr(console,'validate_setup',AsyncMock())
+    monkeypatch.setattr(controller,'observe',AsyncMock(return_value={'objects':[]}))
+    decision={'decision':'roundtrip','commands':[],'message':'Run the carton A to B to A routine.','grounding':'Requested station round trip.'}
+    monkeypatch.setattr(console,'interpret',AsyncMock(return_value=decision))
+    routine=AsyncMock(return_value={'outcome':'roundtrip_completed' if execute else 'preview_passed',
+        'success':execute,'execution_attempted':execute,'verifications':[]})
+    monkeypatch.setattr(console,'run_cycle',routine,raising=False)
+    result=asyncio.run(controller.run('Move the cartoon to point B and then to A back.'))
+    routine.assert_awaited_once_with(controller.robot,controller.scene,controller.checked,execute,notify=controller.notify)
+    assert result['success']==execute
+    assert result['task']==decision
+
+
+@pytest.mark.parametrize('description_decision', ['status', 'deliver_bottle'])
+def test_scan_describes_fresh_views_without_starting_another_action(monkeypatch, tmp_path, description_decision):
+    controller = object.__new__(console.TextController)
+    controller.robot, controller.scene = object(), object()
+    controller.arm = SimpleNamespace(stop=AsyncMock())
+    controller.execute, controller.busy = True, False
+    controller.workspace, controller.checked = tmp_path, {'frames': {}}
+    controller.notify = lambda *a, **k: None
+    monkeypatch.setattr(console, 'ROOT', tmp_path)
+    monkeypatch.setattr(console, 'validate_setup', AsyncMock())
+    monkeypatch.setattr(controller, 'observe', AsyncMock(return_value={'objects': []}))
+    decision = dict(decision='scan_table', commands=[], message='Look around.', grounding='Requested table scan.')
+    fresh = {'objects': [], 'images': [{'path': f'view-{i}.jpg'} for i in range(3)],
+             'completed_actions': [{'action': 'scan_table', 'image_count': 3, 'returned_home': True}]}
+    async def scan(*args):
+        args[5]['execution_attempted'] = True
+        return fresh
+    interpreter = AsyncMock(side_effect=[decision, decision | {'decision': description_decision}])
+    monkeypatch.setattr(console, 'scan_table', scan)
+    monkeypatch.setattr(console, 'interpret', interpreter)
+    move = AsyncMock()
+    monkeypatch.setattr(console, 'move_bottle', move)
+    result = asyncio.run(controller.run('What do you see on my table?'))
+    assert interpreter.await_args_list[1].args[1] == fresh
+    assert result['success'] == (description_decision == 'status')
+    move.assert_not_called()
+    assert controller.arm.stop.await_count == int(description_decision != 'status')
+
+
+def test_roundtrip_cannot_mix_in_generated_commands():
+    decision={'decision':'roundtrip','commands':[],'message':'Run demo.','grounding':'Requested demo.'}
+    assert validate_task(decision)==decision
+    with pytest.raises(ValueError):
+        validate_task(decision|{'commands':[{'action':'translate','object_id':'carton','dx_mm':10,'dy_mm':0}]})

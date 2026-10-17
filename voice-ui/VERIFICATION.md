@@ -1,3 +1,99 @@
+## Integrated live dashboard — 2026-10-17
+
+- Reused the separate `f0d0` worktree's dashboard layout and voice controls in `d3a9` on port 8089.
+- Real wrist-camera JPEGs and matching native color-detection boxes verified in the browser.
+- Six live samples: camera and telemetry fresh throughout; measured 2.4 frame updates/second.
+- Measured arm Home and gripper empty; current harness activity displayed.
+- Web UI “Check robot” completed while the dashboard stayed live. No physical motion requested.
+- `uv run --extra voice-ui pytest tests voice-ui qa-console/test_persistent_sim.py -q`: 101 passed.
+- Final shipping check after the five operation-compatibility cases: full suite 106 passed; frontend build passed.
+- `npm --prefix voice-ui run build:chat` and `git diff --check`: passed.
+- Other servers (8088 and 8090) were not restarted or edited.
+- Camera frames are bounded in memory; temporary camera probe removed.
+- Evidence: `docs/checkpoints/live-dashboard-result.json`; implementation details: `DASHBOARD.md`.
+
+# Conversational table demo — 2026-10-17
+
+The physical UI scan, delivery to the new blue tape marker, and return to the
+saved pickup coordinates all passed. Scan: three distinct images, home return,
+and grounded description in 31.965 seconds. Delivery: 10.827 mm placement error,
+100.296 seconds. Return: 3.228 mm error from the saved origin, 74.249 seconds.
+Both transfers completed all eight stages and verified the empty arm at home.
+
+The first camera rotation triggered the controller self-collision check; a more
+extended high pose passed. The original outward pickup location was unreachable,
+so the user repositioned the carton. A subsequent descent-branch failure was
+resolved by reusing the main harness's `approach_from_grasp` helper. Failures were
+retained in the local reports; no failed attempt was recorded as completion.
+
+Restarting only the demo server reloaded valid speech credentials after a stale
+server returned HTTP 401. Live microphone speech was transcribed; the interpreter
+asked for clarification for an ambiguous utterance without moving, and its reply
+played automatically. Delivery and return confirmations played through Read reply.
+The three physical commands were typed, so this does not claim one uninterrupted
+three-command spoken trial. The microphone is left off for the user's demo.
+
+- 93 offline tests passed; 5 known real-model demo intent cases passed.
+- Person recognition is not implemented; delivery uses the predefined marker.
+- [Demo instructions](../docs/table-demo.md).
+- [Compact measured result](../docs/checkpoints/table-demo-result.json).
+
+---
+
+# Voice intent and suggested prompts — 2026-10-17
+
+Quick-check buttons were replaced with non-interactive suggested prompt text.
+The existing AI interpreter now selects `decision=roundtrip` for an explicit
+carton B-then-A demo request. `TextController` dispatches that validated decision
+to the existing `run_cycle`, respecting physical versus preview mode. The exact
+round-trip shortcut in the voice worker was removed; paraphrases use the same
+single interpreter as other natural-language requests. No generated translation
+sequence replaces the fixed routine. Transfer speed remains 8 degrees/second.
+
+- 82 offline tests passed; browser bundle built.
+- 10 real-model intent regressions passed, including the user's exact sentence
+  “move the cartoon to point B and then to A back”, paraphrases, spoken letter
+  spellings, negation, explanation, wrong object, one-way and mixed actions.
+- An initial one-way case incorrectly requested observation; the instructions
+  now distinguish fixed routine destinations from missing perceptual objects.
+  The original failed result is retained alongside the successful rerun.
+- Reproduce with `uv run python evaluate_text.py --suite config/text-roundtrip-regressions.json`.
+- The active physical run was allowed to finish before refreshing the browser.
+  The refreshed UI shows plain suggestions and retains Start live voice and Stop
+  robot controls. No robot motion was commanded by the language regression tests.
+- Exact report: `artifacts/diagnosis/text-roundtrip-regressions-voice-demo-routing-fixed.json`.
+  This validates text intent recognition plus executor dispatch tests; it does
+  not claim a new microphone-to-motion hardware trial.
+
+---
+
+# Isolated vision-demo product — 2026-10-17
+
+The new worktree serves http://127.0.0.1:8089. QA's server at port 8088 was
+left running. `VOICE_ROBOT_SOURCE` selects its existing shared credentials/lock;
+this worktree supplies code and calibration and owns its reports.
+
+- Added **Vision round trip**, invoking the same `workshop_vision.run_cycle`
+  as the CLI, with no model-generated recreation of the sequence.
+- **80 tests passed**; browser bundle built. Existing Starlette/httpx deprecation
+  and npm's Node engine warning remain.
+- Live readiness: stationary, calibrated, empty gripper, at home.
+- First UI attempt correctly refused while QA held the shared robot lock.
+- After release, the UI completed all **16 physical stages of A → B → A**.
+  Fresh vision measured **10.714 mm** error at B and **2.844 mm** at A, both
+  within the unchanged **45 mm** station tolerance. The arm returned home.
+- UI displayed verified success; **Read reply** entered **Speaking** with the
+  real ElevenLabs stream. The preset also requests automatic spoken playback.
+- Full local report: `artifacts/diagnosis/vision-cycle-20261017T152954715695Z.json`.
+  Compact evidence: `docs/checkpoints/vision-demo-result.json`.
+- Microphone-triggered round-trip execution was not exercised in this run.
+  B-start recovery is covered by tests and previous CLI evidence, not this run.
+
+See `docs/vision-demo.md` for the fixed demo and its setup. Earlier sections
+below describe previous versions and their verification limits.
+
+---
+
 # Main-worktree integration — 2026-10-17
 
 The current demo runs from `/Users/Yang/Documents/ChatGPT/viam-hackathon`,

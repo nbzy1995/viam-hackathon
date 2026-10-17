@@ -17,7 +17,7 @@ class RobotHarness:
         if self.process is not None or self.starting:
             return 'The robot is busy. The request was not queued.'
         env = {k:v for k,v in os.environ.items() if k in {
-            'PATH','HOME','USER','TMPDIR','CODEX_HOME','SSL_CERT_FILE','SSL_CERT_DIR'}}
+            'PATH','HOME','USER','TMPDIR','CODEX_HOME','SSL_CERT_FILE','SSL_CERT_DIR','VOICE_ROBOT_SOURCE'}}
         self.progress = 'Acquiring robot control'
         self.starting = True
         self.stop_requested = False

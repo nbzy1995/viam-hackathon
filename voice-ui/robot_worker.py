@@ -20,7 +20,7 @@ def emit(event, **data):
 
 
 async def run(request, reader):
-    source = SOURCE
+    source = Path(os.environ.get('VOICE_ROBOT_SOURCE', SOURCE)).resolve()
     # Open existing lock without truncating it; all worktrees contend on one inode.
     with (source / '.arm-control.lock').open('a') as lock:
         try:

@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-17",
+  "interface": "http://127.0.0.1:8089/",
+  "physical_cases": {
+    "scan": {
+      "report": "artifacts/diagnosis/text-task-20261017T155305511532Z.json",
+      "request": "What do you see on my table?",
+      "outcome": "table_scanned",
+      "seconds": 31.965,
+      "verification": null,
+      "image_count": 3,
+      "returned_home": true,
+      "description": "I see a blue-and-white water carton and a blue tape marker on the white table; the three views also include parts of a laptop, a person\u2019s arm, and the robot at the edges.",
+      "capture_times": [
+        "2026-10-17T15:53:17.984Z",
+        "2026-10-17T15:53:21.821Z",
+        "2026-10-17T15:53:27.659Z"
+      ]
+    },
+    "delivery": {
+      "report": "artifacts/diagnosis/text-task-20261017T155753885156Z.json",
+      "request": "Bring this water bottle to me.",
+      "outcome": "bottle_delivered",
+      "seconds": 100.296,
+      "verification": {
+        "error_mm": 10.827199649591524,
+        "tolerance_mm": 45.0,
+        "cap_world_mm": [
+          476.230748277486,
+          -230.8778533631698,
+          148.51079507200882
+        ],
+        "target_world_xy_mm": [
+          475.9,
+          -241.7
+        ]
+      },
+      "image_count": 0,
+      "returned_home": true,
+      "completed_stages": [
+        [
+          "approach",
+          "grasp",
+          "lift",
+          "B-transit",
+          "destination-approach",
+          "place",
+          "withdraw",
+          "home"
+        ]
+      ]
+    },
+    "return": {
+      "report": "artifacts/diagnosis/text-task-20261017T160114632267Z.json",
+      "request": "Take the water bottle back.",
+      "outcome": "bottle_returned",
+      "seconds": 74.249,
+      "verification": {
+        "error_mm": 3.227577418959479,
+        "tolerance_mm": 45.0,
+        "cap_world_mm": [
+          387.19614576390245,
+          -428.1180480159076,
+          146.07029759646096
+        ],
+        "target_world_xy_mm": [
+          384.8286349640002,
+          -430.3117090215608
+        ]
+      },
+      "image_count": 0,
+      "returned_home": true,
+      "completed_stages": [
+        [
+          "approach",
+          "grasp",
+          "lift",
+          "B-transit",
+          "destination-approach",
+          "place",
+          "withdraw",
+          "home"
+        ]
+      ]
+    }
+  },
+  "speech": {
+    "live_microphone_transcription_observed": true,
+    "ambiguous_utterance_rejected_without_motion": true,
+    "automatic_spoken_clarification_observed": true,
+    "delivery_and_return_read_reply_tested": true,
+    "credentials_reloaded_after_initial_http_401": true
+  },
+  "checks": {
+    "offline_pytest_passed": 93,
+    "real_model_intent_cases_passed": 5
+  },
+  "scope": [
+    "Physical demo commands were submitted through text chat. Live microphone transcription and spoken responses were exercised separately.",
+    "The delivery point is a predefined blue tape location, not person recognition.",
+    "This is one completed delivery/return after fixing the camera posture and reusing the grasp-branch helper; not a repeatability study."
+  ]
+}

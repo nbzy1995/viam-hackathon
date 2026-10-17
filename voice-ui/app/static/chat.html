@@ -1,9 +1,9 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Viam — local chat</title>
+<title>Viam — robot workspace</title>
 <style>
   :root{color-scheme:dark;--bg:#191919;--panel:#303030;--edge:#454545;--text:#ececec;--muted:#929292;--accent:#fff;--good:#69c98c;--bad:#ed8c8c}
   *{box-sizing:border-box}[hidden]{display:none!important}html,body{height:100%;margin:0}body{background:var(--bg);color:var(--text);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-  .shell{width:min(980px,100%);height:100dvh;margin:0 auto;padding:22px 22px 18px;display:flex;flex-direction:column}
+  .shell{width:min(1440px,100%);height:100dvh;margin:0 auto;padding:22px 22px 18px;display:flex;flex-direction:column}
   header{height:50px;display:flex;align-items:center;justify-content:space-between;flex:none}
   .brand{font-size:15px;font-weight:600;letter-spacing:.01em}.brand b{font-weight:400;color:#bcbcbc}
   .status{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}
@@ -28,24 +28,54 @@
   .send{background:#f6f6f6;color:#111}.send:hover{background:#fff}.send:disabled{opacity:.38;cursor:default}
   .send svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .stop{width:40px;height:40px;background:#262626;color:#ddd}.stop:hover{background:#484848}.stop svg{width:17px;height:17px;fill:currentColor}
-  .quick-checks{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0}.action,.quick-checks button{min-height:40px;border:1px solid #555;border-radius:10px;background:#292929;color:#eee;padding:8px 13px;cursor:pointer;font:inherit;font-size:12px}.action:disabled,.quick-checks button:disabled{opacity:.4;cursor:default}.danger{border-color:#985e5e;color:#ffbaba}.quick-checks button:hover,.action:hover{background:#3b3b3b}
+  .action{min-height:40px;border:1px solid #555;border-radius:10px;background:#292929;color:#eee;padding:8px 13px;cursor:pointer;font:inherit;font-size:12px}.action:disabled{opacity:.4;cursor:default}.danger{border-color:#985e5e;color:#ffbaba}.action:hover{background:#3b3b3b}
+
   .hint{min-height:18px;padding:9px 8px 0;color:#858585;font-size:11px}.hint.error{color:var(--bad)}
   button:focus-visible,textarea:focus-visible{outline:2px solid #aaa;outline-offset:2px}
   @keyframes rise{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
   @keyframes wave{from{height:4px}to{height:var(--h,20px)}}
   @media(max-width:600px){.shell{padding:12px 12px 10px}.message{max-width:90%}.composer{border-radius:23px;padding:12px 10px 9px}textarea{font-size:16px}.voice-label{display:none}.waveform{gap:3px}.waveform i{width:3px}.icon{width:38px;height:38px}.send{width:44px;height:44px}}
+
+  .quick-checks{color:#aaa;font-size:12px}.quick-checks p{margin:4px 0}.camera-frame svg.boxes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.camera-frame svg.boxes text{font:42px -apple-system,BlinkMacSystemFont,sans-serif;paint-order:stroke;stroke:#141414;stroke-width:5px;stroke-linejoin:round}.camera-frame svg.boxes rect{fill:none;stroke-width:3px;vector-effect:non-scaling-stroke}
+  .workspace{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:32px;flex:1;min-height:0;padding-top:16px}
+  .conversation{display:flex;flex-direction:column;min-width:0;min-height:0}
+  .dashboard{overflow:auto;border-left:1px solid #353535;padding-left:24px;display:flex;flex-direction:column;gap:22px}
+  .panel-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:10px}.panel-heading h2{font-size:13px;font-weight:500;margin:0;color:#cfcfcf}
+  .badge{font-size:11px;color:#b3b3b3;background:#303030;border-radius:6px;padding:4px 7px}.badge.live{color:#8cddad;background:#20382b}
+  .camera-frame{position:relative;aspect-ratio:16/10;background:#222;border:1px solid #3c3c3c;border-radius:12px;overflow:hidden;display:grid;place-items:center}
+  .camera-frame img{width:100%;height:100%;object-fit:contain;position:absolute}.camera-placeholder{text-align:center;color:#a3a3a3;font-size:13px;padding:24px}.camera-placeholder svg{display:block;width:28px;height:28px;margin:0 auto 12px;fill:none;stroke:currentColor;stroke-width:1.4}
+  .caption{font-size:11px;color:#aaa;margin:10px 0 0}.objects{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:7px}.objects li{font-size:12px;padding:7px 10px;background:#292929;border:1px solid #404040;border-radius:8px}.objects .none{border:0;padding:0;background:none;color:#aaa}
+  .robot-state{background:#242424;border:1px solid #3b3b3b;border-radius:12px;padding:16px}.robot-state strong{font-size:14px;font-weight:500;display:block}.robot-state p{color:#aaa;font-size:12px;line-height:1.6;margin:7px 0 0}
+  .voice-controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}.voice-start{display:flex;gap:8px;align-items:center;font-size:12px;min-height:44px}.voice-start svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8}.reply-toggle{display:flex;align-items:center;gap:8px;font-size:12px;color:#ccc;min-height:44px;cursor:pointer}.reply-toggle input{accent-color:#86d7a2;width:16px;height:16px}.transcript{font-size:13px;color:#d7d7d7;padding:0 8px 10px;overflow-wrap:anywhere}
+  .hint{color:#a3a3a3}.empty{color:#aaa}.voice-label{color:#ccc}.action{min-height:44px}.waveform{max-width:160px}.waveform.paused i{animation-play-state:paused;height:4px}
+  @media(max-width:1000px){.workspace{grid-template-columns:minmax(0,1fr) 290px;gap:20px}.dashboard{padding-left:18px}.toolbar{gap:5px}.message{max-width:90%}}
+  @media(max-width:760px){.shell{height:auto;min-height:100dvh}.workspace{display:flex;flex-direction:column;gap:18px}.dashboard{order:-1;display:grid;grid-template-columns:1fr;gap:14px}.dashboard section:nth-child(2){display:none}.conversation{min-height:45dvh}#messages{min-height:200px;max-height:55dvh}.dashboard{border-left:0;border-bottom:1px solid #353535;padding:0 0 16px;overflow:visible}.camera-frame{aspect-ratio:16/9}.voice-label{display:inline}.toolbar{flex-wrap:wrap}}
+  @media(max-width:760px){
+    .shell{height:100dvh;min-height:0;overflow:hidden}.workspace{overflow:auto;gap:14px;padding-top:8px}.conversation{display:contents}
+    .dashboard{flex:none;padding-bottom:10px}.panel-heading{margin-bottom:7px}.camera-frame{height:clamp(125px,25dvh,220px);aspect-ratio:auto}
+    .caption{margin-top:5px}.robot-state{padding:10px}.robot-state p{margin:3px 0 0}.robot-state strong{font-size:13px}.dashboard section[aria-labelledby="robot-heading"] .panel-heading{display:none}.robot-state #robot-activity{font-size:11px;line-height:1.3}
+    #messages{flex:none;min-height:80px;max-height:none;overflow:visible;padding:10px 2px}.quick-checks{flex:none}
+    .composer-wrap{position:sticky;bottom:0;z-index:2;background:var(--bg);order:10;flex:none;margin-top:auto;padding:10px 0 6px}
+    .voice-controls{gap:8px;margin-bottom:4px}.voice-controls select{display:none}.voice-start,.reply-toggle{font-size:11px;min-height:36px}
+    .composer{padding:6px 8px;border-radius:18px}textarea{min-height:32px;padding:4px 6px 6px}.toolbar{min-height:40px}.toolbar .action{min-height:36px;padding:6px 9px}.send{width:38px;height:38px}.hint{padding:5px 3px 0;font-size:10px}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
 </style></head><body><main class="shell">
-<header><div class="brand">Viam <b>local chat</b></div><div class="status" id="status">Ready</div></header>
-<nav id="quick-checks" class="quick-checks" aria-label="Robot quick checks"></nav>
+<header><div class="brand">Viam <b>robot workspace</b></div><div class="status" id="status">Ready</div></header>
+<div class="workspace"><section class="conversation" aria-label="Conversation">
+<div class="quick-checks" id="quick-checks" hidden><span>Try saying</span></div>
 <section id="messages" role="log" aria-live="polite"><div class="empty">Type a robot request or start live voice.</div></section>
-<div class="composer-wrap"><div class="composer">
+<div class="composer-wrap">
+<div class="voice-controls">
+<button class="action voice-start" id="mic" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3m-4 0h8"/></svg>Start voice conversation</button>
+<button class="action" id="cancel-voice" hidden>End voice conversation</button>
+<label class="reply-toggle"><input id="voice-replies" type="checkbox" checked>Voice replies</label>
+<select id="reply-voice" class="action" aria-label="Reply voice"><option value="elevenlabs">ElevenLabs voice</option><option value="device">Device voice</option></select>
+<button class="action" id="stop-audio" hidden>Stop audio</button>
+</div><div id="transcript" class="transcript" aria-live="polite" hidden></div><div class="composer">
   <textarea id="prompt" rows="1" placeholder="Message" aria-label="Message"></textarea>
   <div class="toolbar">
-    <button class="icon" id="mic" aria-label="Start live voice" title="Start live voice" disabled>
-      <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="12" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0M12 18v3m-4 0h8"></path></svg>
-    </button>
     <div class="voice-state" id="voice-state" hidden>
-      <button class="icon" id="cancel-voice" aria-label="Disconnect microphone" title="Disconnect microphone"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
       <span class="voice-label" id="voice-label">Listening</span>
       <div class="waveform" id="waveform" aria-hidden="true"></div>
       <button class="stop" id="end-chat" aria-label="Stop robot" title="Stop robot"><svg viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"></rect></svg></button>
@@ -55,5 +85,12 @@
     <button class="send" id="send" aria-label="Send message" title="Send message" disabled><svg viewBox="0 0 24 24"><path d="M12 19V5m-7 7 7-7 7 7"></path></svg></button>
   </div>
 </div><div class="hint" id="hint">Loading local voice chat…</div></div>
-</main>
+</section>
+<aside class="dashboard" aria-label="Robot dashboard">
+<section aria-labelledby="camera-heading"><div class="panel-heading"><h2 id="camera-heading">Robot camera</h2><span class="badge" id="camera-badge">Disconnected</span></div>
+<div class="camera-frame"><img id="camera-image" alt="Live view from the robot camera" hidden><svg id="camera-boxes" class="boxes" aria-label="Visual recognition bounding boxes" hidden></svg><div class="camera-placeholder" id="camera-placeholder"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="m16 10 5-3v10l-5-3"/></svg><span id="camera-empty-text">Waiting for the camera feed</span></div></div>
+<p class="caption" id="camera-updated">No camera connected</p></section>
+<section aria-labelledby="objects-heading"><div class="panel-heading"><h2 id="objects-heading">Visual recognition</h2><span class="badge" id="object-count">—</span></div><ul class="objects" id="objects"><li class="none">Waiting for vision data</li></ul><p class="caption" id="vision-updated">Detections from the current camera frame</p></section>
+<section aria-labelledby="robot-heading"><div class="panel-heading"><h2 id="robot-heading">Robot activity</h2><span class="badge" id="robot-badge">Offline</span></div><div class="robot-state"><strong id="robot-state">Not connected</strong><p id="robot-telemetry"></p><p id="robot-activity">Robot activity will appear when the harness connects.</p></div></section>
+</aside></div></main>
 <script type="module" src="/static/chat.bundle.js"></script></body></html>

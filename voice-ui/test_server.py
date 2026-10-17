@@ -172,3 +172,34 @@ def test_stop_remains_available_while_busy(client):
     client.app.state.busy = True
     assert client.post('/api/stop').json() == {'text':'Stop requested'}
     assert client.app.state.harness.calls == []
+
+
+def test_dashboard_reads_do_not_start_tasks_and_frames_are_memory_only(client):
+    assert not client.get('/api/dashboard').json()['connected']
+    client.app.state.dashboard.frames['frame-1.jpg'] = b'jpeg'
+    assert client.get('/api/camera/frame-1.jpg').content == b'jpeg'
+    assert client.get('/api/camera/.env').status_code == 404
+    assert client.app.state.harness.calls == []
+
+
+@pytest.mark.parametrize('streaming', [True, False])
+def test_key_quota_is_identified_without_leaking_provider_details(monkeypatch, streaming):
+    monkeypatch.setenv('ELEVENLABS_API_KEY', 'secret-test-key')
+    monkeypatch.setenv('ELEVENLABS_VOICE_ID', 'voice-id')
+    def handle(request):
+        return httpx.Response(401, json={'detail': {'status': 'quota_exceeded',
+            'message': 'Sensitive account details here', 'request_id': 'private-id'}})
+    original = httpx.AsyncClient
+    monkeypatch.setattr(server.httpx, 'AsyncClient', lambda **kw: original(transport=httpx.MockTransport(handle), **kw))
+    async def run():
+        speech = server.ElevenSpeech()
+        with pytest.raises(HTTPException) as error:
+            if streaming:
+                await anext(speech.stream('Hello'))
+            else:
+                await speech.speak('Hello')
+        assert error.value.detail['code'] == 'speech_quota_exceeded'
+        assert 'credit limit' in error.value.detail['message']
+        assert 'Sensitive' not in str(error.value.detail)
+        assert 'private-id' not in str(error.value.detail)
+    asyncio.run(run())

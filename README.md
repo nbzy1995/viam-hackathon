@@ -1,7 +1,12 @@
 # Viam carton round trip
 
 [Voice demo](voice-ui/README.md): realtime ElevenLabs speech around the local
-robot harness, with saved readiness and five-degree motion checks.
+robot harness, with saved readiness, five-degree motion, and
+[vision-guided A → B → A demo](docs/vision-demo.md) checks.
+
+[Conversational table demo](docs/table-demo.md): three camera views with a spoken
+description, bring the water carton to the user's blue tape marker, then return
+it to its remembered pickup position.
 
 [Milestone 2: scene-aware text control](docs/milestone-2-text-control.md).
 `uv run python workshop_text.py` opens the persistent preview console;

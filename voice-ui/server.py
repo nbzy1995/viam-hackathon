@@ -6,6 +6,7 @@ from pathlib import Path
 import secrets
 import shutil
 import signal
+from contextlib import asynccontextmanager
 from urllib.parse import quote
 
 import httpx
@@ -62,6 +63,20 @@ class CodexHarness:
 
 
 class ElevenSpeech:
+    @staticmethod
+    async def provider_error(response):
+        await response.aread()
+        try:
+            detail = response.json().get('detail', {})
+            code = detail.get('code') or detail.get('status') if isinstance(detail, dict) else None
+        except ValueError:
+            code = None
+        if code == 'quota_exceeded':
+            return HTTPException(502, detail={
+                'code': 'speech_quota_exceeded',
+                'message': 'ElevenLabs API-key credit limit reached. Increase the key limit or use device voice for replies.'})
+        return HTTPException(502, f'ElevenLabs rejected speech (HTTP {response.status_code}). Check key permissions and credits.')
+
     async def request(self, endpoint, **kwargs):
         key = os.getenv('ELEVENLABS_API_KEY', '').strip()
         if not key:
@@ -73,7 +88,7 @@ class ElevenSpeech:
         except httpx.HTTPError:
             raise HTTPException(502, 'Could not reach ElevenLabs.') from None
         if response.is_error:
-            raise HTTPException(502, f'ElevenLabs rejected the request (HTTP {response.status_code}). Check key permissions and credits.')
+            raise await self.provider_error(response)
         return response
 
     async def realtime_token(self):
@@ -90,7 +105,7 @@ class ElevenSpeech:
                 params={'output_format':'pcm_16000'},
                 json={'text':text, 'model_id':os.getenv('ELEVENLABS_TTS_MODEL','eleven_flash_v2_5')}) as response:
                 if response.is_error:
-                    raise HTTPException(502, f'ElevenLabs speech failed (HTTP {response.status_code}).')
+                    raise await self.provider_error(response)
                 async for chunk in response.aiter_bytes():
                     yield chunk
 
@@ -125,8 +140,19 @@ class Speech(BaseModel):
     session_id: str
 
 
-def create_app(harness=None, speech=None):
-    app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+def create_app(harness=None, speech=None, dashboard=None):
+    from dashboard import Dashboard
+    observe_robot = harness is None and os.getenv('VOICE_ROBOT_ENABLED') == '1'
+
+    @asynccontextmanager
+    async def lifespan(app):
+        await app.state.dashboard.start()
+        try:
+            yield
+        finally:
+            await app.state.dashboard.close()
+
+    app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None, lifespan=lifespan)
     app.add_middleware(TrustedHostMiddleware, allowed_hosts=['127.0.0.1', 'localhost', '[::1]', 'testserver'])
     if harness is None and os.getenv('VOICE_ROBOT_ENABLED') == '1':
         import sys
@@ -137,6 +163,9 @@ def create_app(harness=None, speech=None):
     app.state.speech = speech or ElevenSpeech()
     app.state.sessions = {}
     app.state.busy = False
+    app.state.dashboard = dashboard or Dashboard(
+        os.getenv('VOICE_ROBOT_SOURCE', str(ROOT.parent)) if observe_robot else None,
+        busy=lambda: app.state.busy)
     token = secrets.token_urlsafe(32)
 
     @app.middleware('http')
@@ -167,6 +196,18 @@ def create_app(harness=None, speech=None):
     @app.get('/api/status')
     async def progress():
         return {'busy': app.state.busy, 'message': getattr(app.state.harness, 'progress', 'Thinking')}
+
+    @app.get('/api/dashboard')
+    async def dashboard_state():
+        activity = getattr(app.state.harness, 'progress', 'Working') if app.state.busy else 'Waiting for a voice or text request.'
+        return app.state.dashboard.snapshot(activity=activity)
+
+    @app.get('/api/camera/{name}')
+    async def camera_frame(name: str):
+        frame = app.state.dashboard.frames.get(name)
+        if frame is None:
+            raise HTTPException(404, 'Camera frame unavailable.')
+        return Response(frame, media_type='image/jpeg')
 
     @app.post('/api/stop')
     async def stop():

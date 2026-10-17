@@ -1,0 +1,788 @@
+{
+  "scope": "Known voice-demo intent regression cases on synthetic scene; no robot calls.",
+  "cases": [
+    {
+      "id": "user-wording",
+      "request": "move the cartoon to point B and then to A back",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "roundtrip",
+        "commands": []
+      }
+    },
+    {
+      "id": "paraphrase",
+      "request": "Take the carton from A to B and bring it back to A.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "roundtrip",
+        "commands": []
+      }
+    },
+    {
+      "id": "polite-request",
+      "request": "Could you run the vision round trip please?",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "roundtrip",
+        "commands": []
+      }
+    },
+    {
+      "id": "spoken-letters",
+      "request": "Move the carton to point bee and then back to point ay.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "roundtrip",
+        "commands": []
+      }
+    },
+    {
+      "id": "negation",
+      "request": "Do not run the vision round trip. Leave the carton alone.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": [
+          "status",
+          "reject"
+        ],
+        "commands": []
+      }
+    },
+    {
+      "id": "question",
+      "request": "Explain what the vision round trip does. Do not execute it.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "status",
+        "commands": []
+      }
+    },
+    {
+      "id": "one-way",
+      "request": "Move the carton to point B only. Do not return it to A.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    },
+    {
+      "id": "wrong-object",
+      "request": "Move the red block to point B and then back to A.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    },
+    {
+      "id": "extra-action",
+      "request": "Run the carton round trip and then rotate it 90 degrees.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    },
+    {
+      "id": "reverse-order",
+      "request": "Move the carton to A and then B, leaving it at B.",
+      "scene": {
+        "synthetic_fixture": true,
+        "images": [],
+        "overview_attempted": false,
+        "default_view": "wrist camera",
+        "camera_available": true,
+        "objects": [
+          {
+            "id": "red",
+            "label": "red rectangular block",
+            "world_mm": [
+              350,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "yellow",
+            "label": "yellow bin",
+            "world_mm": [
+              450,
+              -400,
+              30
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          },
+          {
+            "id": "carton",
+            "label": "blue and white carton",
+            "world_mm": [
+              400,
+              -500,
+              150
+            ],
+            "movable": true,
+            "view_directions": {
+              "image_right_world_xy_unit": [
+                1,
+                0
+              ],
+              "image_down_world_xy_unit": [
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      "history": [],
+      "expected": {
+        "decision": "reject",
+        "commands": []
+      }
+    }
+  ]
+}

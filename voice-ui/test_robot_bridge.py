@@ -149,3 +149,16 @@ def test_result_narration_distinguishes_planning_failure_from_motion_failure():
     assert 'could not be verified' in text and 'acknowledged a stop' in text
     assert 'Task completed' not in messages.task_answer({'outcome':'completed','success':False})
     assert '1.2 mm' in messages.task_answer({'outcome':'completed','success':True,'verification':{'error_mm':1.2}})
+
+
+def test_configured_worktree_uses_shared_robot_lock(monkeypatch,tmp_path):
+    module,events,arm,robot=worker(monkeypatch,tmp_path)
+    shared=tmp_path/'shared';shared.mkdir();(shared/'.arm-control.lock').touch()
+    monkeypatch.setenv('VOICE_ROBOT_SOURCE',str(shared))
+    async def forbidden(*args):raise AssertionError('Shared QA controller must retain robot ownership')
+    monkeypatch.setattr(module.RobotClient,'at_address',forbidden)
+    with (shared/'.arm-control.lock').open('r') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        async def check():await module.run('Run vision round trip',asyncio.StreamReader())
+        asyncio.run(check())
+    assert 'existing workshop console' in events[-1]['text']
